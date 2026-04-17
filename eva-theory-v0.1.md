@@ -1,9 +1,9 @@
 # Eva Agent: A Cognitive Architecture for Autonomous Survival and Self-Evolution
 
 **Status**: Draft v0.1 — Internal Working Document  
-**Authors**: [Author Name]  
+**Authors**: slamslammo  
 **Repository**: Private (timestamp record)  
-**Date**: 2025-04-17  
+**Date**: 2026-04-17  
 **License**: CC BY 4.0
 
 ---
