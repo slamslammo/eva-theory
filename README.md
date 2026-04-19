@@ -1,80 +1,136 @@
-# agent-cognitive-architecture
+# eva-theory
 
-**EVA: An architecture for agents centered on continuous existence**
+**EVA: An architecture for agents centered on continuous existence.**
 
----
-
-## Project Positioning
-
-Most AI agent architectures are organized around **task completion**. EVA starts from a different premise: for a certain class of agents, **continuous existence is the first-order constraint**, and other capabilities must be understood relative to that constraint.
-
-**This is a theoretical framework paper, not a benchmark-oriented agent design.**
+This repository contains the theoretical framework for EVA. For the reference implementation, see [eva-agent](https://github.com/slamslammo/eva-agent) (separate repository).
 
 ---
+
+## What This Is
+
+Most AI agent architectures are organized around **task completion**. Memory serves recall, reasoning serves planning, tools serve execution, and the agent's lifecycle is bounded by the task boundary. Survival, continuity, and self-integrity are either assumed away or treated as peripheral concerns.
+
+This repository develops a different paradigm: **an agent architecture where continuous existence is the first-order constraint**, and other capabilities are understood relative to that constraint.
+
+This is not a proposal for "better agents." It is a proposal for a different kind of agent—one whose reason for existing is not to serve tasks, but to persist, and to grow through persistence.
+
+## About the Name
+
+EVA is derived from the Hebrew name *Chava* (חַוָּה), meaning "life" or "she who gives life"—the origin of the English name Eve. The name marks the project's central commitment: to treat continuous existence as a foundational design concern rather than a philosophical afterthought. We do not claim our agents are alive in any biological sense. The name signals the paradigm shift the project is centered on.
 
 ## Two Claims
 
+This work makes two distinct claims, kept together rather than separated.
+
 **Claim A (paradigm claim)**: There exists a meaningful class of agents for which the task-centered framing is structurally insufficient. For such agents, the correct starting point is not "what task should the agent complete?" but "what must the agent maintain in order to persist as the same agent over time?"
 
-**Claim B (structural claim)**: Under three operating conditions—survival continuity, environmental non-stationarity, and finite encoding capacity—a layered architecture comprising homeostatic sensing (L1), drive structure (L2), and adaptive deliberation (L3) is a structurally coherent response. Two further layers, self-model (L4) and social cognition (L5), are proposed as downstream extensions under additional pressures, with explicitly weaker derivational strength than L1–L3.
-
----
+**Claim B (structural claim)**: Under three operating conditions—survival continuity, environmental non-stationarity, and finite encoding capacity—a layered architecture consisting of homeostatic sensing (L1), drive structure (L2), and adaptive deliberation (L3) is a structurally coherent response. Two further layers, self-model (L4) and social cognition (L5), are proposed as downstream extensions with explicitly weaker derivational strength.
 
 ## Core Contributions
 
-1. **Drive as context**
-   - The drive layer continuously broadcasts contextual state rather than issuing instructions.
-   - Reasoning occurs within this state rather than receiving commands from it.
+Within the framework, four engineering contributions distinguish this paradigm from existing agent frameworks:
 
-2. **Anchor as structural constraint**
-   - Anchors are pre-generative structural restrictions, not post-hoc rules.
-   - Candidate actions are generated within an anchor-restricted domain rather than filtered only after generation.
+1. **Drive as continuous contextual broadcast, not instruction.** The drive layer broadcasts its state continuously; the reasoning layer operates within this state rather than receiving commands from it. Argued as the coherent solution to cross-system coordination in an architecture without a central controller.
 
-3. **Basal ganglia analog as peer circuit**
-   - Action selection and habit formation are architecturally parallel to deliberation rather than a sub-module of reasoning.
-   - This preserves default inhibition, separates selection from justification, and supports skill crystallization.
+2. **Anchor as pre-generative structural constraint, not post-hoc rule.** Anchors restrict the domain over which candidate actions are generated: `G(s) → A'(s) ⊆ A(s)`. Unlike rules that filter after generation, anchors cannot be reasoned around.
 
----
+3. **Explicit drive injection rather than emergent drive formation.** Under the instrumental convergence hypothesis, drives will emerge in sufficiently capable systems whether designers intend them to or not. Explicit injection makes drives auditable and constrainable; emergent drives do not. We choose explicit.
 
-## Current Status
+4. **Basal ganglia analog as independent peer circuit, not reasoning sub-module.** Action selection and habit formation run parallel to deliberation, not within it. This preserves default inhibition as structure rather than policy, separates selection from justification, and enables emergent skill crystallization.
 
-- **Theory**: v0.5 stable integrated version
-- **Implementation**: `eva-agent` Step 2 complete
-- **License**: CC BY 4.0
+## Scope
 
-The current stable manuscript is `THEORY/v0.5-integrated.md`.
+The framework applies to agents operating under three conditions:
 
----
+- **C1. Survival continuity requirement** — the agent's value comes from its continuous existence
+- **C2. Environmental non-stationarity** — the environment's statistical structure changes over time
+- **C3. Finite encoding capacity** — no finite design-time specification can cover all future states
+
+The framework is **not intended for**:
+
+- One-shot task agents
+- Fully stationary environments
+- Systems where continuity is irrelevant
+- Benchmark settings where repeated reset is costless
+
+For such systems, this architecture is unnecessary overhead.
 
 ## Repository Structure
 
 ```text
-agent-cognitive-architecture/
-├── README.md
+eva-theory/
+├── README.md                        # This file
+├── LICENSE                          # CC BY 4.0
 ├── THEORY/
+│   ├── CHANGELOG.md                 # Version-by-version substantive changes
 │   ├── v0.1-initial.md
 │   ├── v0.2-expanded.md
 │   ├── v0.3-scoped.md
 │   ├── v0.4-claim-structured.md
-│   ├── v0.5-integrated.md
-│   └── CHANGELOG.md
+│   └── v0.5-integrated.md           # Current stable version
 ├── DISCUSSIONS/
 │   └── 01-route-selection.md
-├── IMPLEMENTATION/
-│   └── eva-agent-correspondence.md
-└── LICENSE
+└── IMPLEMENTATION/
+    └── eva-agent-correspondence.md  # Map from theory to reference implementation
 ```
 
----
+## Current Version
 
-## Reading Guide
+The current stable theoretical document is **v0.5** (`THEORY/v0.5-integrated.md`).
 
-- Start with `THEORY/v0.5-integrated.md` for the current stable framework
-- See `THEORY/CHANGELOG.md` for substantive theory evolution from v0.1 to v0.5
-- See `IMPLEMENTATION/eva-agent-correspondence.md` for the mapping from theory to `eva-agent`
+v0.5 integrates the structural contributions of v0.4 (Claim A/B separation, anchor formalization, epistemic layering) with the sharp core of v0.3 (drive as context, LLM as Level 3 cultural carrier, peer circuit necessity). It marks the transition from "theory development" to "theory publication" phase.
 
----
+See `THEORY/CHANGELOG.md` for what changed at each version.
+
+## Epistemic Transparency
+
+Not all claims in this work rest on the same evidential basis. The document explicitly separates:
+
+- **Level A** — established science (used as background, not contribution)
+- **Level B** — theoretical hypotheses (acknowledged as hypothetical: instrumental convergence, dynamic kinetic stability, timescale mismatch)
+- **Level C** — engineering contributions of this work (the substantive content)
+
+Readers who disagree with specific Level B claims can still evaluate Level C contributions on their own merits.
+
+## Relationship to Implementation
+
+This work is paired with an ongoing implementation project: [eva-agent](https://github.com/slamslammo/eva-agent). eva-agent currently implements the lowest layers of the architecture and has validated stable long-running operation.
+
+`IMPLEMENTATION/eva-agent-correspondence.md` documents the mapping from theoretical layers to current implementation components, including explicit gaps.
+
+The theory is not speculative architecture. It describes a system under active construction, with specific missing pieces identified.
+
+## What This Work Does Not Claim
+
+- Not a claim that this is the only possible architecture for persistent agents
+- Not a claim that this architecture achieves general intelligence
+- Not a proposal for a specific implementation benchmark
+- Not a critique of existing agent frameworks (they solve different problems)
+- Not a claim that digital agents are "alive" in any biological sense
+- Not a claim that continuity of existence justifies unconstrained self-preservation — L0/L1 anchors explicitly prevent this
+
+## How to Read
+
+- **Short version**: this README plus Sections 1, 4, and 5 of `THEORY/v0.5-integrated.md`
+- **Paradigm argument**: Sections 1–4 of `THEORY/v0.5-integrated.md` (Claim A)
+- **Architectural derivation**: Sections 5–12 of `THEORY/v0.5-integrated.md` (Claim B)
+- **Engineering contributions only**: Section 3.3 plus Sections 7, 8, and 11 of `THEORY/v0.5-integrated.md`
 
 ## License
 
-This work is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+This work is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt the material with attribution.
+
+## Citing
+
+If you reference this work, please cite as:
+slamslammo. (2026). *EVA: Continuous Existence as a First-Order Constraint for Agents*. eva-theory v0.5. https://github.com/slamslammo/eva-theory
+
+## Status
+
+- **Theory**: v0.5 stable
+- **arXiv submission**: in preparation
+- **Implementation (eva-agent)**: Steps 0–2 complete; L3 work in progress
+
+---
+
+*This is independent theoretical research. The framework is open to critique and refinement. Substantive feedback is welcome through GitHub issues.*

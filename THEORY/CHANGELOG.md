@@ -6,6 +6,16 @@ This is not a line-by-line diff. It records the conceptual evolution—what clai
 
 ---
 
+## Repository Rename and Naming Note (2026-04-20)
+
+Non-theoretical housekeeping. Theory content unchanged.
+
+- Repository renamed from `agent-cognitive-architecture` to `eva-theory` to consolidate project identity (theory + implementation both under the EVA name)
+- Naming note added to `README.md` and `THEORY/v0.5-integrated.md` (Abstract section): clarifies that EVA derives from Hebrew *Chava* (life), reflecting the project's continuous-existence framing, without claiming agents are "alive" in any biological sense
+- Cross-references between `eva-theory` and `eva-agent` repositories made explicit
+
+---
+
 ## v0.5 — Integrated Stable Version (2026-04-19)
 
 **Status**: Current stable version. Theoretical framework considered stable; further changes expected to be precision refinements rather than structural modifications.

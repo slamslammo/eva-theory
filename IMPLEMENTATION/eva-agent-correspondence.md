@@ -1,6 +1,6 @@
 # eva-agent Implementation Correspondence
 
-This document maps the theoretical framework (see `THEORY/v0.5-integrated.md`) to the current state of the eva-agent reference implementation.
+This document maps the theoretical framework (see `THEORY/v0.5-integrated.md`) to the current state of the eva-agent reference implementation (repository: [eva-agent](https://github.com/slamslammo/eva-agent)).
 
 The theory is not speculative. It describes a system under active construction. This document makes explicit both what has been built and what remains.
 
