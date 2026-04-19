@@ -1,6 +1,8 @@
 # eva-agent Implementation Correspondence
 
-This document maps the theoretical framework (see `THEORY/v0.5-integrated.md`) to the current state of the eva-agent reference implementation (repository: [eva-agent](https://github.com/slamslammo/eva-agent)).
+> **Note on disclosure level**: The `eva-agent` implementation is not yet publicly released. This document describes the theory-to-implementation correspondence at a level that characterizes what has been built and what remains, without disclosing source-level details. More specific implementation documentation will become available when `eva-agent` is published.
+
+This document maps the theoretical framework (see `THEORY/v0.5-integrated.md`) to the current state of the eva-agent reference implementation.
 
 The theory is not speculative. It describes a system under active construction. This document makes explicit both what has been built and what remains.
 
@@ -27,8 +29,8 @@ The implementation has validated the architectural foundation (L0–L1 in operat
 
 | Theoretical component | eva-agent implementation | Status |
 |---|---|---|
-| Sensor registry (extensible) | Heartbeat monitor, runtime integrity checks, disk/process monitoring | Partial — core sensors implemented; extension mechanism not explicit |
-| State sensing | `external_life_snapshot.json` captures current state | Implemented |
+| Sensor registry (extensible) | Heartbeat monitoring, runtime integrity checks, and resource/process sensing | Partial — core sensors implemented; extension mechanism not explicit |
+| State sensing | Persistent runtime state snapshot of current conditions | Implemented |
 | Rate sensing (metabolic) | Not implemented | **Gap** |
 | Signal bus with minimum classification (threat/status/background) | Not explicit; pressure categorization exists but is not a generalized classification routing layer | **Gap** |
 | Fast/slow path split at signal bus | Not explicit at L1 level | **Gap** |
@@ -43,8 +45,8 @@ The implementation has validated the architectural foundation (L0–L1 in operat
 
 | Theoretical component | eva-agent implementation | Status |
 |---|---|---|
-| Reflex arc | `distress` / `yield` mechanisms; heartbeat-first constraint cannot be preempted by work | Basic implementation |
-| Drive registry (extensible, injected) | `active_pressures.json` with types: integrity / resource / continuity / anomaly | Implemented as rule-based pressure, not continuous intensity model |
+| Reflex arc | Distress / yield mechanisms; heartbeat-first constraint cannot be preempted by work | Basic implementation |
+| Drive registry (extensible, injected) | Four pressure types implemented: integrity / resource / continuity / anomaly | Implemented as rule-based pressure, not continuous intensity model |
 | Drive as continuous intensity | Not implemented — pressures are discrete state | **Gap** |
 | Drive broadcast as context to L3 | Not implemented — no L3 to broadcast to | **Gap** |
 | Suppression constraint (L3 cannot eliminate L0/L1 drives) | Implicit — rule-based pressure cannot be overridden by current response selection | Partial |
@@ -59,9 +61,9 @@ The implementation has validated the architectural foundation (L0–L1 in operat
 
 | Theoretical component | eva-agent implementation | Status |
 |---|---|---|
-| Salience-weighted memory (hippocampus analog) | `survival_log.jsonl`, `response_history.jsonl` — append-only event logs | Append-only logging implemented; no salience weighting |
+| Salience-weighted memory (hippocampus analog) | Append-only event and response logs | Append-only logging implemented; no salience weighting |
 | Semantic memory / skill library | Not implemented | **Gap** |
-| Reasoning core (PFC analog) | Step 2 response selection (rule-based) | Rules implemented; LLM integration not yet present |
+| Reasoning core (PFC analog) | Rule-based response selection | Rules implemented; LLM integration not yet present |
 | Working memory (dlPFC analog, LLM substrate) | Not implemented | **Gap** |
 | Value judgment (OFC analog, drive-weighted) | Rule precedence in response selection | Partial — precedence exists but not drive-state weighted |
 | Conflict detection (ACC analog) | Not implemented | **Gap** |
@@ -69,7 +71,7 @@ The implementation has validated the architectural foundation (L0–L1 in operat
 | Default inhibition | Not implemented — actions execute directly from response selection | **Major gap** |
 | RPE (reward prediction error) | Not implemented | **Major gap** |
 | Goal-directed / habit dual track | Not implemented | **Major gap** |
-| Tool layer | Filesystem operations, process management via Python | Minimal implementation |
+| Tool layer | Filesystem and process management operations | Minimal implementation |
 
 **What is working**: Basic rule-based response selection that respects L0/L1 constraints.
 
@@ -81,7 +83,7 @@ The implementation has validated the architectural foundation (L0–L1 in operat
 
 Not yet implemented. This is intentional — the self-model requires L3 behavioral history to develop, and L3 is itself not yet built.
 
-Current minimum form available via queries to L2 active_pressures and L3 behavioral logs would be a placeholder, not a genuine self-model.
+Current minimum form available via queries to current drive-state representation and L3 behavioral logs would be a placeholder, not a genuine self-model.
 
 ---
 
@@ -95,8 +97,8 @@ Not yet designed. Prerequisite not yet resolved: the agent's conspecifics (other
 
 | Theoretical component | eva-agent implementation | Status |
 |---|---|---|
-| L0 constitutional anchors (injected) | Encoded as rule filters in response selection logic | Partial — exists as rules, not as structural constraint |
-| L1 physiological/cognitive integrity | Heartbeat-first, integrity checks | Implemented |
+| L0 constitutional anchors (injected) | Encoded as rule filters in response selection | Partial — exists as rules, not as structural constraint |
+| L1 physiological/cognitive integrity | Heartbeat-first lifecycle and runtime integrity checks | Implemented |
 | L2+ emergent anchors | Not applicable — no L3 history to emerge from | Not yet |
 | Cross-layer enforcement | Implemented at current layer breadth only | Partial |
 | `G(s) → A'(s)` structural restriction | Not implemented — current is post-hoc rule filtering | **Gap** |
@@ -111,8 +113,8 @@ Based on theory-to-implementation gap analysis, the three highest-value engineer
 
 ### Priority 1: Drive broadcast as continuous context
 
-Current state: `active_pressures.json` is discrete, rule-based.
-Target state: Continuous intensity values, broadcast each heartbeat cycle as processing context for L3.
+Current state: pressure representation is discrete and rule-based.
+Target state: Continuous intensity values, broadcast each cycle as processing context for L3.
 
 This is the lowest-hanging fruit among the major gaps because:
 - The infrastructure for pressure detection exists
@@ -121,15 +123,15 @@ This is the lowest-hanging fruit among the major gaps because:
 
 ### Priority 2: Salience-weighted memory
 
-Current state: Append-only logs.
+Current state: append-only logs.
 Target state: Each memory entry weighted by drive-state intensity at time of encoding.
 
 This is necessary before L3's hippocampus analog can function, and before any form of context-triggered memory retrieval can work.
 
 ### Priority 3: Mediated action path with default inhibition
 
-Current state: Response selection executes tool calls directly.
-Target state: All tool calls pass through a mediator that enforces default inhibition and logs the "release" event for later RPE attachment.
+Current state: response selection executes actions directly.
+Target state: All actions pass through a mediator that enforces default inhibition and logs the release event for later RPE attachment.
 
 This does not require the full basal ganglia system. A minimal implementation of default inhibition already realizes the core architectural property — actions require active release, not passive permission.
 

@@ -2,7 +2,7 @@
 
 **EVA: An architecture for agents centered on continuous existence.**
 
-This repository contains the theoretical framework for EVA. For the reference implementation, see [eva-agent](https://github.com/slamslammo/eva-agent) (separate repository).
+This repository contains the theoretical framework for EVA. The reference implementation (`eva-agent`) is under active development and will be published separately. See the "Relationship to Implementation" section below for the current correspondence and timeline.
 
 ---
 
@@ -94,11 +94,13 @@ Readers who disagree with specific Level B claims can still evaluate Level C con
 
 ## Relationship to Implementation
 
-This work is paired with an ongoing implementation project: [eva-agent](https://github.com/slamslammo/eva-agent). eva-agent currently implements the lowest layers of the architecture and has validated stable long-running operation.
+This theoretical framework is paired with an active implementation project named `eva-agent`. As of April 2026, `eva-agent` has completed Steps 0–2 (lifecycle, external sensing, minimum integrity pressure response) and demonstrated stable long-running operation on Linux. L3 architecture development is in progress.
 
-`IMPLEMENTATION/eva-agent-correspondence.md` documents the mapping from theoretical layers to current implementation components, including explicit gaps.
+The `eva-agent` repository is not yet publicly released. It will be published in the coming months, after a minimum viable L3 prototype is in place.
 
-The theory is not speculative architecture. It describes a system under active construction, with specific missing pieces identified.
+Until `eva-agent` is publicly released, `IMPLEMENTATION/eva-agent-correspondence.md` provides a high-level mapping from theoretical layers to current implementation status, without disclosing implementation details. The theory is not speculative architecture—it describes a system under active construction.
+
+For notifications when `eva-agent` is released, watch this repository.
 
 ## What This Work Does Not Claim
 
