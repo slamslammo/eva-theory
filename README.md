@@ -42,7 +42,7 @@ Most AI agent architectures are organized around **task completion**. EVA starts
 - **Implementation**: `eva-agent` Step 2 complete
 - **License**: CC BY 4.0
 
-The current stable manuscript is `theory/v0.5-integrated.md`.
+The current stable manuscript is `THEORY/v0.5-integrated.md`.
 
 ---
 
@@ -51,7 +51,7 @@ The current stable manuscript is `theory/v0.5-integrated.md`.
 ```text
 agent-cognitive-architecture/
 ├── README.md
-├── theory/
+├── THEORY/
 │   ├── v0.1-initial.md
 │   ├── v0.2-expanded.md
 │   ├── v0.3-scoped.md
@@ -69,8 +69,8 @@ agent-cognitive-architecture/
 
 ## Reading Guide
 
-- Start with `theory/v0.5-integrated.md` for the current stable framework
-- See `theory/CHANGELOG.md` for substantive theory evolution from v0.1 to v0.5
+- Start with `THEORY/v0.5-integrated.md` for the current stable framework
+- See `THEORY/CHANGELOG.md` for substantive theory evolution from v0.1 to v0.5
 - See `IMPLEMENTATION/eva-agent-correspondence.md` for the mapping from theory to `eva-agent`
 
 ---
