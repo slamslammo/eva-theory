@@ -61,6 +61,7 @@ For such systems, this architecture is unnecessary overhead.
 eva-theory/
 ├── README.md                        # This file
 ├── LICENSE                          # CC BY 4.0
+├── index.html                       # GitHub Pages landing page for public-facing visuals
 ├── THEORY/
 │   ├── CHANGELOG.md                 # Version-by-version substantive changes
 │   ├── v0.1-initial.md
@@ -73,7 +74,8 @@ eva-theory/
 │   ├── 01-paradigm-introduction.md  # Introductory paradigm article
 │   └── 02-architectural-contributions.md # Engineering-oriented companion article
 ├── VISUALS/
-│   └── README.md                    # Visual index and public-facing diagrams
+│   ├── README.md                    # Visual index and public-facing diagrams
+│   └── previews/                    # Static preview images for README and landing page
 ├── DISCUSSIONS/
 │   └── 01-route-selection.md
 └── IMPLEMENTATION/
@@ -85,6 +87,25 @@ eva-theory/
 The current stable theoretical document is **v0.5** (`THEORY/v0.5-integrated.md`).
 
 For a shorter, reader-oriented entry point, start with `ARTICLES/01-paradigm-introduction.md`. For article navigation and public-facing visuals, see `ARTICLES/README.md` and `VISUALS/README.md`.
+
+## Visuals
+
+Live views:
+
+- [EVA Visuals landing page](https://slamslammo.github.io/eva-theory/)
+- [Five-Layer Architecture Overview](https://slamslammo.github.io/eva-theory/VISUALS/five-layer-overview.html)
+- [Signal-Flow Overview](https://slamslammo.github.io/eva-theory/VISUALS/signal-flow.html)
+
+Click either preview to open the live HTML rendering.
+
+<p align="center">
+  <a href="https://slamslammo.github.io/eva-theory/VISUALS/five-layer-overview.html">
+    <img src="VISUALS/previews/five-layer-overview-preview.png" alt="Preview of the EVA five-layer architecture overview" width="48%" />
+  </a>
+  <a href="https://slamslammo.github.io/eva-theory/VISUALS/signal-flow.html">
+    <img src="VISUALS/previews/signal-flow-preview.png" alt="Preview of the EVA signal-flow overview" width="48%" />
+  </a>
+</p>
 
 v0.5 integrates the structural contributions of v0.4 (Claim A/B separation, anchor formalization, epistemic layering) with the sharp core of v0.3 (drive as context, LLM as Level 3 cultural carrier, peer circuit necessity). It marks the transition from "theory development" to "theory publication" phase.
 
