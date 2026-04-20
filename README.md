@@ -90,19 +90,19 @@ For a shorter, reader-oriented entry point, start with `ARTICLES/01-paradigm-int
 
 ## Visuals
 
-Live views:
+Current repository entry files:
 
-- [EVA Visuals landing page](https://slamslammo.github.io/eva-theory/)
-- [Five-Layer Architecture Overview](https://slamslammo.github.io/eva-theory/VISUALS/five-layer-overview.html)
-- [Signal-Flow Overview](https://slamslammo.github.io/eva-theory/VISUALS/signal-flow.html)
+- [Visuals landing page source](index.html)
+- [Five-Layer Architecture Overview HTML](VISUALS/five-layer-overview.html)
+- [Signal-Flow Overview HTML](VISUALS/signal-flow.html)
 
-Click either preview to open the live HTML rendering.
+GitHub Pages is not currently available for this repository plan, so the previews below link to the repository HTML files rather than live rendered pages.
 
 <p align="center">
-  <a href="https://slamslammo.github.io/eva-theory/VISUALS/five-layer-overview.html">
+  <a href="VISUALS/five-layer-overview.html">
     <img src="VISUALS/previews/five-layer-overview-preview.png" alt="Preview of the EVA five-layer architecture overview" width="48%" />
   </a>
-  <a href="https://slamslammo.github.io/eva-theory/VISUALS/signal-flow.html">
+  <a href="VISUALS/signal-flow.html">
     <img src="VISUALS/previews/signal-flow-preview.png" alt="Preview of the EVA signal-flow overview" width="48%" />
   </a>
 </p>

@@ -4,11 +4,13 @@ Reader-facing diagrams and visual aids for `eva-theory`.
 
 This directory holds public-facing visuals that help readers understand EVA's structure and flow without replacing the theory text. The emphasis is on conceptual clarity, not implementation detail or roadmap communication.
 
-## Live pages
+## Current repository entry files
 
-- [EVA Visuals landing page](https://slamslammo.github.io/eva-theory/)
-- [Five-Layer Architecture Overview](https://slamslammo.github.io/eva-theory/VISUALS/five-layer-overview.html)
-- [Signal-Flow Overview](https://slamslammo.github.io/eva-theory/VISUALS/signal-flow.html)
+- [Visuals landing page source](../index.html)
+- [Five-Layer Architecture Overview HTML](five-layer-overview.html)
+- [Signal-Flow Overview HTML](signal-flow.html)
+
+GitHub Pages is not currently available for this repository plan, so these links point to repository files rather than live rendered pages.
 
 ## Current public-facing visuals
 
