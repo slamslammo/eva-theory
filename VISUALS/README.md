@@ -24,8 +24,8 @@ GitHub Pages is not currently available for this repository plan, so these links
 
 ## Preview assets
 
-- `previews/five-layer-overview-preview.png` — static preview image for the repository README and the Pages landing page
-- `previews/signal-flow-preview.png` — static preview image for the repository README and the Pages landing page
+- `previews/five-layer-overview-preview.png` — static preview image for the repository README and the repository entry page
+- `previews/signal-flow-preview.png` — static preview image for the repository README and the repository entry page
 
 ## What this directory is not for
 

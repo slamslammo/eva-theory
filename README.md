@@ -61,7 +61,7 @@ For such systems, this architecture is unnecessary overhead.
 eva-theory/
 ├── README.md                        # This file
 ├── LICENSE                          # CC BY 4.0
-├── index.html                       # GitHub Pages landing page for public-facing visuals
+├── index.html                       # Repository entry page for public-facing visuals
 ├── THEORY/
 │   ├── CHANGELOG.md                 # Version-by-version substantive changes
 │   ├── v0.1-initial.md
@@ -86,28 +86,9 @@ eva-theory/
 
 The current stable theoretical document is **v0.5** (`THEORY/v0.5-integrated.md`).
 
-For a shorter, reader-oriented entry point, start with `ARTICLES/01-paradigm-introduction.md`. For article navigation and public-facing visuals, see `ARTICLES/README.md` and `VISUALS/README.md`.
-
-## Visuals
-
-Current repository entry files:
-
-- [Visuals landing page source](index.html)
-- [Five-Layer Architecture Overview HTML](VISUALS/five-layer-overview.html)
-- [Signal-Flow Overview HTML](VISUALS/signal-flow.html)
-
-GitHub Pages is not currently available for this repository plan, so the previews below link to the repository HTML files rather than live rendered pages.
-
-<p align="center">
-  <a href="VISUALS/five-layer-overview.html">
-    <img src="VISUALS/previews/five-layer-overview-preview.png" alt="Preview of the EVA five-layer architecture overview" width="48%" />
-  </a>
-  <a href="VISUALS/signal-flow.html">
-    <img src="VISUALS/previews/signal-flow-preview.png" alt="Preview of the EVA signal-flow overview" width="48%" />
-  </a>
-</p>
-
 v0.5 integrates the structural contributions of v0.4 (Claim A/B separation, anchor formalization, epistemic layering) with the sharp core of v0.3 (drive as context, LLM as Level 3 cultural carrier, peer circuit necessity). It marks the transition from "theory development" to "theory publication" phase.
+
+For a shorter, reader-oriented entry point, start with `ARTICLES/01-paradigm-introduction.md`. For article navigation and public-facing visuals, see `ARTICLES/README.md` and `VISUALS/README.md`.
 
 See `THEORY/CHANGELOG.md` for what changed at each version.
 
@@ -148,6 +129,25 @@ For notifications when `eva-agent` is released, watch this repository.
 - **Architectural derivation**: Sections 5–12 of `THEORY/v0.5-integrated.md` (Claim B)
 - **Engineering contributions only**: Section 3.3 plus Sections 7, 8, and 11 of `THEORY/v0.5-integrated.md`
 - **Reader guide**: `ARTICLES/README.md` and `VISUALS/README.md`
+
+## Visuals
+
+The repository includes two public-facing visuals for readers who want a quicker architectural overview before or alongside the full theory text:
+
+- [Five-Layer Architecture Overview HTML](VISUALS/five-layer-overview.html) — static structure view of the five-layer architecture
+- [Signal-Flow Overview HTML](VISUALS/signal-flow.html) — dynamic flow view of sensing, drive broadcast, anchor restriction, and mediated release
+- [Visuals landing page source](index.html) — repository entry page linking both visuals and their source materials
+
+GitHub Pages is not currently available for this repository plan, so the previews below link to the repository HTML files rather than live rendered pages.
+
+<p align="center">
+  <a href="VISUALS/five-layer-overview.html">
+    <img src="VISUALS/previews/five-layer-overview-preview.png" alt="Preview of the EVA five-layer architecture overview" width="48%" />
+  </a>
+  <a href="VISUALS/signal-flow.html">
+    <img src="VISUALS/previews/signal-flow-preview.png" alt="Preview of the EVA signal-flow overview" width="48%" />
+  </a>
+</p>
 
 ## License
 

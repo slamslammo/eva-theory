@@ -192,7 +192,7 @@ If the starting question here seems worth taking seriously, there are several na
 
 **For the full theoretical framework**: read `THEORY/v0.5-integrated.md`. That document contains the complete five-layer architecture, the scope conditions, the epistemic layering, the anchor formalization, and the limitations.
 
-**For the engineering and architectural distinctions in more detail**: see `ARTICLES/02-architectural-contributions.md`. That companion article is planned to focus on the concrete design choices that distinguish EVA from current agent frameworks.
+**For the engineering and architectural distinctions in more detail**: see `ARTICLES/02-architectural-contributions.md`. That companion article focuses on the concrete design choices that distinguish EVA from current agent frameworks.
 
 **For repository navigation and reader-facing materials**: see `ARTICLES/README.md` and `VISUALS/README.md`.
 

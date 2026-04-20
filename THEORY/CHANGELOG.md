@@ -6,6 +6,18 @@ This is not a line-by-line diff. It records the conceptual evolution—what clai
 
 ---
 
+## Reader-Facing Content Expansion (2026-04-20)
+
+Repository-level content packaging expanded. Theory claims unchanged.
+
+- Root `README.md` rewritten as a reader-facing entry point with clearer reading paths, repository structure, implementation relationship, and visual navigation
+- `ARTICLES/` added as a public-facing companion layer, including a paradigm introduction and an engineering-oriented article
+- `VISUALS/` added as a public-facing diagram layer, with static preview assets for repository browsing
+- `index.html` added as a repository landing page for the public-facing visuals and their source/spec links
+- Cross-navigation between theory, articles, visuals, and implementation correspondence made explicit across the repository
+
+---
+
 ## Repository Rename and Naming Note (2026-04-20)
 
 Non-theoretical housekeeping. Theory content unchanged.
