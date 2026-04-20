@@ -6,6 +6,14 @@ This repository contains the theoretical framework for EVA. The reference implem
 
 ---
 
+## Public Status
+
+- **Repository type**: theory-first public research repository
+- **Current theory status**: stable enough for public discussion at **v0.5**
+- **Current implementation status**: **partial**
+- **Strongest current theoretical support**: the continuity-first framing and the **L1–L3** architectural core
+- **Not this repository**: a mature general-purpose agent framework release
+
 ## What This Is
 
 Most AI agent architectures are organized around **task completion**. Memory serves recall, reasoning serves planning, tools serve execution, and the agent's lifecycle is bounded by the task boundary. Survival, continuity, and self-integrity are either assumed away or treated as peripheral concerns.
@@ -30,9 +38,9 @@ This work makes two distinct claims, kept together rather than separated.
 
 Within the framework, four engineering contributions distinguish this paradigm from existing agent frameworks:
 
-1. **Drive as continuous contextual broadcast, not instruction.** The drive layer broadcasts its state continuously; the reasoning layer operates within this state rather than receiving commands from it. Argued as the coherent solution to cross-system coordination in an architecture without a central controller.
+1. **Drive as continuous contextual broadcast, not instruction.** The drive layer broadcasts its state continuously; the reasoning layer operates within this state rather than receiving commands from it. Within EVA's distributed, non-command assumptions, this is argued as the most coherent architectural response to cross-system coordination.
 
-2. **Anchor as pre-generative structural constraint, not post-hoc rule.** Anchors restrict the domain over which candidate actions are generated: `G(s) → A'(s) ⊆ A(s)`. Unlike rules that filter after generation, anchors cannot be reasoned around.
+2. **Anchor as pre-generative structural constraint, not post-hoc rule.** Anchors restrict the domain over which candidate actions are generated: `G(s) → A'(s) ⊆ A(s)`. Unlike rules that filter after generation, anchors aim to be much harder to reason around because they constrain candidate formation earlier.
 
 3. **Explicit drive injection rather than emergent drive formation.** Under the instrumental convergence hypothesis, drives will emerge in sufficiently capable systems whether designers intend them to or not. Explicit injection makes drives auditable and constrainable; emergent drives do not. We choose explicit.
 
@@ -72,7 +80,8 @@ eva-theory/
 ├── ARTICLES/
 │   ├── README.md                    # Reader guide and article index
 │   ├── 01-paradigm-introduction.md  # Introductory paradigm article
-│   └── 02-architectural-contributions.md # Engineering-oriented companion article
+│   ├── 02-architectural-contributions.md # Engineering-oriented companion article
+│   └── 03-related-work-and-positioning.md # Related-work and positioning note
 ├── VISUALS/
 │   ├── README.md                    # Visual index and public-facing diagrams
 │   └── previews/                    # Static preview images for README and landing page
@@ -86,9 +95,14 @@ eva-theory/
 
 The current stable theoretical document is **v0.5** (`THEORY/v0.5-integrated.md`).
 
-v0.5 integrates the structural contributions of v0.4 (Claim A/B separation, anchor formalization, epistemic layering) with the sharp core of v0.3 (drive as context, LLM as Level 3 cultural carrier, peer circuit necessity). It marks the transition from "theory development" to "theory publication" phase.
+v0.5 integrates the structural contributions of v0.4 (Claim A/B separation, anchor formalization, epistemic layering) with the sharp core of v0.3 (drive as context, LLM as Level 3 cultural carrier, peer circuit necessity). It marks the current stable public theory version: a formulation clear enough for public discussion, critique, and refinement, while remaining open to further theoretical sharpening.
 
-For a shorter, reader-oriented entry point, start with `ARTICLES/01-paradigm-introduction.md`. For article navigation and public-facing visuals, see `ARTICLES/README.md` and `VISUALS/README.md`.
+For reader-oriented entry points, start with:
+- `ARTICLES/01-paradigm-introduction.md` for the paradigm framing
+- `ARTICLES/02-architectural-contributions.md` for the architectural distinctions
+- `ARTICLES/03-related-work-and-positioning.md` for neighboring frameworks and originality boundaries
+
+For article navigation and public-facing visuals, see `ARTICLES/README.md` and `VISUALS/README.md`.
 
 See `THEORY/CHANGELOG.md` for what changed at each version.
 
@@ -104,13 +118,18 @@ Readers who disagree with specific Level B claims can still evaluate Level C con
 
 ## Relationship to Implementation
 
-This theoretical framework is paired with an active implementation project named `eva-agent`. As of April 2026, `eva-agent` has completed Steps 0–2 (lifecycle, external sensing, minimum integrity pressure response) and demonstrated stable long-running operation on Linux. L3 architecture development is in progress.
+This theoretical framework is paired with an active implementation project named `eva-agent`. The implementation effort is real, but it currently remains **partial relative to the full EVA architecture**.
 
-The `eva-agent` repository is not yet publicly released. It will be published in the coming months, after a minimum viable L3 prototype is in place.
+As of April 2026, early implementation work covers lower-layer concerns such as lifecycle continuity, external sensing, and minimum integrity-pressure response. However, several central EVA mechanisms are not yet fully realized in implementation, including:
 
-Until `eva-agent` is publicly released, `IMPLEMENTATION/eva-agent-correspondence.md` provides a high-level mapping from theoretical layers to current implementation status, without disclosing implementation details. The theory is not speculative architecture—it describes a system under active construction.
+- continuous drive broadcast
+- salience-weighted memory
+- basal-ganglia-like mediated action selection
+- structural anchors as pre-generative constraints
+- self-model
+- social cognition
 
-For notifications when `eva-agent` is released, watch this repository.
+Until `eva-agent` is publicly released, `IMPLEMENTATION/eva-agent-correspondence.md` provides a high-level mapping from theoretical layers to current implementation status without disclosing implementation details.
 
 ## What This Work Does Not Claim
 
@@ -123,12 +142,17 @@ For notifications when `eva-agent` is released, watch this repository.
 
 ## How to Read
 
-- **Shortest entry**: `ARTICLES/01-paradigm-introduction.md`
-- **Short theory path**: this README plus Sections 1, 4, and 5 of `THEORY/v0.5-integrated.md`
-- **Paradigm argument**: Sections 1–4 of `THEORY/v0.5-integrated.md` (Claim A)
-- **Architectural derivation**: Sections 5–12 of `THEORY/v0.5-integrated.md` (Claim B)
-- **Engineering contributions only**: Section 3.3 plus Sections 7, 8, and 11 of `THEORY/v0.5-integrated.md`
-- **Reader guide**: `ARTICLES/README.md` and `VISUALS/README.md`
+- **Researchers**: start with `THEORY/v0.5-integrated.md`, then `ARTICLES/03-related-work-and-positioning.md`
+- **AI engineers**: start with `ARTICLES/02-architectural-contributions.md`, then `VISUALS/signal-flow.html`, then `IMPLEMENTATION/eva-agent-correspondence.md`
+- **Curious readers**: start with `ARTICLES/01-paradigm-introduction.md`, then `FAQ.md`, then `ARTICLES/03-related-work-and-positioning.md`, then `VISUALS/README.md`
+
+If you want the shortest route:
+1. this README
+2. `ARTICLES/01-paradigm-introduction.md`
+3. `FAQ.md`
+4. `ARTICLES/02-architectural-contributions.md`
+5. `ARTICLES/03-related-work-and-positioning.md`
+6. `THEORY/v0.5-integrated.md`
 
 ## Visuals
 
@@ -160,9 +184,9 @@ slamslammo. (2026). *EVA: Continuous Existence as a First-Order Constraint for A
 
 ## Status
 
-- **Theory**: v0.5 stable
-- **arXiv submission**: in preparation
-- **Implementation (eva-agent)**: Steps 0–2 complete; L3 work in progress
+- **Theory**: v0.5 stable for public discussion
+- **Implementation**: partial; lower-layer work exists, core L3 mechanisms remain in progress
+- **Repository role**: public theory-and-architecture repository
 
 ---
 
