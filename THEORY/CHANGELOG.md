@@ -16,6 +16,19 @@ Non-theoretical housekeeping. Theory content unchanged.
 
 ---
 
+## v0.5 Pre-Publication Polish (2026-04-20)
+
+Small precision adjustments before public release. No substantive claims changed.
+
+- "Only coherent solution" strengthened to "most coherent under EVA constraints" throughout drive-as-context discussions (3 locations). Preserves architectural force while narrowing to EVA's specific coordination requirements.
+- Section 8.5 on LLM as Level 3 cultural carrier: boundary clarification added, explicitly not denying the role of model architecture or optimization in LLM capability.
+- Section 4.3: operational test added for distinguishing existence-centered from task-centered agents (three-condition negative test).
+- Section 14 correspondence table: implementation references abstracted for consistency with the pre-release disclosure level in `IMPLEMENTATION/eva-agent-correspondence.md`.
+
+The document is still called v0.5. These are precision refinements within v0.5, not a new version number.
+
+---
+
 ## v0.5 — Integrated Stable Version (2026-04-19)
 
 **Status**: Current stable version. Theoretical framework considered stable; further changes expected to be precision refinements rather than structural modifications.
