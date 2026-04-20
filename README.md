@@ -134,8 +134,8 @@ For notifications when `eva-agent` is released, watch this repository.
 
 The repository includes two public-facing visuals for readers who want a quicker architectural overview before or alongside the full theory text:
 
-- [Five-Layer Architecture Overview HTML](VISUALS/five-layer-overview.html) — static structure view of the five-layer architecture
-- [Signal-Flow Overview HTML](VISUALS/signal-flow.html) — dynamic flow view of sensing, drive broadcast, anchor restriction, and mediated release
+- [Five-Layer Architecture Overview HTML](VISUALS/five-layer-overview.html) — start here for the static map of the five-layer architecture
+- [Signal-Flow Overview HTML](VISUALS/signal-flow.html) — then use the same layered skeleton to see fast path, slow path, drive broadcast, anchor restriction, and mediated release in motion
 - [Visuals landing page source](index.html) — repository entry page linking both visuals and their source materials
 
 GitHub Pages is not currently available for this repository plan, so the previews below link to the repository HTML files rather than live rendered pages.

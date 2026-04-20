@@ -14,8 +14,8 @@ GitHub Pages is not currently available for this repository plan, so these links
 
 ## Current public-facing visuals
 
-- `five-layer-overview.html` — static structure view of the five-layer architecture, cross-layer anchors, and peer-circuit action selection
-- `signal-flow.html` — dynamic flow view showing fast path, slow path, drive broadcast, anchor restriction, and mediated release
+- `five-layer-overview.html` — start here for the static structure view of the five-layer architecture, cross-layer anchors, and peer-circuit action selection
+- `signal-flow.html` — then use the same architectural skeleton to see fast path, slow path, drive broadcast, anchor restriction, and mediated release as flow
 
 ## Supporting specifications
 
