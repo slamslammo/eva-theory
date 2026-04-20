@@ -16,20 +16,29 @@
       --text-dim: #8ea2ba;
       --text-soft: #6e8198;
 
-      --urgent: #fb7185;
-      --urgent-bg: rgba(251, 113, 133, 0.10);
-      --status: #38bdf8;
-      --status-bg: rgba(56, 189, 248, 0.10);
-      --drive: #fb923c;
-      --drive-bg: rgba(251, 146, 60, 0.10);
+      --l1: #38bdf8;
+      --l1-bg: rgba(56, 189, 248, 0.10);
+      --l2: #fb923c;
+      --l2-bg: rgba(251, 146, 60, 0.10);
+      --l3: #c084fc;
+      --l3-bg: rgba(192, 132, 252, 0.10);
+      --l4: #34d399;
+      --l4-bg: rgba(52, 211, 153, 0.08);
+      --l5: #94a3b8;
+      --l5-bg: rgba(148, 163, 184, 0.06);
       --anchor: #fbbf24;
-      --anchor-bg: rgba(251, 191, 36, 0.10);
-      --slow: #c084fc;
-      --slow-bg: rgba(192, 132, 252, 0.10);
+      --anchor-bg: rgba(251, 191, 36, 0.08);
       --peer: #67e8f9;
       --peer-bg: rgba(103, 232, 249, 0.08);
-      --good: #34d399;
-      --good-bg: rgba(52, 211, 153, 0.08);
+
+      --fast: #fb7185;
+      --fast-bg: rgba(251, 113, 133, 0.10);
+      --slow: #67e8f9;
+      --slow-bg: rgba(103, 232, 249, 0.08);
+      --drive: #fb923c;
+      --drive-bg: rgba(251, 146, 60, 0.10);
+      --execution: #34d399;
+      --execution-bg: rgba(52, 211, 153, 0.08);
 
       --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
       --radius: 16px;
@@ -57,7 +66,7 @@
     }
 
     .page {
-      max-width: 1240px;
+      max-width: 1180px;
       margin: 0 auto;
     }
 
@@ -112,18 +121,18 @@
       letter-spacing: 0.03em;
     }
 
-    .intro {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 18px;
-      margin-bottom: 24px;
-    }
-
     .panel {
       background: linear-gradient(180deg, rgba(20, 30, 45, 0.92), rgba(14, 21, 33, 0.96));
       border: 1px solid var(--border-soft);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 290px;
+      gap: 18px;
+      margin-bottom: 24px;
     }
 
     .caption,
@@ -174,169 +183,226 @@
     }
 
     .diagram {
-      padding: 18px;
-      overflow: hidden;
-    }
-
-    .flow-grid {
       display: grid;
-      grid-template-columns: 220px 130px minmax(460px, 1fr) 220px 180px;
-      grid-template-rows: auto auto;
-      gap: 14px;
-      align-items: stretch;
-      position: relative;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
     }
 
-    .flow-grid::before,
-    .flow-grid::after {
-      content: "";
+    .anchor-spine {
+      padding: 18px 16px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(251, 191, 36, 0.10), rgba(251, 191, 36, 0.03)),
+        var(--surface-3);
+    }
+
+    .anchor-spine::after {
+      content: "applies across all layers";
       position: absolute;
-      left: 220px;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+      top: 16px;
+      right: -26px;
+      transform: rotate(90deg);
+      transform-origin: top right;
+      color: rgba(251, 191, 36, 0.48);
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       pointer-events: none;
     }
 
-    .flow-grid::before { top: calc(50% - 7px); }
-    .flow-grid::after { top: calc(50% + 7px); }
-
-    .card {
-      border-radius: 14px;
-      border: 1px solid var(--border-soft);
-      background: linear-gradient(180deg, rgba(20, 30, 45, 0.94), rgba(14, 21, 33, 0.98));
-      padding: 16px;
-      position: relative;
-      min-height: 100%;
-    }
-
-    .card h2,
-    .card h3 {
-      margin: 0 0 8px;
-      letter-spacing: -0.01em;
-    }
-
-    .card h2 {
+    .anchor-spine h2 {
+      margin: 0 0 10px;
       font-size: 1.02rem;
+      color: var(--anchor);
     }
 
-    .card h3 {
-      font-size: 0.88rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-family: var(--mono);
-    }
-
-    .card p,
-    .card li {
+    .anchor-spine p {
+      margin: 0 0 14px;
       color: var(--text-dim);
       font-size: 0.92rem;
     }
 
-    .card ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .card li + li {
-      margin-top: 6px;
-    }
-
-    .entry {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-    }
-
-    .entry h2 { color: var(--status); }
-
-    .signal-stack {
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .signal-box {
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 12px;
-      background: var(--surface);
-    }
-
-    .signal-box.urgent {
-      border-color: rgba(251, 113, 133, 0.24);
-      background: var(--urgent-bg);
-    }
-
-    .signal-box.status {
-      border-color: rgba(56, 189, 248, 0.24);
-      background: var(--status-bg);
-    }
-
-    .signal-tag {
-      display: inline-flex;
-      align-items: center;
+    .spine-line {
+      width: 4px;
       border-radius: 999px;
-      padding: 4px 8px;
-      font-size: 0.72rem;
-      font-family: var(--mono);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      border: 1px solid currentColor;
-    }
-
-    .signal-box.urgent .signal-tag { color: #ffb8c7; }
-    .signal-box.status .signal-tag { color: #9edcff; }
-
-    .entry-note {
-      margin-top: 12px;
-      border-top: 1px solid var(--border-soft);
-      padding-top: 12px;
-      color: var(--text-soft);
-      font-size: 0.84rem;
-    }
-
-    .split {
-      grid-column: 2;
-      grid-row: 1 / span 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      background:
-        linear-gradient(180deg, rgba(251, 113, 133, 0.04), rgba(192, 132, 252, 0.05)),
-        var(--surface-3);
-    }
-
-    .split-inner {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      grid-template-rows: 1fr auto 1fr;
-      align-items: center;
-      justify-items: center;
-      padding: 18px 10px;
+      background: linear-gradient(180deg, rgba(251, 191, 36, 0.95), rgba(251, 191, 36, 0.22));
+      margin: 18px auto;
+      min-height: 620px;
       position: relative;
+      box-shadow: 0 0 18px rgba(251, 191, 36, 0.14);
     }
 
-    .split-inner::before,
-    .split-inner::after {
+    .spine-line::before,
+    .spine-line::after {
       content: "";
       position: absolute;
       left: 50%;
-      width: 38px;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.20), rgba(255,255,255,0));
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      background: rgba(251, 191, 36, 0.16);
     }
 
-    .split-inner::before { top: 27%; transform: translateX(-10px) rotate(-22deg); }
-    .split-inner::after { bottom: 27%; transform: translateX(-10px) rotate(22deg); }
+    .spine-line::before { top: 22%; }
+    .spine-line::after { bottom: 22%; }
 
-    .split-badge,
-    .lane-badge {
+    .anchor-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .anchor-chip {
+      border: 1px solid rgba(251, 191, 36, 0.22);
+      background: rgba(251, 191, 36, 0.08);
+      color: #f6d275;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-family: var(--mono);
+      letter-spacing: 0.02em;
+    }
+
+    .stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .section-band {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--border);
+      background: rgba(16, 23, 34, 0.92);
+      color: var(--text-soft);
+      justify-self: start;
+    }
+
+    .section-band.core {
+      border-color: rgba(103, 232, 249, 0.22);
+      color: var(--peer);
+      background: rgba(103, 232, 249, 0.08);
+    }
+
+    .section-band.extension {
+      border-color: rgba(148, 163, 184, 0.18);
+      color: #b3c0cf;
+      background: rgba(148, 163, 184, 0.08);
+    }
+
+    .layer {
+      border-radius: var(--radius);
+      border: 1px solid var(--border-soft);
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(20, 30, 45, 0.92), rgba(13, 19, 29, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .layer.dimmed {
+      opacity: 0.78;
+    }
+
+    .layer-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-soft);
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .layer-header::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .layer-left {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .layer-tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      border-radius: 8px;
+      padding: 4px 8px;
+      border: 1px solid currentColor;
+      background: rgba(255,255,255,0.04);
+      text-transform: uppercase;
+    }
+
+    .layer-title {
+      margin: 0;
+      font-size: 1.02rem;
+      letter-spacing: -0.01em;
+    }
+
+    .layer-status {
+      font-size: 0.76rem;
+      font-family: var(--mono);
+      color: var(--text-soft);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .layer-body {
+      padding: 16px 18px 18px;
+      color: var(--text-dim);
+      font-size: 0.95rem;
+    }
+
+    .layer-body p {
+      margin: 0 0 12px;
+    }
+
+    .layer.l1 .layer-tag,
+    .layer.l1 .layer-title { color: var(--l1); }
+    .layer.l1 .layer-header { background: var(--l1-bg); }
+
+    .layer.l2 .layer-tag,
+    .layer.l2 .layer-title { color: var(--l2); }
+    .layer.l2 .layer-header { background: var(--l2-bg); }
+
+    .layer.l3 .layer-tag,
+    .layer.l3 .layer-title { color: var(--l3); }
+    .layer.l3 .layer-header { background: var(--l3-bg); }
+
+    .layer.l4 .layer-tag,
+    .layer.l4 .layer-title { color: var(--l4); }
+    .layer.l4 .layer-header { background: var(--l4-bg); }
+
+    .layer.l5 .layer-tag,
+    .layer.l5 .layer-title { color: var(--l5); }
+    .layer.l5 .layer-header { background: var(--l5-bg); }
+
+    .path-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       border-radius: 999px;
       padding: 5px 9px;
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-family: var(--mono);
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -345,129 +411,211 @@
       color: var(--text-soft);
     }
 
-    .split-core {
+    .path-chip.fast {
+      border-color: rgba(251, 113, 133, 0.40);
+      color: #ffd4dc;
+      background: linear-gradient(180deg, rgba(251, 113, 133, 0.18), rgba(251, 113, 133, 0.10));
+      box-shadow: inset 0 0 0 1px rgba(251, 113, 133, 0.08);
+    }
+
+    .path-chip.slow {
+      border-color: rgba(103, 232, 249, 0.34);
+      color: #ddfbff;
+      background: linear-gradient(180deg, rgba(103, 232, 249, 0.16), rgba(103, 232, 249, 0.08));
+      box-shadow: inset 0 0 0 1px rgba(103, 232, 249, 0.06);
+    }
+
+    .flow-shell {
       display: grid;
-      justify-items: center;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .flow-main {
+      min-width: 0;
+    }
+
+    .flow-callouts {
+      display: flex;
       gap: 8px;
-      color: var(--text-dim);
-      font-size: 0.84rem;
-      text-align: center;
-    }
-
-    .split-node {
-      width: 46px;
-      height: 46px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.04);
-      display: grid;
-      place-items: center;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
-    }
-
-    .fast-card {
-      grid-column: 3;
-      grid-row: 1;
-      border-color: rgba(251, 113, 133, 0.18);
-      background: linear-gradient(180deg, rgba(251, 113, 133, 0.10), rgba(20, 30, 45, 0.96));
-    }
-
-    .fast-card .lane-badge {
-      color: #ffc0cd;
-      border-color: rgba(251, 113, 133, 0.22);
-      background: rgba(251, 113, 133, 0.08);
+      flex-wrap: wrap;
       margin-bottom: 12px;
     }
 
-    .fast-note {
-      border: 1px dashed rgba(251, 113, 133, 0.22);
-      border-radius: 12px;
-      padding: 10px 12px;
-      margin-top: 12px;
-      color: #ffcad4;
-      background: rgba(251, 113, 133, 0.05);
-      font-size: 0.86rem;
+    .stage-grid {
+      display: grid;
+      gap: 10px;
     }
 
-    .slow-zone {
-      grid-column: 3;
-      grid-row: 2;
-      border-color: rgba(251, 146, 60, 0.18);
-      background:
-        linear-gradient(180deg, rgba(251, 146, 60, 0.08), rgba(192, 132, 252, 0.08)),
-        linear-gradient(180deg, rgba(20, 30, 45, 0.96), rgba(14, 21, 33, 0.98));
+    .stage-grid.l2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stage-grid.l3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      position: relative;
+    }
+
+    .drive-field {
+      grid-column: 1 / span 2;
+      border-radius: 14px;
+      border: 1px dashed rgba(251, 146, 60, 0.26);
+      background: linear-gradient(90deg, rgba(251, 146, 60, 0.10), rgba(251, 146, 60, 0.04));
+      padding: 10px 12px;
+      margin-bottom: 2px;
+      color: #ffd0aa;
+      font-size: 0.84rem;
+      position: relative;
       overflow: hidden;
     }
 
-    .slow-zone::before {
-      content: "Drive broadcast";
+    .drive-field::after {
+      content: "contextual broadcast, not command";
       position: absolute;
-      top: 16px;
-      right: 16px;
+      top: 10px;
+      right: 12px;
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255, 208, 170, 0.76);
+    }
+
+    .stage {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 12px;
+      position: relative;
+      min-height: 100%;
+    }
+
+    .stage h3 {
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      font-family: var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .step-order {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
       border-radius: 999px;
-      padding: 5px 9px;
-      font-size: 0.7rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-size: 0.68rem;
+      letter-spacing: 0;
+      flex: 0 0 auto;
+    }
+
+    .stage p,
+    .stage li {
+      margin: 0;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .stage ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .stage li + li {
+      margin-top: 6px;
+    }
+
+    .stage.reflex {
+      border-color: rgba(251, 113, 133, 0.22);
+      background: rgba(251, 113, 133, 0.08);
+    }
+
+    .stage.reflex h3 { color: #ffc2cf; }
+
+    .stage.drive {
+      border-color: rgba(251, 146, 60, 0.22);
+      background: rgba(251, 146, 60, 0.08);
+    }
+
+    .stage.drive h3 { color: #ffd0aa; }
+
+    .stage.candidate {
+      border-color: rgba(192, 132, 252, 0.22);
+      background: rgba(192, 132, 252, 0.08);
+    }
+
+    .stage.candidate h3 { color: #dec2ff; }
+
+    .stage.memory {
+      border-color: rgba(103, 232, 249, 0.18);
+      background: rgba(103, 232, 249, 0.06);
+    }
+
+    .stage.memory h3 { color: #bdf7ff; }
+
+    .stage.peer {
+      border-color: rgba(103, 232, 249, 0.24);
+      background: rgba(103, 232, 249, 0.08);
+    }
+
+    .stage.peer h3 { color: var(--peer); }
+
+    .stage-label {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 0.68rem;
       font-family: var(--mono);
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #ffd0aa;
-      border: 1px solid rgba(251, 146, 60, 0.22);
-      background: rgba(251, 146, 60, 0.12);
+      margin-bottom: 8px;
+      border: 1px solid var(--border);
+      background: rgba(16, 23, 34, 0.92);
+      color: var(--text-soft);
     }
 
-    .slow-zone::after {
-      content: "contextual field, not command";
-      position: absolute;
-      top: 48px;
-      right: 16px;
-      color: rgba(251, 208, 170, 0.72);
-      font-size: 0.72rem;
+    .stage-label.anchor {
+      border-color: rgba(251, 191, 36, 0.22);
+      color: #f6d275;
+      background: rgba(251, 191, 36, 0.08);
+    }
+
+    .stage-label.peer {
+      border-color: rgba(103, 232, 249, 0.22);
+      color: #bdf7ff;
+      background: rgba(103, 232, 249, 0.08);
+    }
+
+    .stage-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      color: var(--text-soft);
+      font-size: 0.74rem;
       font-family: var(--mono);
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
-    .slow-zone h2 {
-      color: var(--slow);
-      margin-right: 220px;
+    .stage-arrow::before {
+      content: "→";
+      color: rgba(255,255,255,0.48);
+      font-size: 0.92rem;
     }
 
-    .drive-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 12px 0 14px;
-    }
-
-    .drive-chip {
-      border-radius: 999px;
-      border: 1px solid rgba(251, 146, 60, 0.20);
-      background: rgba(251, 146, 60, 0.10);
-      color: #ffd4b3;
-      font-size: 0.74rem;
-      font-family: var(--mono);
-      padding: 5px 9px;
-      letter-spacing: 0.03em;
-    }
-
-    .slow-sequence {
-      display: grid;
-      grid-template-columns: 0.85fr 1fr 1fr;
-      gap: 10px;
-      align-items: stretch;
-      position: relative;
-    }
-
-    .step {
-      border-radius: 12px;
-      padding: 12px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 36, 0.72);
-      position: relative;
-      min-height: 100%;
-    }
-
-    .step:not(:last-child)::after {
+    .stage-grid.l3 .stage:not(:last-child)::after {
       content: "→";
       position: absolute;
       right: -16px;
@@ -479,140 +627,140 @@
       z-index: 2;
     }
 
-    .step h3 {
-      margin-bottom: 8px;
-    }
-
-    .step.anchor {
-      border-color: rgba(251, 191, 36, 0.26);
-      background: var(--anchor-bg);
-    }
-
-    .step.anchor h3 { color: var(--anchor); }
-
-    .step.candidate {
-      border-color: rgba(192, 132, 252, 0.22);
-      background: rgba(192, 132, 252, 0.08);
-    }
-
-    .step.candidate h3,
-    .step.evaluate h3 { color: #dec2ff; }
-
-    .step.evaluate {
-      border-color: rgba(103, 232, 249, 0.20);
-      background: rgba(103, 232, 249, 0.06);
-    }
-
-    .slow-note {
-      margin-top: 12px;
-      color: #d3bcf6;
-      font-size: 0.86rem;
-    }
-
-    .selection {
-      grid-column: 4;
-      grid-row: 1 / span 2;
-      border-color: rgba(103, 232, 249, 0.22);
-      background: linear-gradient(180deg, rgba(103, 232, 249, 0.10), rgba(20, 30, 45, 0.96));
-    }
-
-    .selection h2 { color: var(--peer); }
-
-    .selection-badge {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 5px 9px;
-      font-size: 0.72rem;
-      font-family: var(--mono);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin: 2px 0 12px;
-      border: 1px solid rgba(103, 232, 249, 0.22);
-      background: rgba(103, 232, 249, 0.08);
-      color: #bdf7ff;
-    }
-
-    .gate {
-      margin-top: 14px;
-      border-radius: 12px;
-      border: 1px dashed rgba(103, 232, 249, 0.22);
-      background: rgba(103, 232, 249, 0.05);
-      padding: 12px;
-    }
-
-    .gate strong {
-      display: block;
-      color: var(--text);
-      margin-bottom: 4px;
-      font-size: 0.85rem;
-    }
-
-    .execution {
-      grid-column: 5;
-      grid-row: 1 / span 2;
-      border-color: rgba(52, 211, 153, 0.18);
-      background: linear-gradient(180deg, rgba(52, 211, 153, 0.10), rgba(20, 30, 45, 0.96));
-    }
-
-    .execution h2 { color: var(--good); }
-
-    .exec-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 12px 0 14px;
-    }
-
-    .exec-chip {
-      border-radius: 999px;
-      border: 1px solid rgba(52, 211, 153, 0.18);
-      background: rgba(52, 211, 153, 0.08);
-      color: #baf7e3;
-      font-size: 0.74rem;
-      font-family: var(--mono);
-      padding: 5px 9px;
-      letter-spacing: 0.03em;
-    }
-
-    .execution-note {
-      margin-top: 12px;
-      border-top: 1px solid rgba(52, 211, 153, 0.14);
-      padding-top: 12px;
-      color: #b8eedb;
-      font-size: 0.86rem;
-    }
-
-    .feedback {
-      margin-top: 14px;
-      margin-left: auto;
-      width: calc(220px + 180px + 14px);
+    .execution-card {
       border-radius: 14px;
-      border: 1px solid var(--border-soft);
-      background: linear-gradient(180deg, rgba(20, 30, 45, 0.88), rgba(15, 23, 36, 0.94));
-      padding: 14px 16px;
-      color: var(--text-dim);
-      font-size: 0.9rem;
+      border: 1px solid rgba(52, 211, 153, 0.18);
+      background: linear-gradient(180deg, rgba(52, 211, 153, 0.10), rgba(20, 30, 45, 0.96));
+      padding: 14px;
       position: relative;
     }
 
-    .feedback::before {
-      content: "learning feedback";
+    .execution-card::before {
+      content: "";
       position: absolute;
-      top: -11px;
-      left: 18px;
-      padding: 4px 8px;
+      left: -12px;
+      top: 26px;
+      width: 12px;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(52, 211, 153, 0.9), rgba(52, 211, 153, 0.2));
+    }
+
+    .execution-card h3 {
+      margin: 0 0 8px;
+      font-size: 0.84rem;
+      font-family: var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--execution);
+    }
+
+    .execution-card p,
+    .execution-card li {
+      margin: 0;
+      color: #baeeda;
+      font-size: 0.88rem;
+    }
+
+    .execution-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .execution-card li + li {
+      margin-top: 6px;
+    }
+
+    .execution-card.fast::before {
+      background: linear-gradient(90deg, rgba(251, 113, 133, 0.9), rgba(251, 113, 133, 0.2));
+    }
+
+    .execution-card.fast h3 { color: #ffd2db; }
+
+    .execution-path {
+      display: inline-flex;
+      align-items: center;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(15, 23, 36, 0.96);
-      color: var(--text-soft);
+      padding: 4px 8px;
       font-size: 0.68rem;
       font-family: var(--mono);
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      margin-bottom: 10px;
+      border: 1px solid rgba(52, 211, 153, 0.18);
+      background: rgba(52, 211, 153, 0.08);
+      color: #baf7e3;
     }
 
-    .feedback strong { color: var(--text); }
+    .execution-path.fast {
+      border-color: rgba(251, 113, 133, 0.22);
+      background: rgba(251, 113, 133, 0.08);
+      color: #ffc4d0;
+    }
+
+    .feedback-strip {
+      margin-top: 12px;
+      border-radius: 12px;
+      border: 1px dashed rgba(103, 232, 249, 0.20);
+      background: rgba(103, 232, 249, 0.05);
+      padding: 10px 12px;
+      color: #bceef5;
+      font-size: 0.84rem;
+    }
+
+    .signal-entry {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .signal-box {
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 12px;
+      background: var(--surface);
+    }
+
+    .signal-box.fast {
+      border-color: rgba(251, 113, 133, 0.24);
+      background: rgba(251, 113, 133, 0.08);
+    }
+
+    .signal-box.slow {
+      border-color: rgba(103, 232, 249, 0.28);
+      background: rgba(103, 232, 249, 0.10);
+    }
+
+    .signal-title {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      font-family: var(--mono);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      border: 1px solid currentColor;
+    }
+
+    .signal-box.fast .signal-title { color: #ffc0cd; }
+    .signal-box.slow .signal-title { color: #c8f8ff; }
+
+    .split-note {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .entry-note {
+      margin-top: 12px;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 12px;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+    }
 
     .footer-note {
       margin-top: 24px;
@@ -626,67 +774,33 @@
 
     .footer-note strong { color: var(--text); }
 
-    @media (max-width: 1120px) {
-      .intro {
+    @media (max-width: 1100px) {
+      .intro,
+      .diagram,
+      .flow-shell,
+      .stage-grid.l2,
+      .stage-grid.l3,
+      .signal-entry {
         grid-template-columns: 1fr;
       }
 
-      .flow-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+      .anchor-spine::after {
+        position: static;
+        display: inline-block;
+        transform: none;
+        margin-top: 10px;
+        color: rgba(251, 191, 36, 0.6);
       }
 
-      .flow-grid::before,
-      .flow-grid::after {
-        display: none;
-      }
-
-      .entry,
-      .split,
-      .fast-card,
-      .slow-zone,
-      .selection,
-      .execution {
-        grid-column: auto;
-        grid-row: auto;
-      }
-
-      .split {
+      .spine-line {
         min-height: 120px;
       }
 
-      .split-inner {
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 1fr;
+      .drive-field {
+        grid-column: auto;
       }
 
-      .split-inner::before,
-      .split-inner::after {
-        top: 50%;
-        bottom: auto;
-      }
-
-      .split-inner::before {
-        left: 28%;
-        transform: translateY(-14px) rotate(-18deg);
-      }
-
-      .split-inner::after {
-        left: auto;
-        right: 28%;
-        transform: translateY(14px) rotate(18deg);
-      }
-
-      .slow-zone h2 {
-        margin-right: 0;
-        margin-top: 36px;
-      }
-
-      .slow-sequence {
-        grid-template-columns: 1fr;
-      }
-
-      .step:not(:last-child)::after {
+      .stage-grid.l3 .stage:not(:last-child)::after {
         content: "↓";
         right: auto;
         left: 50%;
@@ -695,29 +809,14 @@
         transform: translateX(-50%);
       }
 
-      .feedback {
-        width: 100%;
+      .execution-card::before {
+        display: none;
       }
     }
 
     @media (max-width: 720px) {
       body {
         padding: 24px 14px 40px;
-      }
-
-      .diagram {
-        padding: 14px;
-      }
-
-      .slow-zone::before,
-      .slow-zone::after {
-        position: static;
-        display: inline-flex;
-        margin-bottom: 8px;
-      }
-
-      .slow-zone::after {
-        display: block;
       }
     }
   </style>
@@ -726,16 +825,16 @@
   <div class="page">
     <section class="hero">
       <div>
-        <p class="eyebrow">public-facing EVA visual</p>
+        <p class="eyebrow">eva visual · signal flow</p>
         <h1>EVA — Signal Flow Overview</h1>
         <p>
-          A public-facing dynamic flow map aligned with <code>v0.5</code>. This diagram emphasizes that EVA is not a single serial
-          pipeline: threats can drive a fast reflex path while slower deliberation proceeds under contextual drive
-          broadcast, anchor-bounded candidate generation, and mediated release.
+          A signal-flow view aligned with <code>v0.5</code>. Using the same five-layer architecture as the overview, it shows how
+          urgent and non-urgent signals move through EVA: fast reflex through L1–L2, slower deliberation through L1–L2–L3,
+          drive broadcast into candidate generation, and execution only after mediated release.
         </p>
         <div class="meta">
-          <span class="pill">dynamic flow view</span>
-          <span class="pill">drive as context</span>
+          <span class="pill">architecture-aligned flow view</span>
+          <span class="pill">fast vs slow path</span>
           <span class="pill">mediated release</span>
         </div>
       </div>
@@ -744,132 +843,222 @@
     <section class="intro">
       <div class="panel caption">
         <strong>How to read this diagram.</strong>
-        Start at <strong>Sensing</strong>, where urgent and non-urgent signals enter together. Then follow the split:
-        an urgent signal can drive a fast reflex path, while slower candidate generation proceeds in parallel. The
-        shaded slow-path zone is important: <strong>drive is a contextual broadcast</strong>, not a command arrow. Anchors
-        act before candidate generation, and nothing reaches <strong>Execution</strong> until a separate
-        <strong>Selection / release</strong> stage opens the gate.
+        Read it as the flow companion to the five-layer overview. The stack stays the same: L5 at the top, L1 at the
+        bottom, anchor spine on the left. Start at <strong>L1 sensing</strong>, where signals enter and split. Urgent input can
+        take the <strong>fast path</strong> through L1–L2 and reach execution quickly. Non-urgent input follows the
+        <strong>slow path</strong> through L1–L2–L3, where candidate generation is anchor-bounded, drive enters as
+        contextual broadcast, and release happens only inside L3's peer circuit.
       </div>
       <aside class="panel legend">
         <h2>Visual emphasis</h2>
         <ul>
-          <li><span class="dot" style="background: var(--urgent);"></span><span><strong style="color: var(--text);">Fast path</strong> handles urgent pressure without waiting for full deliberation.</span></li>
-          <li><span class="dot" style="background: var(--drive);"></span><span><strong style="color: var(--text);">Drive broadcast</strong> surrounds the slow path as context rather than issuing a command.</span></li>
-          <li><span class="dot" style="background: var(--anchor);"></span><span><strong style="color: var(--text);">Anchor restriction</strong> appears before candidate generation, not only at the end.</span></li>
-          <li><span class="dot" style="background: var(--peer);"></span><span><strong style="color: var(--text);">Selection / release</strong> is distinct from reasoning and keeps default inhibition in place.</span></li>
+          <li><span class="dot" style="background: var(--fast);"></span><span><strong style="color: var(--text);">Fast path</strong> overlays L1 → L2 → execution for urgent reflex response.</span></li>
+          <li><span class="dot" style="background: var(--slow);"></span><span><strong style="color: var(--text);">Slow path</strong> overlays L1 → L2 → L3 → mediated release → execution.</span></li>
+          <li><span class="dot" style="background: var(--drive);"></span><span><strong style="color: var(--text);">Drive broadcast</strong> is shown as a contextual field into candidate generation, not a command arrow.</span></li>
+          <li><span class="dot" style="background: var(--anchor);"></span><span><strong style="color: var(--text);">Anchor restriction</strong> appears before candidate generation rather than as a final filter.</span></li>
         </ul>
       </aside>
     </section>
 
-    <section class="diagram panel">
-      <div class="flow-grid">
-        <section class="card entry">
-          <h2>Sensing</h2>
-          <p>Signals enter from the agent and environment, then get differentiated before the full slower path unfolds.</p>
-          <div class="signal-stack">
-            <div class="signal-box urgent">
-              <div class="signal-tag">urgent / threat</div>
-              <p>Integrity-relevant input with priority pressure for immediate response.</p>
-            </div>
-            <div class="signal-box status">
-              <div class="signal-tag">status / background</div>
-              <p>Ongoing state information, context, and slower-changing conditions.</p>
-            </div>
-          </div>
-          <div class="entry-note">Classification pressure appears here before the architecture settles into a single deliberative rhythm.</div>
-        </section>
+    <section class="diagram">
+      <aside class="panel anchor-spine">
+        <h2>Anchor System</h2>
+        <p>
+          Cross-layer structural constraint. The same anchor spine remains present here as in the five-layer overview, but this
+          time it visibly matters at the point of candidate generation.
+        </p>
+        <div class="anchor-list">
+          <span class="anchor-chip">constitutional anchors</span>
+          <span class="anchor-chip">integrity-preserving</span>
+          <span class="anchor-chip">continuity-bounded</span>
+          <span class="anchor-chip">pre-generative restriction</span>
+        </div>
+        <div class="spine-line" aria-hidden="true"></div>
+        <p>
+          The restriction shows up most clearly at L3: anchors bound what can be generated before the candidate set is formed.
+        </p>
+      </aside>
 
-        <section class="card split">
-          <div class="split-inner">
-            <div class="split-badge" style="color:#ffc0cd;border-color:rgba(251,113,133,0.22);background:rgba(251,113,133,0.08);">fast path</div>
-            <div class="split-core">
-              <div class="split-node">↗</div>
-              <div>parallel routing</div>
-            </div>
-            <div class="split-badge" style="color:#dec2ff;border-color:rgba(192,132,252,0.22);background:rgba(192,132,252,0.08);">slow path</div>
-          </div>
-        </section>
+      <div class="stack">
+        <div class="section-band extension">Downstream extensions</div>
 
-        <section class="card fast-card">
-          <div class="lane-badge">Fast path</div>
-          <h2>Reflexive response handling</h2>
-          <ul>
-            <li>immediate response priority under threat</li>
-            <li>does not wait for full candidate-space exploration</li>
-            <li>coexists with, rather than replaces, slower deliberation</li>
-          </ul>
-          <div class="fast-note">Urgent pressure can reach release priority quickly while the slower path continues in parallel.</div>
-        </section>
-
-        <section class="card slow-zone">
-          <div class="lane-badge" style="color:#dec2ff;border-color:rgba(192,132,252,0.22);background:rgba(192,132,252,0.08);margin-bottom:12px;">Slow path</div>
-          <h2>Adaptive deliberation under current drive context</h2>
-          <p>Slower but richer processing. The whole zone is embedded in a motivational field rather than being told what to do by a single command source.</p>
-          <div class="drive-row">
-            <span class="drive-chip">continuity pressure</span>
-            <span class="drive-chip">resource pressure</span>
-            <span class="drive-chip">integrity pressure</span>
-          </div>
-          <div class="slow-sequence">
-            <div class="step anchor">
-              <h3>Anchor restriction</h3>
-              <p>Constraint enters before or at the boundary of candidate-space formation.</p>
+        <section class="layer l5 dimmed">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L5</span>
+              <h2 class="layer-title">Social Cognition</h2>
             </div>
-            <div class="step candidate">
-              <h3>Candidate generation</h3>
-              <p>Produces options within the anchor-bounded space rather than from an unrestricted action set.</p>
-            </div>
-            <div class="step evaluate">
-              <h3>Evaluation</h3>
-              <p>Assesses candidates under current drive context, memory, and sensed state.</p>
-            </div>
-          </div>
-          <div class="slow-note">The slow path should be read as <strong>contextual modulation</strong>, not instruction following from the drive layer.</div>
-        </section>
-
-        <section class="card selection">
-          <h2>Selection / release</h2>
-          <div class="selection-badge">default inhibition</div>
-          <p>Fast-path urgency and slow-path candidates converge here, but release remains mediated by a distinct selection function.</p>
-          <ul>
-            <li>reasoning produces candidates, not execution</li>
-            <li>a separate circuit mediates what is actually released</li>
-            <li>default inhibition holds until release occurs</li>
-          </ul>
-          <div class="gate">
-            <strong>Release gate</strong>
-            Opens only when a candidate or reflexive tendency is selected for actual execution.
+            <div class="layer-status">shown for architectural continuity</div>
+          </header>
+          <div class="layer-body">
+            <p>
+              Kept visible for continuity with the five-layer overview, but not where the main fast/slow-path explanation sits.
+            </p>
           </div>
         </section>
 
-        <section class="card execution">
-          <h2>Execution</h2>
-          <p>Only after mediated release does the architecture cross the edge into environmental action.</p>
-          <div class="exec-row">
-            <span class="exec-chip">tool use</span>
-            <span class="exec-chip">environmental action</span>
-            <span class="exec-chip">external behavior</span>
+        <section class="layer l4 dimmed">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L4</span>
+              <h2 class="layer-title">Self-Model</h2>
+            </div>
+            <div class="layer-status">shown, but not emphasized here</div>
+          </header>
+          <div class="layer-body">
+            <p>
+              Kept visible so the reader sees the same architecture, but dimmed because the main flow story concentrates in
+              L1–L3.
+            </p>
           </div>
-          <ul>
-            <li>not <code>sensing → reasoning → action</code></li>
-            <li>action follows selection, not candidate formation alone</li>
-          </ul>
-          <div class="execution-note">Execution is the endpoint of a gated process, not the automatic continuation of cognition.</div>
         </section>
-      </div>
 
-      <div class="feedback">
-        <strong>Outcome feedback.</strong>
-        If included, learning remains secondary in the composition: outcomes can feed back toward the selection system as a
-        reward-prediction or updating signal without changing the main message that flow is parallel, contextual, and gated.
+        <div class="section-band core">Strongest current theoretical core</div>
+
+        <section class="layer l3">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L3</span>
+              <h2 class="layer-title">Adaptive Deliberation</h2>
+            </div>
+            <div class="layer-status">slow path becomes explicit here</div>
+          </header>
+          <div class="layer-body">
+            <div class="flow-shell">
+              <div class="flow-main">
+                <div class="flow-callouts">
+                  <span class="path-chip slow">slow path in L3</span>
+                </div>
+                <p>
+                  The slow path becomes explicit here: anchor-bounded candidate generation, drive context from L2, and peer-circuit
+                  release before execution.
+                </p>
+                <div class="stage-grid l3">
+                  <div class="drive-field">Drive broadcast from L2 surrounds candidate formation as state, pressure, and motivational context.</div>
+                  <div class="stage candidate">
+                    <div class="stage-label anchor">pre-generative restriction</div>
+                    <h3><span class="step-order">1</span>Candidate generation</h3>
+                    <p>Options form inside the anchor-bounded space.</p>
+                    <div class="stage-arrow">slow path enters from L2</div>
+                  </div>
+                  <div class="stage memory">
+                    <h3><span class="step-order">2</span>Memory + evaluation</h3>
+                    <p>Current state, pressure history, and memory weigh the candidate set.</p>
+                  </div>
+                  <div class="stage peer">
+                    <div class="stage-label peer">independent peer circuit</div>
+                    <h3><span class="step-order">3</span>Selection / release</h3>
+                    <p>Default inhibition holds until the peer circuit releases one candidate.</p>
+                    <div class="stage-arrow">default inhibition released</div>
+                  </div>
+                </div>
+                <div class="feedback-strip">
+                  <strong style="color: var(--text);">RPE / learning signal.</strong>
+                  Outcome feedback returns here toward memory and the peer circuit as a secondary learning path rather than the main flow.
+                </div>
+              </div>
+              <aside class="execution-card">
+                <div class="execution-path">slow path to execution</div>
+                <h3>Released action</h3>
+                <p>Execution remains outside L3 and is reached only after peer-circuit release.</p>
+                <ul>
+                  <li>candidate generation alone is insufficient</li>
+                  <li>release is the gate to actual action</li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer l2">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L2</span>
+              <h2 class="layer-title">Drive Layer</h2>
+            </div>
+            <div class="layer-status">both fast and slow path traverse L2</div>
+          </header>
+          <div class="layer-body">
+            <div class="flow-shell">
+              <div class="flow-main">
+                <div class="flow-callouts">
+                  <span class="path-chip fast">fast path in L2</span>
+                  <span class="path-chip slow">slow path in L2</span>
+                </div>
+                <p>
+                  L2 is where the routes diverge. Urgent pressure can trigger reflex handling here; the slow path updates drive
+                  state and broadcasts that state upward into L3 as context.
+                </p>
+                <div class="stage-grid l2">
+                  <div class="stage reflex">
+                    <div class="stage-label">urgent signal</div>
+                    <h3>Reflex route</h3>
+                    <p>Threat-level input can gain rapid response priority here, without waiting for L3.</p>
+                    <div class="stage-arrow">reflex response → execution</div>
+                  </div>
+                  <div class="stage drive">
+                    <div class="stage-label">slow path state update</div>
+                    <h3>Drive update + broadcast</h3>
+                    <p>Current pressure is updated here, then broadcast into L3 as context rather than command.</p>
+                    <div class="stage-arrow">broadcast into L3 candidate generation</div>
+                  </div>
+                </div>
+              </div>
+              <aside class="execution-card fast">
+                <div class="execution-path fast">fast path to execution</div>
+                <h3>Reflex action</h3>
+                <p>Urgent input can exit here from L2 without traversing L3.</p>
+                <ul>
+                  <li>short route for low-latency response</li>
+                  <li>coexists with, rather than replaces, the slow path</li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer l1">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L1</span>
+              <h2 class="layer-title">Homeostatic Sensing</h2>
+            </div>
+            <div class="layer-status">entry and split point for both paths</div>
+          </header>
+          <div class="layer-body">
+            <p>
+              Signals enter at L1, where immediate integrity pressure is separated from slower background state. The split starts
+              here, but both routes remain inside the same layered architecture.
+            </p>
+            <div class="signal-entry">
+              <div class="signal-box fast">
+                <div class="signal-title">urgent signal</div>
+                <p>Threat-level or integrity-relevant input that can route toward rapid reflex handling in L2.</p>
+              </div>
+              <div class="signal-box slow">
+                <div class="signal-title">status / background signal</div>
+                <p>Non-urgent state information that continues into L2 and then L3 for slower candidate generation and release.</p>
+              </div>
+            </div>
+            <div class="split-note">
+              <span class="path-chip fast">L1 → L2 → execution</span>
+              <span class="path-chip slow">L1 → L2 → L3 → release → execution</span>
+            </div>
+            <div class="entry-note">
+              The split begins at sensing, but the two routes are still part of one architecture: a fast reflex path for urgency and a
+              slower deliberative path for anchor-bounded candidate generation.
+            </div>
+          </div>
+        </section>
       </div>
     </section>
 
     <section class="footer-note panel">
       <strong>Caption.</strong>
-      Signal-flow view of EVA. Threats can trigger a fast reflex path while deliberation proceeds in parallel on a slower path.
-      Drive acts as a contextual broadcast rather than a command stream, anchors restrict candidate generation structurally,
-      and execution occurs only after mediated release.
+      Signal-flow view of EVA, mapped onto the five-layer architecture. Urgent signals can trigger a fast reflex path through
+      L1–L2 while non-urgent signals follow the slower deliberative path through L1–L2–L3. Drive broadcasts as context from
+      L2 into L3's candidate generation; anchors restrict that generation structurally before candidates are produced; execution
+      occurs only after mediated release within L3's peer circuit.
     </section>
   </div>
 </body>

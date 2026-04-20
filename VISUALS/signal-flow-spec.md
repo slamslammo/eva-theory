@@ -2,17 +2,13 @@
 
 This file defines the intended content and reading logic for a reader-facing EVA signal-flow diagram.
 
-## Purpose
+## Diagram type
 
-This diagram is the **dynamic flow view** of EVA.
+A **layered signal-flow overlay** on the five-layer architecture.
 
-Its job is to make visible the parts of the architecture that are hardest to understand from prose alone:
+The diagram shares its architectural skeleton with the five-layer overview, but overlays signal flow: fast reflex path through L1–L2, slow deliberative path through L1–L2–L3, drive broadcast from L2 into L3, anchor restriction acting at candidate generation, mediated release inside L3's peer circuit, and execution only after release.
 
-- the dual-path structure
-- the difference between fast reflex and slow deliberation
-- drive broadcast as context rather than command
-- anchor restriction prior to candidate action generation
-- mediated action release rather than direct execution
+It is designed to be read alongside the five-layer overview rather than as an independent flow chart.
 
 ## Audience
 
@@ -109,13 +105,17 @@ sensing → candidate generation under context and constraint → mediated selec
 
 ### Main layout
 
-A left-to-right or top-to-bottom flow is acceptable, but the following relationships must remain clear:
+Top-to-bottom layout, L5 at top through L1 at bottom, matching the direction of `five-layer-overview.html`.
 
-- sensing entry
-- split into fast and slow path
-- drive broadcast intersecting the slower path as context
-- anchor restriction acting before candidate generation
-- independent selection/release before execution
+The layered skeleton should be visually recognizable as the same architecture shown in the five-layer overview. Signal flow is overlaid on that skeleton rather than replacing it.
+
+The following relationships must remain clear:
+
+- L1 sensing entry at the bottom of the layer stack
+- split into fast reflex path (L1 → L2 → execution) and slow deliberative path (L1 → L2 → L3 → mediated release → execution)
+- drive broadcast from L2 into L3's candidate generation, rendered differently from command-style arrows to convey contextual influence rather than instruction
+- anchor spine on the left, consistent with the five-layer overview, with visible restriction at L3's candidate generation
+- independent selection/release inside L3 before execution
 
 ### Visual priority hierarchy
 
@@ -149,6 +149,11 @@ Recommended labels include:
 - "Selection / release"
 - "Default inhibition"
 - "Execution"
+- "urgent signal"
+- "reflex response"
+- "pre-generative restriction"
+- "contextual broadcast, not command"
+- "default inhibition released"
 
 ## Labels to avoid
 
@@ -172,6 +177,8 @@ This diagram pairs most directly with:
 - `ARTICLES/02-architectural-contributions.md` Sections 3–5 and 7
 
 It can also serve as a more intuitive companion for parts of `THEORY/v0.5-integrated.md` Section 12.
+
+This diagram also pairs directly with `VISUALS/five-layer-overview.html` — the two visuals share the same architectural skeleton. The five-layer overview provides the static structural map; the signal-flow view adds dynamic flow on top of that same structure. Readers are encouraged to read them together.
 
 ## What this diagram should not try to do
 
