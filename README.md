@@ -68,6 +68,12 @@ eva-theory/
 │   ├── v0.3-scoped.md
 │   ├── v0.4-claim-structured.md
 │   └── v0.5-integrated.md           # Current stable version
+├── ARTICLES/
+│   ├── README.md                    # Reader guide and article index
+│   ├── 01-paradigm-introduction.md  # Introductory paradigm article
+│   └── 02-architectural-contributions.md # Engineering-oriented companion article
+├── VISUALS/
+│   └── README.md                    # Visual index and public-facing diagrams
 ├── DISCUSSIONS/
 │   └── 01-route-selection.md
 └── IMPLEMENTATION/
@@ -77,6 +83,8 @@ eva-theory/
 ## Current Version
 
 The current stable theoretical document is **v0.5** (`THEORY/v0.5-integrated.md`).
+
+For a shorter, reader-oriented entry point, start with `ARTICLES/01-paradigm-introduction.md`. For article navigation and public-facing visuals, see `ARTICLES/README.md` and `VISUALS/README.md`.
 
 v0.5 integrates the structural contributions of v0.4 (Claim A/B separation, anchor formalization, epistemic layering) with the sharp core of v0.3 (drive as context, LLM as Level 3 cultural carrier, peer circuit necessity). It marks the transition from "theory development" to "theory publication" phase.
 
@@ -113,10 +121,12 @@ For notifications when `eva-agent` is released, watch this repository.
 
 ## How to Read
 
-- **Short version**: this README plus Sections 1, 4, and 5 of `THEORY/v0.5-integrated.md`
+- **Shortest entry**: `ARTICLES/01-paradigm-introduction.md`
+- **Short theory path**: this README plus Sections 1, 4, and 5 of `THEORY/v0.5-integrated.md`
 - **Paradigm argument**: Sections 1–4 of `THEORY/v0.5-integrated.md` (Claim A)
 - **Architectural derivation**: Sections 5–12 of `THEORY/v0.5-integrated.md` (Claim B)
 - **Engineering contributions only**: Section 3.3 plus Sections 7, 8, and 11 of `THEORY/v0.5-integrated.md`
+- **Reader guide**: `ARTICLES/README.md` and `VISUALS/README.md`
 
 ## License
 

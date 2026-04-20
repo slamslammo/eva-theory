@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVA — Five-Layer Architecture Overview</title>
+  <style>
+    :root {
+      --bg: #0a0f16;
+      --surface: #101722;
+      --surface-2: #141e2d;
+      --surface-3: #0f1724;
+      --border: #223148;
+      --border-soft: #1a2435;
+      --text: #d7e3f4;
+      --text-dim: #8ea2ba;
+      --text-soft: #6e8198;
+
+      --l1: #38bdf8;
+      --l1-bg: rgba(56, 189, 248, 0.10);
+      --l2: #fb923c;
+      --l2-bg: rgba(251, 146, 60, 0.10);
+      --l3: #c084fc;
+      --l3-bg: rgba(192, 132, 252, 0.10);
+      --l4: #34d399;
+      --l4-bg: rgba(52, 211, 153, 0.08);
+      --l5: #94a3b8;
+      --l5-bg: rgba(148, 163, 184, 0.06);
+      --anchor: #fbbf24;
+      --anchor-bg: rgba(251, 191, 36, 0.08);
+      --peer: #67e8f9;
+      --peer-bg: rgba(103, 232, 249, 0.08);
+      --danger: #fb7185;
+
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      --radius: 16px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(192, 132, 252, 0.08), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.55;
+      padding: 40px 20px 72px;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: flex;
+      gap: 18px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--text-soft);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 2.5vw, 2.35rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      max-width: 840px;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 760px;
+      color: var(--text-dim);
+      font-size: 0.97rem;
+    }
+
+    .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .pill {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-dim);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-family: var(--mono);
+      letter-spacing: 0.03em;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(20, 30, 45, 0.92), rgba(14, 21, 33, 0.96));
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .caption {
+      padding: 18px 20px;
+      color: var(--text-dim);
+    }
+
+    .caption strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .legend {
+      padding: 18px 20px;
+    }
+
+    .legend h2 {
+      margin: 0 0 12px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-soft);
+      font-family: var(--mono);
+    }
+
+    .legend ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .legend li {
+      display: grid;
+      grid-template-columns: 12px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--text-dim);
+      font-size: 0.92rem;
+    }
+
+    .legend .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      margin-top: 3px;
+    }
+
+    .diagram {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .anchor-spine {
+      padding: 18px 16px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(251, 191, 36, 0.10), rgba(251, 191, 36, 0.03)),
+        var(--surface-3);
+    }
+
+    .anchor-spine::after {
+      content: "applies across all layers";
+      position: absolute;
+      top: 16px;
+      right: -26px;
+      transform: rotate(90deg);
+      transform-origin: top right;
+      color: rgba(251, 191, 36, 0.48);
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .anchor-spine h2 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+      color: var(--anchor);
+    }
+
+    .anchor-spine p {
+      margin: 0 0 14px;
+      color: var(--text-dim);
+      font-size: 0.92rem;
+    }
+
+    .spine-line {
+      width: 4px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(251, 191, 36, 0.95), rgba(251, 191, 36, 0.22));
+      margin: 18px auto;
+      min-height: 560px;
+      position: relative;
+      box-shadow: 0 0 18px rgba(251, 191, 36, 0.14);
+    }
+
+    .spine-line::before,
+    .spine-line::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      background: rgba(251, 191, 36, 0.16);
+    }
+
+    .spine-line::before { top: 18%; }
+    .spine-line::after { bottom: 18%; }
+
+    .anchor-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .anchor-chip {
+      border: 1px solid rgba(251, 191, 36, 0.22);
+      background: rgba(251, 191, 36, 0.08);
+      color: #f6d275;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-family: var(--mono);
+      letter-spacing: 0.02em;
+    }
+
+    .stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .section-band {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--border);
+      background: rgba(16, 23, 34, 0.92);
+      color: var(--text-soft);
+      justify-self: start;
+    }
+
+    .section-band.core {
+      border-color: rgba(103, 232, 249, 0.22);
+      color: var(--peer);
+      background: rgba(103, 232, 249, 0.08);
+    }
+
+    .section-band.extension {
+      border-color: rgba(148, 163, 184, 0.18);
+      color: #b3c0cf;
+      background: rgba(148, 163, 184, 0.08);
+    }
+
+    .layer {
+      border-radius: var(--radius);
+      border: 1px solid var(--border-soft);
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(20, 30, 45, 0.92), rgba(13, 19, 29, 0.98));
+      box-shadow: var(--shadow);
+    }
+
+    .layer.dimmed {
+      opacity: 0.78;
+    }
+
+    .layer-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-soft);
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .layer-header::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .layer-left {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .layer-tag {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      border-radius: 8px;
+      padding: 4px 8px;
+      border: 1px solid currentColor;
+      background: rgba(255,255,255,0.04);
+      text-transform: uppercase;
+    }
+
+    .layer-title {
+      margin: 0;
+      font-size: 1.02rem;
+      letter-spacing: -0.01em;
+    }
+
+    .layer-status {
+      font-size: 0.76rem;
+      font-family: var(--mono);
+      color: var(--text-soft);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .layer-body {
+      padding: 16px 18px 18px;
+      color: var(--text-dim);
+      font-size: 0.95rem;
+    }
+
+    .layer-body p {
+      margin: 0 0 14px;
+    }
+
+    .core-note {
+      border: 1px solid rgba(103, 232, 249, 0.16);
+      background: rgba(103, 232, 249, 0.06);
+      color: #b8f6ff;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      margin-bottom: 14px;
+    }
+
+    .modules,
+    .subgrid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .modules.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .modules.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .module {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 12px 13px;
+    }
+
+    .module h3 {
+      margin: 0 0 6px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-family: var(--mono);
+      color: var(--text);
+    }
+
+    .module p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-dim);
+    }
+
+    .module ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .module li + li { margin-top: 6px; }
+
+    .layer.l1 .layer-tag,
+    .layer.l1 .layer-title { color: var(--l1); }
+    .layer.l1 .layer-header { background: var(--l1-bg); }
+
+    .layer.l2 .layer-tag,
+    .layer.l2 .layer-title { color: var(--l2); }
+    .layer.l2 .layer-header { background: var(--l2-bg); }
+
+    .layer.l3 .layer-tag,
+    .layer.l3 .layer-title { color: var(--l3); }
+    .layer.l3 .layer-header { background: var(--l3-bg); }
+
+    .layer.l4 .layer-tag,
+    .layer.l4 .layer-title { color: var(--l4); }
+    .layer.l4 .layer-header { background: var(--l4-bg); }
+
+    .layer.l5 .layer-tag,
+    .layer.l5 .layer-title { color: var(--l5); }
+    .layer.l5 .layer-header { background: var(--l5-bg); }
+
+    .peer-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 12px;
+      align-items: stretch;
+      margin-top: 8px;
+      position: relative;
+    }
+
+    .peer-layout::before {
+      content: "parallel, not nested";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(103, 232, 249, 0.18);
+      background: rgba(14, 21, 33, 0.92);
+      color: var(--peer);
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .reasoning-box {
+      border: 1px solid rgba(192, 132, 252, 0.22);
+      background: rgba(192, 132, 252, 0.08);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: inset 0 0 0 1px rgba(192, 132, 252, 0.04);
+    }
+
+    .reasoning-box h3,
+    .peer-box h3,
+    .tool-edge h3 {
+      margin: 0 0 10px;
+      font-size: 0.84rem;
+      font-family: var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .reasoning-box h3 { color: #dfc4ff; }
+
+    .subgrid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .submodule {
+      background: rgba(15, 23, 36, 0.7);
+      border: 1px solid rgba(192, 132, 252, 0.12);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .submodule strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+      font-size: 0.82rem;
+    }
+
+    .submodule span {
+      display: block;
+      color: var(--text-dim);
+      font-size: 0.84rem;
+    }
+
+    .peer-box {
+      border: 1px solid rgba(103, 232, 249, 0.22);
+      background: var(--peer-bg);
+      border-radius: 14px;
+      padding: 14px;
+      position: relative;
+      box-shadow: inset 0 0 0 1px rgba(103, 232, 249, 0.04);
+    }
+
+    .peer-box h3 { color: var(--peer); }
+
+    .peer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(103, 232, 249, 0.22);
+      color: var(--peer);
+      font-size: 0.72rem;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      background: rgba(103, 232, 249, 0.08);
+    }
+
+    .peer-box ul { margin: 0; padding-left: 18px; }
+    .peer-box li + li { margin-top: 6px; }
+
+    .peer-note {
+      margin-top: 12px;
+      border: 1px dashed rgba(103, 232, 249, 0.22);
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: #b6edf6;
+      font-size: 0.86rem;
+      background: rgba(103, 232, 249, 0.04);
+    }
+
+    .tool-edge {
+      margin-top: 12px;
+      border: 1px solid rgba(251, 113, 133, 0.18);
+      background: rgba(251, 113, 133, 0.06);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .tool-edge h3 { color: #ffb0c0; }
+
+    .tool-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .tool-chip {
+      border: 1px solid rgba(251, 113, 133, 0.18);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 0.76rem;
+      font-family: var(--mono);
+      color: #ffc9d4;
+      background: rgba(15, 23, 36, 0.5);
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-soft);
+      background: linear-gradient(180deg, rgba(20, 30, 45, 0.88), rgba(15, 23, 36, 0.94));
+      color: var(--text-dim);
+      font-size: 0.92rem;
+    }
+
+    .footer-note strong { color: var(--text); }
+
+    @media (max-width: 980px) {
+      .intro,
+      .diagram,
+      .peer-layout,
+      .subgrid,
+      .modules.cols-2,
+      .modules.cols-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .anchor-spine::after {
+        position: static;
+        display: inline-block;
+        transform: none;
+        margin-top: 10px;
+        color: rgba(251, 191, 36, 0.6);
+      }
+
+      .spine-line {
+        min-height: 120px;
+      }
+
+      .peer-layout::before {
+        position: static;
+        transform: none;
+        justify-self: start;
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">public-facing EVA visual</p>
+        <h1>EVA — Five-Layer Architecture Overview</h1>
+        <p>
+          A public-facing static structure map aligned with <code>v0.5</code>. This overview highlights the strongest current theoretical core (L1–L3),
+          the anchor system as a cross-layer structure, and action selection as a peer circuit rather than a reasoning sub-module.
+        </p>
+        <div class="meta">
+          <span class="pill">static structure view</span>
+          <span class="pill">cross-layer anchors</span>
+          <span class="pill">peer-circuit selection</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="panel caption">
+        <strong>How to read this diagram.</strong>
+        Start with the five layers in the main stack. Then read the anchor spine as a structure that applies
+        across layers rather than inside a single module. Finally, focus on Layer 3: EVA treats the reasoning
+        core and basal ganglia analog as distinct but interacting structures, because candidate generation and
+        action release should not collapse into a single process.
+      </div>
+      <aside class="panel legend">
+        <h2>Visual emphasis</h2>
+        <ul>
+          <li><span class="dot" style="background: var(--peer);"></span><span><strong style="color: var(--text);">L1–L3</strong> are the strongest current theoretical core.</span></li>
+          <li><span class="dot" style="background: var(--l4);"></span><span><strong style="color: var(--text);">L4–L5</strong> remain part of the architecture but carry weaker derivational support.</span></li>
+          <li><span class="dot" style="background: var(--anchor);"></span><span><strong style="color: var(--text);">Anchors</strong> are shown as cross-layer structural constraints, not a rule box.</span></li>
+          <li><span class="dot" style="background: var(--danger);"></span><span><strong style="color: var(--text);">Execution</strong> happens only after mediated release.</span></li>
+          <li><span class="dot" style="background: var(--l3);"></span><span><strong style="color: var(--text);">Selection</strong> sits beside reasoning, not inside it.</span></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="diagram">
+      <aside class="panel anchor-spine">
+        <h2>Anchor System</h2>
+        <p>
+          Cross-layer structural constraint. Anchors restrict what the architecture can generate or release;
+          they are not post-hoc rules attached at the end.
+        </p>
+        <div class="anchor-list">
+          <span class="anchor-chip">constitutional anchors</span>
+          <span class="anchor-chip">integrity-preserving</span>
+          <span class="anchor-chip">continuity-bounded</span>
+          <span class="anchor-chip">sustainability-oriented</span>
+          <span class="anchor-chip">identity-shaping (later)</span>
+        </div>
+        <div class="spine-line" aria-hidden="true"></div>
+        <p>
+          The same anchor system applies across reflex, deliberation, and later self-model development.
+        </p>
+      </aside>
+
+      <div class="stack">
+        <div class="section-band extension">Downstream extensions</div>
+        <section class="layer l5 dimmed">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L5</span>
+              <h2 class="layer-title">Social Cognition</h2>
+            </div>
+            <div class="layer-status">downstream extension</div>
+          </header>
+          <div class="layer-body">
+            <p>
+              Social reasoning about conspecifics, coordination, and other-agent modeling. Included for architectural completeness,
+              but dependent on deployment context and currently weaker in derivational support than L1–L3.
+            </p>
+          </div>
+        </section>
+
+        <section class="layer l4 dimmed">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L4</span>
+              <h2 class="layer-title">Self-Model</h2>
+            </div>
+            <div class="layer-status">emerges from history</div>
+          </header>
+          <div class="layer-body">
+            <p>
+              Slow-moving self-representation shaped by behavioral history, boundary conditions, and accumulated costs.
+              Present in the architecture, but expected to emerge only after sustained L3 operation.
+            </p>
+          </div>
+        </section>
+
+        <div class="section-band core">Strongest current theoretical core</div>
+
+        <section class="layer l3">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L3</span>
+              <h2 class="layer-title">Adaptive Deliberation</h2>
+            </div>
+            <div class="layer-status">strongest current core</div>
+          </header>
+          <div class="layer-body">
+            <div class="core-note">
+              Essential function: <strong>non-design-time information carriage and use</strong>. This is where EVA's strongest
+              structural claims concentrate.
+            </div>
+
+            <div class="modules cols-2">
+              <div class="module">
+                <h3>Memory structure</h3>
+                <ul>
+                  <li>salience-weighted episodic memory</li>
+                  <li>semantic memory and skill library</li>
+                  <li>history shaped by pressure, not neutral recall alone</li>
+                </ul>
+              </div>
+              <div class="module">
+                <h3>L3 role</h3>
+                <ul>
+                  <li>uses information not available at initialization</li>
+                  <li>supports within-lifetime adaptation</li>
+                  <li>integrates sensing, drive context, and memory</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="peer-layout">
+              <div class="reasoning-box">
+                <h3>Reasoning Core</h3>
+                <div class="subgrid">
+                  <div class="submodule">
+                    <strong>Working memory</strong>
+                    <span>current context and symbolic reasoning; the architectural position where an LLM substrate can operate</span>
+                  </div>
+                  <div class="submodule">
+                    <strong>Value judgment</strong>
+                    <span>candidate evaluation weighted by current drive state rather than abstract utility alone</span>
+                  </div>
+                  <div class="submodule">
+                    <strong>Conflict detection</strong>
+                    <span>detects competing pressures and routes resolution under anchor-bounded constraints</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="peer-box">
+                <div class="peer-badge">independent peer circuit</div>
+                <h3>Basal Ganglia Analog</h3>
+                <ul>
+                  <li>default inhibition rather than action-readiness</li>
+                  <li>selective release of candidate actions</li>
+                  <li>reward-prediction-error-based updating</li>
+                  <li>habit crystallization alongside deliberate action</li>
+                </ul>
+                <div class="peer-note">
+                  Shown beside the reasoning core because EVA treats selection as a <strong>parallel architectural function</strong>,
+                  not a small sub-module inside reasoning. The core does not directly become action.
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-edge">
+              <h3>Execution edge</h3>
+              <p>
+                Environmental action happens only after mediated release. Reasoning produces candidates; the peer circuit gates what is actually executed under default inhibition.
+              </p>
+              <div class="tool-row">
+                <span class="tool-chip">tool use</span>
+                <span class="tool-chip">environmental action</span>
+                <span class="tool-chip">selected release only</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer l2">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L2</span>
+              <h2 class="layer-title">Drive Layer</h2>
+            </div>
+            <div class="layer-status">strongest current core</div>
+          </header>
+          <div class="layer-body">
+            <p>
+              Internal pressure structure that shapes cognition continuously. Drives are treated as contextual broadcast rather than command,
+              and reflexive response remains available under threat.
+            </p>
+            <div class="modules cols-2">
+              <div class="module">
+                <h3>Drive structure</h3>
+                <ul>
+                  <li>continuous internal pressure</li>
+                  <li>explicitly injected rather than left opaque</li>
+                  <li>shared motivational environment for cognition</li>
+                </ul>
+              </div>
+              <div class="module">
+                <h3>Reflexive function</h3>
+                <ul>
+                  <li>immediate response under threat</li>
+                  <li>parallel to slower deliberation</li>
+                  <li>cannot be simply overridden by higher reasoning</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="layer l1">
+          <header class="layer-header">
+            <div class="layer-left">
+              <span class="layer-tag">L1</span>
+              <h2 class="layer-title">Homeostatic Sensing</h2>
+            </div>
+            <div class="layer-status">strongest current core</div>
+          </header>
+          <div class="layer-body">
+            <p>
+              The architecture's sensing substrate for viability-relevant state. Homeostatic sensing is where the system learns not just what is happening,
+              but what kind of state it is in and whether immediate integrity-preserving response is required.
+            </p>
+            <div class="modules cols-3">
+              <div class="module">
+                <h3>State sensing</h3>
+                <p>current condition of the agent and its operational environment</p>
+              </div>
+              <div class="module">
+                <h3>Rate sensing</h3>
+                <p>metabolic or burn-rate awareness rather than static state alone</p>
+              </div>
+              <div class="module">
+                <h3>Signal classification</h3>
+                <p>threat / status / background distinction before full interpretation</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="footer-note panel">
+      <strong>Caption.</strong>
+      High-level structural overview of EVA. The architecture is organized around homeostatic sensing, drive structure,
+      and adaptive deliberation as the strongest current core, with anchors acting across layers and action selection mediated by a peer circuit rather than collapsed into reasoning.
+    </section>
+  </div>
+</body>
+</html>
