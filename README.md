@@ -1,7 +1,9 @@
 # eva-theory
 
 <p align="center">
-  <img src="eva_theory.png" alt="EVA Theory identifier" width="280" />
+  <a href="index.html">
+    <img src="eva_theory.png" alt="EVA Theory identifier" width="280" />
+  </a>
 </p>
 
 **EVA: An architecture for agents centered on continuous existence.**
