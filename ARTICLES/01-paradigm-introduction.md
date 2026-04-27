@@ -1,5 +1,9 @@
 # Why Continuous Existence Should Be the First Question for AI Agents
 
+<p align="center">
+  <img src="../eva_theory.png" alt="EVA Theory identifier" width="240" />
+</p>
+
 *A paradigm introduction for the EVA framework.*
 
 ---

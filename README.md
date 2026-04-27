@@ -1,5 +1,9 @@
 # eva-theory
 
+<p align="center">
+  <img src="eva_theory.png" alt="EVA Theory identifier" width="280" />
+</p>
+
 **EVA: An architecture for agents centered on continuous existence.**
 
 This repository contains the theoretical framework for EVA. The reference implementation (`eva-agent`) is under active development and will be published separately. See the "Relationship to Implementation" section below for the current correspondence and timeline.

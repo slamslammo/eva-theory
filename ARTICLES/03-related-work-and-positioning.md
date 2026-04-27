@@ -1,5 +1,9 @@
 # Related Work and Positioning
 
+<p align="center">
+  <img src="../eva_theory.png" alt="EVA Theory identifier" width="240" />
+</p>
+
 *A concise reader-facing note on how EVA relates to adjacent agent and research traditions.*
 
 ---

@@ -1,5 +1,9 @@
 # Four Architectural Choices That Distinguish EVA from Current Agent Frameworks
 
+<p align="center">
+  <img src="../eva_theory.png" alt="EVA Theory identifier" width="240" />
+</p>
+
 *An engineering-oriented companion to the EVA paradigm introduction.*
 
 ---
