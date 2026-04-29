@@ -1,14 +1,8 @@
 # eva-theory
 
-<p align="center">
-  <a href="index.html">
-    <img src="eva_theory.png" alt="EVA Theory identifier" width="280" />
-  </a>
-</p>
-
 **EVA: An architecture for agents centered on continuous existence.**
 
-This repository contains the theoretical framework for EVA. The reference implementation (`eva-agent`) is under active development and will be published separately. See the "Relationship to Implementation" section below for the current correspondence and timeline.
+This repository contains the theoretical framework for EVA. The public companion implementation project is [`eva-agent`](https://github.com/slamslammo/eva-agent). This repository stays focused on theory, scope, and public-facing architectural explanation.
 
 ---
 
@@ -16,7 +10,6 @@ This repository contains the theoretical framework for EVA. The reference implem
 
 - **Repository type**: theory-first public research repository
 - **Current theory status**: stable enough for public discussion at **v0.5**
-- **Current implementation status**: **partial**
 - **Strongest current theoretical support**: the continuity-first framing and the **L1–L3** architectural core
 - **Not this repository**: a mature general-purpose agent framework release
 
@@ -74,6 +67,7 @@ For such systems, this architecture is unnecessary overhead.
 ```text
 eva-theory/
 ├── README.md                        # This file
+├── FAQ.md                           # Reader-facing clarifications
 ├── LICENSE                          # CC BY 4.0
 ├── index.html                       # Repository entry page for public-facing visuals
 ├── THEORY/
@@ -91,10 +85,8 @@ eva-theory/
 ├── VISUALS/
 │   ├── README.md                    # Visual index and public-facing diagrams
 │   └── previews/                    # Static preview images for README and landing page
-├── DISCUSSIONS/
-│   └── 01-route-selection.md
 └── IMPLEMENTATION/
-    └── eva-agent-correspondence.md  # Map from theory to reference implementation
+    └── eva-agent-correspondence.md  # Theory/implementation bridge
 ```
 
 ## Current Version
@@ -124,18 +116,11 @@ Readers who disagree with specific Level B claims can still evaluate Level C con
 
 ## Relationship to Implementation
 
-This theoretical framework is paired with an active implementation project named `eva-agent`. The implementation effort is real, but it currently remains **partial relative to the full EVA architecture**.
+EVA also has a public companion implementation project named [`eva-agent`](https://github.com/slamslammo/eva-agent).
 
-As of April 2026, early implementation work covers lower-layer concerns such as lifecycle continuity, external sensing, and minimum integrity-pressure response. However, several central EVA mechanisms are not yet fully realized in implementation, including:
+This repository does not track implementation progress layer-by-layer. Its role is narrower: to define the architecture, scope, terminology, and public-facing explanation of the theory.
 
-- continuous drive broadcast
-- salience-weighted memory
-- basal-ganglia-like mediated action selection
-- structural anchors as pre-generative constraints
-- self-model
-- social cognition
-
-Until `eva-agent` is publicly released, `IMPLEMENTATION/eva-agent-correspondence.md` provides a high-level mapping from theoretical layers to current implementation status without disclosing implementation details.
+For implementation-specific design, current status, and roadmap details, see [`eva-agent`](https://github.com/slamslammo/eva-agent). Inside this repository, `IMPLEMENTATION/eva-agent-correspondence.md` now serves as a lightweight bridge between the theory and the implementation project.
 
 ## What This Work Does Not Claim
 
@@ -149,7 +134,7 @@ Until `eva-agent` is publicly released, `IMPLEMENTATION/eva-agent-correspondence
 ## How to Read
 
 - **Researchers**: start with `THEORY/v0.5-integrated.md`, then `ARTICLES/03-related-work-and-positioning.md`
-- **AI engineers**: start with `ARTICLES/02-architectural-contributions.md`, then `VISUALS/signal-flow.html`, then `IMPLEMENTATION/eva-agent-correspondence.md`
+- **AI engineers**: start with `ARTICLES/02-architectural-contributions.md`, then `VISUALS/signal-flow.html`, then `IMPLEMENTATION/eva-agent-correspondence.md`; implementation specifics live in [`eva-agent`](https://github.com/slamslammo/eva-agent)
 - **Curious readers**: start with `ARTICLES/01-paradigm-introduction.md`, then `FAQ.md`, then `ARTICLES/03-related-work-and-positioning.md`, then `VISUALS/README.md`
 
 If you want the shortest route:
@@ -187,12 +172,6 @@ This work is released under [CC BY 4.0](https://creativecommons.org/licenses/by/
 
 If you reference this work, please cite as:
 slamslammo. (2026). *EVA: Continuous Existence as a First-Order Constraint for Agents*. eva-theory v0.5. https://github.com/slamslammo/eva-theory
-
-## Status
-
-- **Theory**: v0.5 stable for public discussion
-- **Implementation**: partial; lower-layer work exists, core L3 mechanisms remain in progress
-- **Repository role**: public theory-and-architecture repository
 
 ---
 

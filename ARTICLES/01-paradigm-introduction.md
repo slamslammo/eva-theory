@@ -1,9 +1,5 @@
 # Why Continuous Existence Should Be the First Question for AI Agents
 
-<p align="center">
-  <img src="../eva_theory.png" alt="EVA Theory identifier" width="240" />
-</p>
-
 *A paradigm introduction for the EVA framework.*
 
 ---
@@ -200,7 +196,7 @@ If the starting question here seems worth taking seriously, there are several na
 
 **For repository navigation and reader-facing materials**: see `ARTICLES/README.md` and `VISUALS/README.md`.
 
-**For implementation status**: read `IMPLEMENTATION/eva-agent-correspondence.md` for the current high-level mapping from theory to the unreleased reference implementation.
+**For implementation-specific design and current status**: see the public companion project [`eva-agent`](https://github.com/slamslammo/eva-agent). For the repository-local bridge between theory and implementation, see `IMPLEMENTATION/eva-agent-correspondence.md`.
 
 ---
 

@@ -1,14 +1,10 @@
 # Four Architectural Choices That Distinguish EVA from Current Agent Frameworks
 
-<p align="center">
-  <img src="../eva_theory.png" alt="EVA Theory identifier" width="240" />
-</p>
-
 *An engineering-oriented companion to the EVA paradigm introduction.*
 
 ---
 
-**About this article.** This article is a companion to `ARTICLES/01-paradigm-introduction.md`. It does not replace the full theory document in `THEORY/v0.5-integrated.md`, and it does not disclose implementation details of the unreleased `eva-agent` reference implementation. Its narrower purpose is to explain why EVA arrives at a specific set of architectural choices once its problem definition is taken seriously.
+**About this article.** This article is a companion to `ARTICLES/01-paradigm-introduction.md`. It does not replace the full theory document in `THEORY/v0.5-integrated.md`, and it does not attempt to track implementation-specific design from the companion [`eva-agent`](https://github.com/slamslammo/eva-agent) project. Its narrower purpose is to explain why EVA arrives at a specific set of architectural choices once its problem definition is taken seriously.
 
 The article assumes the reader already understands contemporary agent systems at a high level: task loops, tool use, memory modules, planning, and LLM-centered orchestration. The question here is not whether those systems work. The question is what changes when the architecture is designed for a different problem.
 

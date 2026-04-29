@@ -18,4 +18,4 @@ This directory holds public-facing writing that explains EVA at different depths
 4. `VISUALS/README.md`
 5. `THEORY/v0.5-integrated.md`
 
-For implementation status only, see `IMPLEMENTATION/eva-agent-correspondence.md`.
+For implementation-specific design and current status, see the public companion project [`eva-agent`](https://github.com/slamslammo/eva-agent). For the repository-local boundary note, see `IMPLEMENTATION/eva-agent-correspondence.md`.

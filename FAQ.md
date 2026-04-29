@@ -30,12 +30,10 @@ Because a stronger model is not the same thing as a stronger agent architecture.
 
 An LLM can improve reasoning and access to human cumulative knowledge, but EVA argues that persistent agents also need their own drive structure, continuity-relevant memory, mediated action selection, and anchors. Under EVA, those architectural pieces are more fundamental than model scaling alone.
 
-For an engineering-oriented entry, see `ARTICLES/02-architectural-contributions.md` and `IMPLEMENTATION/eva-agent-correspondence.md`.
+For an engineering-oriented entry, see `ARTICLES/02-architectural-contributions.md`.
 
 ## 5. What is implemented today?
 
-The theory is relatively stable at **v0.5**, but the implementation remains **partial**.
+The theory is relatively stable at **v0.5**. Implementation work continues in the public companion project [`eva-agent`](https://github.com/slamslammo/eva-agent).
 
-Early implementation work covers lower-layer concerns such as lifecycle continuity, sensing, and minimum integrity-pressure response. Central EVA mechanisms that are not yet fully realized include continuous drive broadcast, salience-weighted memory, mediated action selection, structural anchors, self-model, and social cognition.
-
-For the current implementation map, see `IMPLEMENTATION/eva-agent-correspondence.md`.
+This repository does not track implementation progress layer-by-layer. For current implementation status and implementation-specific design notes, see [`eva-agent`](https://github.com/slamslammo/eva-agent). For the repository-local bridge between theory and implementation, see `IMPLEMENTATION/eva-agent-correspondence.md`.
