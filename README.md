@@ -1,5 +1,11 @@
 # eva-theory
 
+<p align="center">
+  <a href="index.html">
+    <img src="eva_theory.png" alt="EVA Theory identifier" width="280" />
+  </a>
+</p>
+
 **EVA: An architecture for agents centered on continuous existence.**
 
 This repository contains the theoretical framework for EVA. The public companion implementation project is [`eva-agent`](https://github.com/slamslammo/eva-agent). This repository stays focused on theory, scope, and public-facing architectural explanation.
@@ -66,27 +72,14 @@ For such systems, this architecture is unnecessary overhead.
 
 ```text
 eva-theory/
-├── README.md                        # This file
-├── FAQ.md                           # Reader-facing clarifications
-├── LICENSE                          # CC BY 4.0
-├── index.html                       # Repository entry page for public-facing visuals
-├── THEORY/
-│   ├── CHANGELOG.md                 # Version-by-version substantive changes
-│   ├── v0.1-initial.md
-│   ├── v0.2-expanded.md
-│   ├── v0.3-scoped.md
-│   ├── v0.4-claim-structured.md
-│   └── v0.5-integrated.md           # Current stable version
-├── ARTICLES/
-│   ├── README.md                    # Reader guide and article index
-│   ├── 01-paradigm-introduction.md  # Introductory paradigm article
-│   ├── 02-architectural-contributions.md # Engineering-oriented companion article
-│   └── 03-related-work-and-positioning.md # Related-work and positioning note
-├── VISUALS/
-│   ├── README.md                    # Visual index and public-facing diagrams
-│   └── previews/                    # Static preview images for README and landing page
-└── IMPLEMENTATION/
-    └── eva-agent-correspondence.md  # Theory/implementation bridge
+├── README.md           # Project entry point and top-level navigation
+├── FAQ.md              # Reader-facing clarifications
+├── LICENSE             # CC BY 4.0
+├── index.html          # Repository entry page for public-facing visuals
+├── THEORY/             # Core theory documents and version history
+├── ARTICLES/           # Reader-facing articles; see ARTICLES/README.md
+├── VISUALS/            # Public-facing diagrams and preview assets; see VISUALS/README.md
+└── IMPLEMENTATION/     # Theory/implementation boundary note
 ```
 
 ## Current Version
@@ -95,12 +88,7 @@ The current stable theoretical document is **v0.5** (`THEORY/v0.5-integrated.md`
 
 v0.5 integrates the structural contributions of v0.4 (Claim A/B separation, anchor formalization, epistemic layering) with the sharp core of v0.3 (drive as context, LLM as Level 3 cultural carrier, peer circuit necessity). It marks the current stable public theory version: a formulation clear enough for public discussion, critique, and refinement, while remaining open to further theoretical sharpening.
 
-For reader-oriented entry points, start with:
-- `ARTICLES/01-paradigm-introduction.md` for the paradigm framing
-- `ARTICLES/02-architectural-contributions.md` for the architectural distinctions
-- `ARTICLES/03-related-work-and-positioning.md` for neighboring frameworks and originality boundaries
-
-For article navigation and public-facing visuals, see `ARTICLES/README.md` and `VISUALS/README.md`.
+For reader-oriented entry points, start with the article and visual indexes in `ARTICLES/README.md` and `VISUALS/README.md`, then follow the file-level guidance there.
 
 See `THEORY/CHANGELOG.md` for what changed at each version.
 
