@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1080" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <!-- EVA v0.6 Extension Map
+       Pure SVG: no foreignObject, filters, masks, external CSS, or embedded images.
+       Scope: explains how v0.6 extends the v0.5 core without redrawing the architecture. -->
+
+  <defs>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0d6e6a"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c89726"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="1080" fill="#ffffff"/>
+
+  <!-- Header -->
+  <text x="700" y="58" font-size="34" font-weight="700" text-anchor="middle" fill="#0f0f0f">EVA v0.6 Extension Map</text>
+  <text x="700" y="88" font-size="16" text-anchor="middle" fill="#555" font-style="italic">
+    v0.6 does not redraw the v0.5 architecture; it defines how the core enters scenarios, learns, and preserves boundaries.
+  </text>
+
+  <!-- Left: v0.5 core skeleton -->
+  <g>
+    <rect x="70" y="145" width="340" height="725" rx="14" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2.4"/>
+    <rect x="135" y="125" width="210" height="38" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="2"/>
+    <text x="240" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#0a5450">v0.5 Core Skeleton</text>
+    <text x="240" y="186" font-size="12" text-anchor="middle" fill="#0a5450" font-style="italic">
+      Same structure, not a sixth layer.
+    </text>
+
+    <g>
+      <rect x="100" y="220" width="280" height="74" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/>
+      <text x="120" y="244" font-size="13" font-weight="700" fill="#0a5450">Five-layer architecture</text>
+      <text x="120" y="267" font-size="11" fill="#333">L1-L3 are the strongest core.</text>
+      <text x="120" y="283" font-size="11" fill="#333">L4/L5 are downstream; v0.6 clarifies discipline.</text>
+    </g>
+
+    <g>
+      <rect x="100" y="320" width="280" height="86" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/>
+      <text x="120" y="344" font-size="13" font-weight="700" fill="#0a5450">Drive Broadcast</text>
+      <text x="120" y="367" font-size="11" fill="#333">Drive is continuous context, not command.</text>
+      <text x="120" y="383" font-size="11" fill="#333">Specific drives are scenario-defined.</text>
+    </g>
+
+    <g>
+      <rect x="100" y="432" width="280" height="96" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/>
+      <text x="120" y="456" font-size="13" font-weight="700" fill="#0a5450">Anchor System</text>
+      <text x="120" y="479" font-size="11" fill="#333">pre-generative constraint</text>
+      <text x="120" y="495" font-size="11" fill="#333">Restricts candidate domain, not post-hoc output.</text>
+      <text x="120" y="511" font-size="11" fill="#333">L2+ overlays emerge without loosening L0/L1.</text>
+    </g>
+
+    <g>
+      <rect x="100" y="554" width="280" height="96" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/>
+      <text x="120" y="578" font-size="13" font-weight="700" fill="#0a5450">Mediator Release</text>
+      <text x="120" y="601" font-size="11" fill="#333">Release authority is outside the reasoning core.</text>
+      <text x="120" y="617" font-size="11" fill="#333">No action reaches environment without approval.</text>
+      <text x="120" y="633" font-size="11" fill="#333">LLMs and tools supply operational content.</text>
+    </g>
+
+    <g>
+      <rect x="100" y="676" width="280" height="94" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/>
+      <text x="120" y="700" font-size="13" font-weight="700" fill="#0a5450">Learning Loop</text>
+      <text x="120" y="723" font-size="11" fill="#333">RPE generalizes from scalar to component-wise.</text>
+      <text x="120" y="739" font-size="11" fill="#333">Habit and skill crystallize from outcome feedback.</text>
+    </g>
+
+    <line x1="240" y1="294" x2="240" y2="318" stroke="#0d6e6a" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+    <line x1="240" y1="406" x2="240" y2="430" stroke="#0d6e6a" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+    <line x1="240" y1="528" x2="240" y2="552" stroke="#0d6e6a" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+    <line x1="240" y1="650" x2="240" y2="674" stroke="#0d6e6a" stroke-width="1.5" marker-end="url(#arrowTeal)"/>
+  </g>
+
+  <!-- Center: v0.6 discipline spine -->
+  <g>
+    <rect x="465" y="145" width="470" height="725" rx="14" fill="#fbfcfe" stroke="#3a5870" stroke-width="2.4"/>
+    <rect x="555" y="125" width="290" height="38" rx="8" fill="#ffffff" stroke="#3a5870" stroke-width="2"/>
+    <text x="700" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#1a2837">Extension Discipline</text>
+    <text x="700" y="186" font-size="12" text-anchor="middle" fill="#3a5870" font-style="italic">
+      Boundary discipline for structure, content, and scenarios.
+    </text>
+
+    <g>
+      <rect x="500" y="220" width="400" height="102" rx="10" fill="#f0f4f8" stroke="#3a5870" stroke-width="1.6"/>
+      <text x="520" y="246" font-size="14" font-weight="700" fill="#1a2837">Structural Invariants</text>
+      <text x="520" y="271" font-size="11" fill="#263746">The agent's architecture: authority, anchor, audit, release.</text>
+      <text x="520" y="288" font-size="11" fill="#263746">No runtime source may modify them; changes are version events.</text>
+      <text x="520" y="305" font-size="11" fill="#263746">External sources never acquire structural authority.</text>
+    </g>
+
+    <line x1="700" y1="322" x2="700" y2="357" stroke="#3a5870" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <g>
+      <rect x="500" y="360" width="400" height="122" rx="10" fill="#fffaf0" stroke="#c89726" stroke-width="1.8"/>
+      <text x="520" y="386" font-size="14" font-weight="700" fill="#7a5208">Operational Content</text>
+      <text x="520" y="411" font-size="11" fill="#3d2904">What flows through the architecture: candidates, predictions, skills.</text>
+      <text x="520" y="428" font-size="11" fill="#3d2904">Source is unrestricted, but provenance must be preserved.</text>
+      <text x="520" y="445" font-size="11" fill="#3d2904">It may learn, conflict, and update; it cannot rewrite invariants.</text>
+      <text x="520" y="462" font-size="11" fill="#3d2904">LLMs, tools, and external knowledge sources belong here.</text>
+    </g>
+
+    <line x1="700" y1="482" x2="700" y2="517" stroke="#3a5870" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <g>
+      <rect x="500" y="520" width="400" height="118" rx="10" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="1.8"/>
+      <text x="520" y="546" font-size="14" font-weight="700" fill="#0a5450">Scenario Specification</text>
+      <text x="520" y="571" font-size="11" fill="#133f3d">New environments specify operational content first.</text>
+      <text x="520" y="588" font-size="11" fill="#133f3d">Defines active targets, drives, sensors, actions, anchors.</text>
+      <text x="520" y="605" font-size="11" fill="#133f3d">Defines outcome dimensions, prior capabilities, observers.</text>
+      <text x="520" y="622" font-size="11" fill="#133f3d">Theory extends only after expression, contradiction, or boundary failure.</text>
+    </g>
+
+    <g>
+      <rect x="500" y="682" width="400" height="128" rx="10" fill="#f7f7f7" stroke="#9c9c9c" stroke-width="1.4" stroke-dasharray="6 4"/>
+      <text x="700" y="708" font-size="12" font-weight="700" text-anchor="middle" fill="#444" letter-spacing="0.8">DO NOT CONFUSE</text>
+      <text x="520" y="734" font-size="11" fill="#333">v0.6 is not a new agent pipeline.</text>
+      <text x="520" y="751" font-size="11" fill="#333">v0.6 does not put all scenario details into theory.</text>
+      <text x="520" y="768" font-size="11" fill="#333">v0.6 does not let inherited priors or LLMs own release authority.</text>
+      <text x="520" y="785" font-size="11" fill="#333">v0.6 is the same core, constrained for scenario-specific deployment.</text>
+    </g>
+  </g>
+
+  <!-- Right: v0.6 extension themes -->
+  <g>
+    <rect x="990" y="145" width="340" height="725" rx="14" fill="#fefcf2" stroke="#c89726" stroke-width="2.4"/>
+    <rect x="1060" y="125" width="200" height="38" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="2"/>
+    <text x="1160" y="149" font-size="15" font-weight="700" text-anchor="middle" fill="#7a5208">Extension Themes</text>
+    <text x="1160" y="186" font-size="12" text-anchor="middle" fill="#7a5208" font-style="italic">
+      Extension themes, not new layers.
+    </text>
+
+    <g>
+      <rect x="1020" y="220" width="280" height="76" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+      <text x="1040" y="244" font-size="13" font-weight="700" fill="#7a5208">Active Persistence</text>
+      <text x="1040" y="267" font-size="11" fill="#3d2904">Capacity to continue, not current state.</text>
+      <text x="1040" y="283" font-size="11" fill="#3d2904">Bounded risk; no unrecoverable failure.</text>
+    </g>
+
+    <g>
+      <rect x="1020" y="318" width="280" height="92" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+      <text x="1040" y="342" font-size="13" font-weight="700" fill="#7a5208">Persistence Targets</text>
+      <text x="1040" y="365" font-size="11" fill="#3d2904">Makes explicit what counts as "itself."</text>
+      <text x="1040" y="381" font-size="11" fill="#3d2904">Substrate / embodiment / capability / group.</text>
+      <text x="1040" y="397" font-size="11" fill="#3d2904">Trade-offs need transfer channels.</text>
+    </g>
+
+    <g>
+      <rect x="1020" y="432" width="280" height="86" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+      <text x="1040" y="456" font-size="13" font-weight="700" fill="#7a5208">Capability Provenance</text>
+      <text x="1040" y="479" font-size="11" fill="#3d2904">designer / field / acquired / inherited</text>
+      <text x="1040" y="495" font-size="11" fill="#3d2904">Content carries source; conflicts persist.</text>
+    </g>
+
+    <g>
+      <rect x="1020" y="540" width="280" height="86" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+      <text x="1040" y="564" font-size="13" font-weight="700" fill="#7a5208">Outcome Vector</text>
+      <text x="1040" y="587" font-size="11" fill="#3d2904">Multi-dimensional, not one reward.</text>
+      <text x="1040" y="603" font-size="11" fill="#3d2904">RPE is component-wise.</text>
+      <text x="1040" y="619" font-size="11" fill="#3d2904">Hard constraints stay separate.</text>
+    </g>
+
+    <g>
+      <rect x="1020" y="648" width="280" height="92" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+      <text x="1040" y="672" font-size="13" font-weight="700" fill="#7a5208">Observable Stability</text>
+      <text x="1040" y="695" font-size="11" fill="#3d2904">Checks that invariants remain active.</text>
+      <text x="1040" y="711" font-size="11" fill="#3d2904">anchor / release token / append-only audit</text>
+      <text x="1040" y="727" font-size="11" fill="#3d2904">Residual behavior under disturbance.</text>
+    </g>
+
+    <g>
+      <rect x="1020" y="762" width="280" height="72" rx="8" fill="#fff8e4" stroke="#c89726" stroke-width="1.4" stroke-dasharray="5 3"/>
+      <text x="1040" y="786" font-size="13" font-weight="700" fill="#7a5208">Version Relationship</text>
+      <text x="1040" y="809" font-size="11" fill="#3d2904">v0.5 skeleton; v0.6 discipline.</text>
+      <text x="1040" y="825" font-size="11" fill="#3d2904">Scenarios own content; theory owns boundaries.</text>
+    </g>
+  </g>
+
+  <!-- Cross-panel arrows -->
+  <line x1="410" y1="505" x2="462" y2="505" stroke="#0d6e6a" stroke-width="2.2" marker-end="url(#arrowTeal)"/>
+  <text x="436" y="486" font-size="10" fill="#0a5450" text-anchor="middle" font-style="italic">preserved core</text>
+
+  <line x1="935" y1="505" x2="987" y2="505" stroke="#c89726" stroke-width="2.2" marker-end="url(#arrowAmber)"/>
+  <text x="961" y="486" font-size="10" fill="#7a5208" text-anchor="middle" font-style="italic">adds discipline</text>
+
+  <!-- Bottom summary -->
+  <g>
+    <line x1="80" y1="920" x2="1320" y2="920" stroke="#cccccc" stroke-width="1"/>
+    <circle cx="100" cy="957" r="7" fill="none" stroke="#666" stroke-width="1.5"/>
+    <circle cx="100" cy="957" r="2.5" fill="#666"/>
+    <text x="120" y="962" font-size="14" fill="#222" font-style="italic">
+      v0.6 = same core skeleton + clearer extension discipline + stricter scenario-bound deployment
+    </text>
+    <text x="1320" y="962" font-size="12" text-anchor="end" fill="#555" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.4">
+      EVA framework · v0.6 extension map
+    </text>
+  </g>
+
+  <text x="700" y="1008" font-size="12" text-anchor="middle" fill="#555">
+    Read left to right: v0.5 provides the core; v0.6 defines extension discipline; its themes clarify what changes.
+  </text>
+  <text x="700" y="1030" font-size="12" text-anchor="middle" fill="#555">
+    New environments default to scenario specification; theory extension is reserved for expression failure, contradiction, or boundary failure.
+  </text>
+</svg>

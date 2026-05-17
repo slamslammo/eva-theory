@@ -194,7 +194,7 @@ If the starting question here seems worth taking seriously, there are several na
 
 **For the engineering and architectural distinctions in more detail**: see `ARTICLES/02-architectural-contributions.md`. That companion article focuses on the concrete design choices that distinguish EVA from current agent frameworks.
 
-**For repository navigation and reader-facing materials**: see `ARTICLES/README.md` and `VISUALS/README.md`.
+**For repository navigation and reader-facing materials**: see `ARTICLES/README.md`, `VISUALS/five-layer-overview.svg`, and `VISUALS/signal-flow.svg`.
 
 **For implementation-specific design and current status**: see the public companion project [`eva-agent`](https://github.com/slamslammo/eva-agent). For the repository-local bridge between theory and implementation, see `IMPLEMENTATION/eva-agent-correspondence.md`.
 

@@ -332,7 +332,7 @@ For the broader paradigm framing, read `ARTICLES/01-paradigm-introduction.md`.
 
 For the full theoretical derivation, including scope conditions, epistemic layering, signal architecture, and anchor formalization, read `THEORY/v0.5-integrated.md`.
 
-For reader-facing diagrams and companion visuals, see `VISUALS/README.md`.
+For reader-facing diagrams and companion visuals, see `VISUALS/five-layer-overview.svg` and `VISUALS/signal-flow.svg`.
 
 ---
 

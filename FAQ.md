@@ -6,7 +6,7 @@ No.
 
 EVA does **not** argue for unconstrained self-preservation. Its claim is narrower: for a certain class of agents, continuity should be treated as an architectural concern rather than an afterthought. In EVA, continuity is always bounded by integrity constraints and anchors.
 
-For deeper reading, see `THEORY/v0.5-integrated.md` and `ARTICLES/03-related-work-and-positioning.md`.
+For deeper reading, see `THEORY/v0.5-integrated.md`, `THEORY/v0.6-extension.md`, and `ARTICLES/03-related-work-and-positioning.md`.
 
 ## 2. Is EVA claiming that AI is alive?
 
@@ -30,10 +30,24 @@ Because a stronger model is not the same thing as a stronger agent architecture.
 
 An LLM can improve reasoning and access to human cumulative knowledge, but EVA argues that persistent agents also need their own drive structure, continuity-relevant memory, mediated action selection, and anchors. Under EVA, those architectural pieces are more fundamental than model scaling alone.
 
-For an engineering-oriented entry, see `ARTICLES/02-architectural-contributions.md`.
+For a short architecture entry, see `ARTICLES/02-architectural-contributions.md`.
 
-## 5. What is implemented today?
+## 5. Does v0.6 replace v0.5?
 
-The theory is relatively stable at **v0.5**. Implementation work continues in the public companion project [`eva-agent`](https://github.com/slamslammo/eva-agent).
+No.
 
-This repository does not track implementation progress layer-by-layer. For current implementation status and implementation-specific design notes, see [`eva-agent`](https://github.com/slamslammo/eva-agent). For the repository-local bridge between theory and implementation, see `IMPLEMENTATION/eva-agent-correspondence.md`.
+v0.5 remains the stable core architecture. v0.6 extends it by clarifying active persistence, persistence targets, capability provenance, observable stability, multi-dimensional outcome, and scenario specification.
+
+For the short reader-facing version, see `ARTICLES/04-v0.6-extension.md`.
+
+## 6. Does active persistence make EVA more risk-seeking?
+
+No.
+
+Active persistence means that inaction is evaluated as one possible trajectory, not treated as automatically safe. EVA may take bounded risks when inaction would damage future viability more than action would. But those risks remain constrained by anchors, release authority, and unrecoverability floors.
+
+## 7. What is scenario specification?
+
+Scenario specification is the v0.6 discipline for applying EVA to new environments without expanding the theory each time.
+
+A scenario should specify the relevant existence-field conditions: active persistence targets, drive dimensions, capability sources and provenance, action-space constraints, outcome interpretation, and observable stability traces. Only if a new environment cannot be expressed within the existing framework, creates an internal contradiction, or exposes a failed boundary should theory extension be considered.

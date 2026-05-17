@@ -1,28 +1,22 @@
-# eva-agent Theory / Implementation Bridge
+# eva-agent Theory / Implementation Boundary
 
-This file is intentionally thin.
+中文: [eva-agent-correspondence-zh.md](eva-agent-correspondence-zh.md)
 
-`eva-theory` is the theory repository. It defines EVA's problem framing, scope conditions, core architectural claims, terminology, and public-facing explanatory materials.
+`eva-theory` and `eva-agent` are separate projects with different responsibilities.
 
-The public companion implementation project is [`eva-agent`](https://github.com/slamslammo/eva-agent). That project is the right place for:
+## eva-theory owns
 
-- current implementation status
-- source-level design
-- roadmap and engineering priorities
+- EVA's problem framing, scope, core theoretical claims, and terminology
+- the v0.5 core architecture and v0.6 theoretical extension
+- reader-facing theory articles and visuals
+- theory-side boundaries such as scenario specification discipline
+
+## eva-agent owns
+
+- framework and runtime implementation
+- scenario-specific drives, sensors, actions, anchor policies, prior skills, and outcome observers
+- runner assembly, runtime status, validation traces, metrics, and engineering roadmap
 - implementation-specific documentation
 
-## What remains in this repository
+Read `eva-theory` for theory. Read [`eva-agent`](https://github.com/slamslammo/eva-agent) for implementation.
 
-This repository keeps only the minimal bridge needed between theory and implementation:
-
-- `THEORY/v0.5-integrated.md` — canonical public theory text
-- `ARTICLES/02-architectural-contributions.md` — reader-facing explanation of EVA's four main architectural choices
-- `VISUALS/five-layer-overview.html` and `VISUALS/signal-flow.html` — public-facing architecture visuals
-
-## How to use this boundary
-
-- Read `eva-theory` when you want the architecture as theory.
-- Read [`eva-agent`](https://github.com/slamslammo/eva-agent) when you want implementation status or implementation-specific design.
-- If an implementation decision appears to diverge from the theory, inspect the implementation project directly and treat this repository as authoritative for the stated architecture until the theory text is revised.
-
-The purpose of this split is to keep the theory stable and legible without turning this repository into a moving implementation status board.

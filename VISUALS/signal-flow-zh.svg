@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-474.38 -212.21 1400 1290" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrowFast" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d04a2a"/>
+    </marker>
+    <marker id="arrowSlow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="arrowDrive" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c89726"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="1290" fill="#ffffff" x="-474.38" y="-212.21" style="stroke-width: 1;"/>
+  <text x="225.62" y="-154.21" font-size="32" font-weight="700" text-anchor="middle" fill="#0f0f0f" style="white-space: pre; stroke-width: 1; font-size: 32px;">
+    EVA 信号流
+  </text>
+  <text x="225.62" y="-124.2" font-size="16" text-anchor="middle" fill="#555" font-style="italic" style="white-space: pre; stroke-width: 1; font-size: 16px;">
+    v0.5 核心信号流，v0.6 延续其约束纪律
+  </text>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <line x1="110" y1="1130" x2="110" y2="155" stroke="#333" stroke-width="2"/>
+    <polygon points="110,135 103,158 117,158" fill="#333"/>
+    <g transform="translate(75 650) rotate(-90)">
+      <text font-size="13" fill="#333" text-anchor="middle" letter-spacing="1.6" font-weight="600" style="white-space: pre;">
+        信号从 L1 进入 - 向上流动
+      </text>
+      <text y="18" font-size="11" fill="#666" text-anchor="middle" letter-spacing="1.4" font-style="italic" style="white-space: pre;">
+        fast path 与 slow path 并行
+      </text>
+    </g>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <rect x="150" y="140" width="730" height="80" rx="10" fill="#fbfbfb" stroke="#9c9c9c" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <rect x="172" y="158" width="40" height="26" rx="6" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.2"/>
+    <text x="192" y="176" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#5d5d5d" style="white-space: pre;">L5</text>
+    <text x="225" y="178" font-size="20" font-weight="700" fill="#3d3d3d" style="white-space: pre;">社会认知（Social Cognition）</text>
+    <rect x="710" y="158" width="150" height="26" rx="13" fill="#ffffff" stroke="#9c9c9c" stroke-width="1"/>
+    <text x="785" y="176" font-size="11" text-anchor="middle" fill="#6d6d6d" style="white-space: pre;">下游扩展</text>
+    <text x="225" y="205" font-size="12" fill="#7d7d7d" font-style="italic" style="white-space: pre;">
+      此处不展开下游 flow patterns；L5 的推导支撑弱于 L1-L3 core
+    </text>
+  </g>
+  <polygon points="40.62 19.795 47.62 31.795 33.62 31.795" fill="#888" style="stroke-width: 1;"/>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <rect x="150" y="255" width="730" height="80" rx="10" fill="#fbfbfb" stroke="#9c9c9c" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <rect x="172" y="273" width="40" height="26" rx="6" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.2"/>
+    <text x="192" y="291" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#5d5d5d" style="white-space: pre;">L4</text>
+    <text x="225" y="293" font-size="20" font-weight="700" fill="#3d3d3d" style="white-space: pre;">自我模型（Self-Model）</text>
+    <rect x="705" y="273" width="155" height="26" rx="13" fill="#ffffff" stroke="#9c9c9c" stroke-width="1"/>
+    <text x="782" y="291" font-size="11" text-anchor="middle" fill="#6d6d6d" style="white-space: pre;">由历史涌现</text>
+    <text x="225" y="320" font-size="12" fill="#7d7d7d" font-style="italic" style="white-space: pre;">
+      缓慢接收行为历史；作为 L3 的可行性上下文，此图不把它画成主动 fast/slow path
+    </text>
+  </g>
+  <polygon points="40.62 134.795 47.62 146.795 33.62 146.795" fill="#888" style="stroke-width: 1;"/>
+  <text x="60.62" y="142.795" font-size="10" fill="#7d7d7d" font-style="italic" style="white-space: pre; stroke-width: 1; font-size: 10px;">行为历史（慢变量）</text>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <rect x="150" y="370" width="730" height="415" rx="10" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2"/>
+    <rect x="172" y="388" width="40" height="26" rx="6" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.5"/>
+    <text x="192" y="406" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450" style="white-space: pre;">L3</text>
+    <text x="225" y="408" font-size="20" font-weight="700" fill="#0f0f0f" style="white-space: pre;">适应性思辨（Adaptive Deliberation）</text>
+    <rect x="740" y="388" width="120" height="26" rx="13" fill="#0d6e6a"/>
+    <text x="800" y="406" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff" style="white-space: pre;">最强核心</text>
+    <text x="225" y="438" font-size="13" fill="#0a5450" font-style="italic" style="white-space: pre;">
+      slow path 经过思辨链；fast path 绕过思辨链，但不绕过 release authority
+    </text>
+    <line x1="225" y1="465" x2="860" y2="465" stroke="#c89726" stroke-width="2" stroke-dasharray="8 4"/>
+    <text x="225" y="456" font-size="11" font-weight="700" fill="#7a5208" style="white-space: pre;">
+      锚点约束（Anchor Restriction）- 候选生成受预生成边界限制
+    </text>
+    <rect x="205" y="485" width="655" height="178" rx="8" fill="#fafefd" stroke="#a8d4d0" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="225" y="506" font-size="11" font-weight="700" fill="#0a5450" letter-spacing="0.6" style="white-space: pre;">
+      思辨链（Deliberation Chain）
+    </text>
+    <text x="425" y="506" font-size="10" font-style="italic" fill="#5d8580" style="white-space: pre;">
+      仅 slow path；fast path 绕过此块
+    </text>
+    <g>
+      <rect x="225" y="525" width="202" height="105" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.2"/>
+      <text x="326" y="546" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450" style="white-space: pre;">记忆（Memory）</text>
+      <text x="326" y="561" font-size="10" text-anchor="middle" fill="#5d5d5d" font-style="italic" style="white-space: pre;">显著性加权检索</text>
+      <line x1="240" y1="571" x2="412" y2="571" stroke="#cdddda" stroke-width="1"/>
+      <text x="240" y="591" font-size="11" fill="#2d2d2d" style="white-space: pre;">历史上下文</text>
+      <text x="240" y="608" font-size="10" fill="#5d5d5d" font-style="italic" style="white-space: pre;">受 drive state 偏置</text>
+    </g>
+    <g>
+      <rect x="442" y="525" width="202" height="105" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.2"/>
+      <text x="543" y="546" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450" style="white-space: pre;">推理核心（Reasoning Core）</text>
+      <text x="543" y="561" font-size="10" text-anchor="middle" fill="#5d5d5d" font-style="italic" style="white-space: pre;">候选生成</text>
+      <line x1="457" y1="571" x2="629" y2="571" stroke="#cdddda" stroke-width="1"/>
+      <text x="457" y="591" font-size="11" fill="#2d2d2d" style="white-space: pre;">受 anchor 限制的</text>
+      <text x="457" y="608" font-size="11" fill="#2d2d2d" style="white-space: pre;">候选动作</text>
+    </g>
+    <g>
+      <rect x="659" y="525" width="201" height="105" rx="8" fill="#fdf6ed" stroke="#b97515" stroke-width="1.5"/>
+      <text x="759" y="546" font-size="13" font-weight="700" text-anchor="middle" fill="#8a5410" style="white-space: pre;">基底神经节（Basal Ganglia）</text>
+      <text x="759" y="561" font-size="10" text-anchor="middle" fill="#a06b1f" font-style="italic" style="white-space: pre;">释放调度角色（mediator role）</text>
+      <line x1="674" y1="571" x2="845" y2="571" stroke="#e5cfa3" stroke-width="1"/>
+      <text x="674" y="591" font-size="11" fill="#2d2d2d" style="white-space: pre;">默认抑制</text>
+      <text x="674" y="608" font-size="11" fill="#2d2d2d" style="white-space: pre;">选择性释放</text>
+      <text x="674" y="625" font-size="10" fill="#8a5410" font-style="italic" style="white-space: pre;">多维 RPE 更新选择</text>
+    </g>
+    <line x1="427" y1="580" x2="442" y2="580" stroke="#2c6ea8" stroke-width="2" marker-end="url(#arrowSlow)"/>
+    <line x1="644" y1="580" x2="659" y2="580" stroke="#2c6ea8" stroke-width="2" marker-end="url(#arrowSlow)"/>
+    <text x="326" y="650" font-size="11" fill="#0a5450" text-anchor="middle" font-weight="600" style="white-space: pre;">检索</text>
+    <text x="543" y="650" font-size="11" fill="#0a5450" text-anchor="middle" font-weight="600" style="white-space: pre;">生成</text>
+    <text x="759" y="650" font-size="11" fill="#8a5410" text-anchor="middle" font-weight="600" style="white-space: pre;">选择</text>
+    <rect x="585" y="690" width="280" height="58" rx="8" fill="#eef2f6" stroke="#3a5870" stroke-width="2"/>
+    <text x="725" y="713" font-size="12" font-weight="700" text-anchor="middle" fill="#1a2837" letter-spacing="0.5" style="white-space: pre;">
+      共享释放（Shared Release）
+    </text>
+    <text x="725" y="731" font-size="11" text-anchor="middle" fill="#3a5870" font-style="italic" style="white-space: pre;">
+      mediator release 不在 reasoning core 中
+    </text>
+    <line x1="759" y1="630" x2="759" y2="690" stroke="#2c6ea8" stroke-width="2.5" marker-end="url(#arrowSlow)"/>
+    <rect x="225" y="690" width="315" height="58" rx="6" fill="#fdf5dd" stroke="#c89726" stroke-width="1.5" stroke-dasharray="6 3"/>
+    <text x="240" y="713" font-size="12" font-weight="700" fill="#7a5208" style="white-space: pre;">
+      连续驱动广播（Drive Broadcast）
+    </text>
+    <text x="240" y="729" font-size="11" fill="#5a4407" style="white-space: pre;">
+      进入 L3 的环境上下文；不是命令
+    </text>
+    <text x="240" y="742" font-size="10" fill="#7a5208" font-style="italic" style="white-space: pre;">
+      偏置检索、评估与选择
+    </text>
+    <text x="515" y="770" font-size="11" fill="#5d5d5d" text-anchor="middle" font-style="italic" style="white-space: pre;">
+      L3 可抑制 L2 响应，但不能消除 L0/L1 触发压力
+    </text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <rect x="150" y="815" width="730" height="140" rx="10" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2"/>
+    <rect x="172" y="833" width="40" height="26" rx="6" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.5"/>
+    <text x="192" y="851" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450" style="white-space: pre;">L2</text>
+    <text x="225" y="853" font-size="20" font-weight="700" fill="#0f0f0f" style="white-space: pre;">驱动层（Drive Layer）</text>
+    <rect x="740" y="833" width="120" height="26" rx="13" fill="#0d6e6a"/>
+    <text x="800" y="851" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff" style="white-space: pre;">最强核心</text>
+    <text x="225" y="881" font-size="14" fill="#1a1a1a" style="white-space: pre;">
+      驱动注册表（drive registry）- 反射弧 - 连续上下文广播
+    </text>
+    <rect x="225" y="895" width="315" height="45" rx="6" fill="#fdf5dd" stroke="#c89726" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <text x="240" y="915" font-size="12" font-weight="700" fill="#7a5208" style="white-space: pre;">驱动广播（Drive Broadcast）</text>
+    <text x="240" y="931" font-size="11" fill="#5a4407" style="white-space: pre;">连续上下文进入 L3</text>
+    <rect x="600" y="895" width="260" height="45" rx="6" fill="#fceae5" stroke="#d04a2a" stroke-width="1.5"/>
+    <text x="615" y="915" font-size="12" font-weight="700" fill="#a13815" style="white-space: pre;">反射弧（fast path）</text>
+    <text x="615" y="931" font-size="11" fill="#7a2e10" style="white-space: pre;">威胁 -&gt; 受限反射计划</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <rect x="150" y="985" width="730" height="140" rx="10" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2"/>
+    <rect x="172" y="1003" width="40" height="26" rx="6" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.5"/>
+    <text x="192" y="1021" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450" style="white-space: pre;">L1</text>
+    <text x="225" y="1023" font-size="20" font-weight="700" fill="#0f0f0f" style="white-space: pre;">稳态感知（Homeostatic Sensing）</text>
+    <rect x="740" y="1003" width="120" height="26" rx="13" fill="#0d6e6a"/>
+    <text x="800" y="1021" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff" style="white-space: pre;">最强核心</text>
+    <text x="225" y="1052" font-size="13" fill="#0a5450" font-style="italic" font-weight="600" style="white-space: pre;">
+      signal bus 先于完整解释分类：威胁 / 状态 / 背景
+    </text>
+    <text x="225" y="1074" font-size="11" fill="#5d5d5d" style="white-space: pre;">
+      威胁触发即时反射和升高的 drive context；状态 / 背景进入较慢处理
+    </text>
+    <rect x="225" y="1090" width="300" height="28" rx="6" fill="#e3eff8" stroke="#2c6ea8" stroke-width="1.5"/>
+    <text x="240" y="1109" font-size="12" font-weight="700" fill="#1a4d7a" style="white-space: pre;">状态 / 背景</text>
+    <text x="425" y="1109" font-size="11" fill="#1a4d7a" style="white-space: pre;">-&gt; slow path</text>
+    <rect x="600" y="1090" width="260" height="28" rx="6" fill="#fceae5" stroke="#d04a2a" stroke-width="1.5"/>
+    <text x="615" y="1109" font-size="12" font-weight="700" fill="#a13815" style="white-space: pre;">威胁</text>
+    <text x="720" y="1109" font-size="11" fill="#7a2e10" style="white-space: pre;">-&gt; fast path</text>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <rect x="150" y="1150" width="780" height="56" rx="8" fill="#f4f4f4" stroke="#888" stroke-width="1.5"/>
+    <text x="540" y="1174" font-size="13" font-weight="700" text-anchor="middle" fill="#444" letter-spacing="1.2" style="white-space: pre;">
+      环境 / 行动空间
+    </text>
+    <text x="540" y="1192" font-size="10" text-anchor="middle" fill="#666" font-style="italic" style="white-space: pre;">
+      工具、世界影响和 outcome feedback 位于架构本体之外
+    </text>
+  </g>
+  <path d="M -249.38 891.795 L -343.07 891.795 L -343.07 367.795 L -249.38 367.795" fill="none" stroke="#2c6ea8" stroke-width="3" marker-end="url(#arrowSlow)" style="stroke-width: 3;"/>
+  <line x1="-337.38" y1="702.795" x2="-252.38" y2="702.795" stroke="#2c6ea8" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" marker-end="url(#arrowSlow)" style="stroke-width: 2;"/>
+  <text x="-338.38" y="684.795" font-size="10" fill="#2c6ea8" font-style="italic" style="white-space: pre; stroke-width: 1; font-size: 10px;">L2 上下文更新</text>
+  <line x1="255.62" y1="877.795" x2="255.62" y2="727.795" stroke="#d04a2a" stroke-width="3" marker-end="url(#arrowFast)" style="stroke-width: 3;"/>
+  <line x1="255.62" y1="682.795" x2="255.62" y2="527.795" stroke="#d04a2a" stroke-width="3" marker-end="url(#arrowFast)" style="stroke-width: 3;"/>
+  <line x1="-92.38" y1="682.795" x2="-92.38" y2="535.795" stroke="#c89726" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrowDrive)" style="stroke-width: 3;"/>
+  <path d="M 390.62 513.795 L 420.62 513.795 L 420.62 937.795" fill="none" stroke="#d04a2a" stroke-width="2.5" marker-end="url(#arrowFast)" style="stroke-width: 2.5;"/>
+  <path d="M 390.62 493.795 L 450.62 493.795 L 450.62 937.795" fill="none" stroke="#2c6ea8" stroke-width="2.5" marker-end="url(#arrowSlow)" style="stroke-width: 2.5;"/>
+  <text x="937" y="925" font-size="10" fill="#2c6ea8" font-weight="600" font-style="italic" transform="matrix(0, 1, -1, 0, 1387.620098, -224.205182)" style="white-space: pre; stroke-width: 1; font-size: 10px;">
+    已释放行动（慢）
+  </text>
+  <text x="907" y="925" font-size="10" fill="#d04a2a" font-weight="600" font-style="italic" transform="matrix(0, 1, -1, 0, 1357.620098, -194.205136)" style="white-space: pre; stroke-width: 1; font-size: 10px;">
+    反射行动（快）
+  </text>
+  <g transform="matrix(1, 0, 0, 1, -444.379877, -212.205121)">
+    <rect x="930" y="140" width="380" height="985" rx="14" fill="#fcfdfe" stroke="#3a5870" stroke-width="2"/>
+    <rect x="1030" y="125" width="180" height="32" rx="6" fill="#ffffff" stroke="#3a5870" stroke-width="2"/>
+    <text x="1120" y="146" font-size="14" font-weight="700" text-anchor="middle" fill="#1a2837" letter-spacing="1.4" style="white-space: pre;">
+      流程图例
+    </text>
+    <g>
+      <rect x="950" y="175" width="340" height="120" rx="8" fill="#fceae5" stroke="#d04a2a" stroke-width="1.5"/>
+      <circle cx="965" cy="194" r="6" fill="#d04a2a"/>
+      <text x="980" y="198" font-size="13" font-weight="700" fill="#a13815" style="white-space: pre;">快速路径（Fast Path）</text>
+      <text x="965" y="216" font-size="11" font-style="italic" fill="#7a2e10" style="white-space: pre;">
+        紧急反射；绕过思辨
+      </text>
+      <line x1="950" y1="225" x2="1280" y2="225" stroke="#f0c4b4" stroke-width="1"/>
+      <text x="965" y="245" font-size="11" fill="#2d2d2d" style="white-space: pre;">L1 威胁分类</text>
+      <text x="965" y="262" font-size="11" fill="#2d2d2d" style="white-space: pre;">-&gt; L2 反射弧</text>
+      <text x="965" y="279" font-size="11" fill="#2d2d2d" style="white-space: pre;">-&gt; 共享释放 / tool edge</text>
+    </g>
+    <g>
+      <rect x="950" y="315" width="340" height="150" rx="8" fill="#e3eff8" stroke="#2c6ea8" stroke-width="1.5"/>
+      <circle cx="965" cy="334" r="6" fill="#2c6ea8"/>
+      <text x="980" y="338" font-size="13" font-weight="700" fill="#1a4d7a" style="white-space: pre;">慢速路径（Slow Path）</text>
+      <text x="965" y="356" font-size="11" font-style="italic" fill="#1a4d7a" style="white-space: pre;">
+        思辨式；受 anchor 限制
+      </text>
+      <line x1="950" y1="365" x2="1280" y2="365" stroke="#b4cce0" stroke-width="1"/>
+      <text x="965" y="385" font-size="11" fill="#2d2d2d" style="white-space: pre;">L1 状态 / 背景 -&gt; L3</text>
+      <text x="965" y="402" font-size="11" fill="#2d2d2d" style="white-space: pre;">记忆检索 -&gt; candidate generation</text>
+      <text x="965" y="419" font-size="11" fill="#2d2d2d" style="white-space: pre;">-&gt; basal-ganglia selection</text>
+      <text x="965" y="436" font-size="11" fill="#2d2d2d" style="white-space: pre;">-&gt; 共享释放 / tool edge</text>
+      <text x="965" y="455" font-size="10" font-style="italic" fill="#1a4d7a" style="white-space: pre;">
+        反射开始后，威胁状态也可进入 L3
+      </text>
+    </g>
+    <g>
+      <rect x="950" y="485" width="340" height="115" rx="8" fill="#eef2f6" stroke="#3a5870" stroke-width="1.5"/>
+      <circle cx="965" cy="504" r="6" fill="#3a5870"/>
+      <text x="980" y="508" font-size="13" font-weight="700" fill="#1a2837" style="white-space: pre;">共享释放（Shared Release）/ TOOL-EDGE</text>
+      <text x="965" y="526" font-size="11" font-style="italic" fill="#3a5870" style="white-space: pre;">
+        两条路径汇合于 mediator release
+      </text>
+      <line x1="950" y1="535" x2="1280" y2="535" stroke="#b4c1cf" stroke-width="1"/>
+      <text x="965" y="555" font-size="11" fill="#2d2d2d" style="white-space: pre;">没有 mediator release</text>
+      <text x="965" y="572" font-size="11" fill="#2d2d2d" style="white-space: pre;">action 不能到达环境</text>
+    </g>
+    <g>
+      <rect x="950" y="620" width="340" height="105" rx="8" fill="#fdf5dd" stroke="#c89726" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <circle cx="965" cy="639" r="6" fill="#c89726"/>
+      <text x="980" y="643" font-size="13" font-weight="700" fill="#7a5208" style="white-space: pre;">驱动广播（Drive Broadcast）</text>
+      <text x="965" y="661" font-size="11" font-style="italic" fill="#7a5208" style="white-space: pre;">
+        连续上下文，不是命令
+      </text>
+      <line x1="950" y1="670" x2="1280" y2="670" stroke="#e8d39a" stroke-width="1"/>
+      <text x="965" y="690" font-size="11" fill="#2d2d2d" style="white-space: pre;">L2 向 L3 广播 drive intensity</text>
+      <text x="965" y="707" font-size="11" fill="#2d2d2d" style="white-space: pre;">同时作用于快 / 慢情境</text>
+    </g>
+    <g>
+      <rect x="950" y="745" width="340" height="105" rx="8" fill="#fdf5dd" stroke="#c89726" stroke-width="1.5"/>
+      <circle cx="965" cy="764" r="6" fill="#c89726"/>
+      <text x="980" y="768" font-size="13" font-weight="700" fill="#7a5208" style="white-space: pre;">锚点约束（Anchor Restriction）</text>
+      <text x="965" y="786" font-size="11" font-style="italic" fill="#7a5208" style="white-space: pre;">
+        预生成边界
+      </text>
+      <line x1="950" y1="795" x2="1280" y2="795" stroke="#e8d39a" stroke-width="1"/>
+      <text x="965" y="815" font-size="11" fill="#2d2d2d" style="white-space: pre;">generation 发生在 A'(s) 内</text>
+      <text x="965" y="832" font-size="11" fill="#2d2d2d" style="white-space: pre;">不是 post-hoc filtering</text>
+    </g>
+    <g>
+      <rect x="950" y="875" width="340" height="130" rx="10" fill="#f0f4f8" stroke="#3a5870" stroke-width="1.5"/>
+      <text x="1120" y="897" font-size="11" font-weight="700" text-anchor="middle" fill="#3a5870" letter-spacing="0.8" style="white-space: pre;">
+        关键洞察
+      </text>
+      <text x="965" y="923" font-size="11" fill="#1a2837" style="white-space: pre;">EVA 不是串行 pipeline。</text>
+      <text x="965" y="942" font-size="11" fill="#1a2837" style="white-space: pre;">fast path 处理即时响应；</text>
+      <text x="965" y="959" font-size="11" fill="#1a2837" style="white-space: pre;">slow path 处理深层问题；</text>
+      <text x="965" y="976" font-size="11" fill="#1a2837" style="white-space: pre;">drive broadcast 持续塑造 L3。</text>
+      <text x="965" y="993" font-size="11" fill="#1a2837" style="white-space: pre;">多维 RPE 更新 basal-ganglia 选择。</text>
+    </g>
+    <g>
+      <rect x="950" y="1025" width="340" height="80" rx="8" fill="#fafafa" stroke="#bbbbbb" stroke-width="1"/>
+      <text x="1120" y="1047" font-size="11" font-weight="700" text-anchor="middle" fill="#555" letter-spacing="0.6" style="white-space: pre;">
+        示例
+      </text>
+      <text x="965" y="1068" font-size="10" fill="#555" font-style="italic" style="white-space: pre;">
+        实例有效性威胁：先反射，
+      </text>
+      <text x="965" y="1083" font-size="10" fill="#555" font-style="italic" style="white-space: pre;">
+        再在升高的 drive context 下思辨
+      </text>
+    </g>
+  </g>
+  <line x1="-394.38" y1="1011.79" x2="845.62" y2="1011.79" stroke="#cccccc" stroke-width="1" style="stroke-width: 1;"/>
+  <g transform="matrix(1, 0, 0, 1, -474.379876, -212.205121)">
+    <circle cx="100" cy="1255" r="7" fill="none" stroke="#666" stroke-width="1.5"/>
+    <circle cx="100" cy="1255" r="2.5" fill="#666"/>
+    <text x="118" y="1260" font-size="14" fill="#222" font-style="italic" style="white-space: pre;">
+      持续存在（continuous existence）作为一阶约束
+    </text>
+    <text x="1300" y="1260" font-size="12" text-anchor="end" fill="#555" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.5" style="white-space: pre;">
+      EVA framework - v0.5 core / v0.6 aligned
+    </text>
+  </g>
+</svg>

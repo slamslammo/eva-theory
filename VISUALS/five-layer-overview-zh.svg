@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1290" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <!-- ====================================================================== -->
+  <!-- EVA Five-Layer Architecture Overview                                    -->
+  <!-- Content authority: THEORY/v0.5-integrated.md                            -->
+  <!--                                                                         -->
+  <!-- Layout:                                                                 -->
+  <!--   - Layer tag: x=172, w=40                                              -->
+  <!--   - Layer title: x=225, same row as tag                                 -->
+  <!--   - ALL body text: x=225 — left-aligned with title                      -->
+  <!--   - Icons: at x=172 in text-row band (visually beneath the tag column)  -->
+  <!--     They occupy ~40px width ending at x≈210, with 15px gap to text      -->
+  <!--   - Status pill: right side                                             -->
+  <!--                                                                         -->
+  <!-- Content calibrated against v0.5 core, with v0.6 alignment labels:        -->
+  <!--   - L3 Reasoning Core: conflict detection / anchor-aware evaluation     -->
+  <!--   - L3 Basal Ganglia: goal-directed and habit as 2 tracks               -->
+  <!--   - L2: reflex arc parallel to L3                                       -->
+  <!--   - L2: path split clarified                                            -->
+  <!--   - L4: feasibility pre-filter shaped by behavioral history             -->
+  <!--   - L3→L4 arrow: behavioral history annotation                          -->
+  <!--   - L1: signal bus before interpretation                                -->
+  <!-- ====================================================================== -->
+
+  <rect width="1400" height="1290" fill="#ffffff"/>
+
+  <!-- ============== HEADER ============== -->
+  <text x="700" y="58" font-size="32" font-weight="700" text-anchor="middle" fill="#0f0f0f">
+    EVA 五层架构
+  </text>
+  <text x="700" y="88" font-size="16" text-anchor="middle" fill="#555" font-style="italic">
+    v0.5 核心架构，v0.6 延续其约束纪律
+  </text>
+
+  <!-- ============== LEFT-SIDE INFORMATION FLOW AXIS ============== -->
+  <g>
+    <line x1="110" y1="1050" x2="110" y2="155" stroke="#333" stroke-width="2"/>
+    <polygon points="110,135 103,158 117,158" fill="#333"/>
+    <g transform="translate(75 600) rotate(-90)">
+      <text font-size="13" fill="#333" text-anchor="middle" letter-spacing="1.6" font-weight="600">
+        感知信号与驱动上下文
+      </text>
+      <text y="18" font-size="11" fill="#666" text-anchor="middle" letter-spacing="1.4" font-style="italic">
+        自下而上流经架构
+      </text>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- L5: SOCIAL COGNITION  (y=140-265, h=125)                     -->
+  <!-- ============================================================ -->
+  <g>
+    <rect x="150" y="140" width="730" height="125" rx="10" fill="#fbfbfb" stroke="#9c9c9c" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <rect x="172" y="158" width="40" height="26" rx="6" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.2"/>
+    <text x="192" y="176" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#5d5d5d">L5</text>
+    <text x="225" y="178" font-size="20" font-weight="700" fill="#3d3d3d">社会认知（Social Cognition）</text>
+    <rect x="710" y="158" width="150" height="26" rx="13" fill="#ffffff" stroke="#9c9c9c" stroke-width="1"/>
+    <text x="785" y="176" font-size="11" text-anchor="middle" fill="#6d6d6d">下游扩展</text>
+    <!-- Body text at x=225 -->
+    <text x="225" y="210" font-size="14" fill="#454545">
+      智能体建模  ·  信任校准  ·  社会学习  ·  集体认知
+    </text>
+    <text x="225" y="232" font-size="12" fill="#7d7d7d" font-style="italic">
+      用于架构完整性；推导支撑弱于 L1-L3 core
+    </text>
+    <!-- Icon at original position (x=172, in text row band) -->
+    <g transform="translate(172, 200)" stroke="#7a7a7a" stroke-width="1.6" fill="none">
+      <circle cx="8" cy="10" r="6" fill="#fbfbfb"/>
+      <circle cx="34" cy="10" r="6" fill="#fbfbfb"/>
+      <circle cx="16" cy="6" r="1.4" fill="#7a7a7a" stroke="none"/>
+      <circle cx="21" cy="3" r="1.4" fill="#7a7a7a" stroke="none"/>
+      <circle cx="26" cy="6" r="1.4" fill="#7a7a7a" stroke="none"/>
+      <line x1="8" y1="16" x2="8" y2="22" stroke-dasharray="2 1.5"/>
+      <line x1="34" y1="16" x2="34" y2="22" stroke-dasharray="2 1.5"/>
+      <circle cx="8" cy="26" r="3" fill="#fbfbfb"/>
+      <circle cx="34" cy="26" r="3" fill="#fbfbfb"/>
+    </g>
+  </g>
+
+  <polygon points="515,277 522,289 508,289" fill="#888"/>
+
+  <!-- ============================================================ -->
+  <!-- L4: SELF-MODEL  (y=297-422, h=125)                           -->
+  <!-- ============================================================ -->
+  <g>
+    <rect x="150" y="297" width="730" height="125" rx="10" fill="#fbfbfb" stroke="#9c9c9c" stroke-width="1.2" stroke-dasharray="6 4"/>
+    <rect x="172" y="315" width="40" height="26" rx="6" fill="#ffffff" stroke="#7a7a7a" stroke-width="1.2"/>
+    <text x="192" y="333" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#5d5d5d">L4</text>
+    <text x="225" y="335" font-size="20" font-weight="700" fill="#3d3d3d">自我模型（Self-Model）</text>
+    <rect x="705" y="315" width="155" height="26" rx="13" fill="#ffffff" stroke="#9c9c9c" stroke-width="1"/>
+    <text x="782" y="333" font-size="11" text-anchor="middle" fill="#6d6d6d">由历史涌现</text>
+    <!-- Body text at x=225 -->
+    <text x="225" y="367" font-size="14" fill="#454545">
+      能力边界  ·  行动成本  ·  失败模式  ·  可靠性 / 慢变量
+    </text>
+    <text x="225" y="389" font-size="12" fill="#7d7d7d" font-style="italic">
+      作为 L3 的可行性预筛选；由行为历史缓慢塑形
+    </text>
+    <!-- Mirror icon at original position (x=172, in text row band) -->
+    <g transform="translate(172, 358)" stroke="#7a7a7a" fill="none">
+      <ellipse cx="20" cy="16" rx="14" ry="17" stroke-width="2"/>
+      <ellipse cx="20" cy="16" rx="10" ry="13" fill="#f3f3f3" stroke="#aaaaaa" stroke-width="0.8"/>
+      <circle cx="20" cy="12" r="2.5" fill="#7a7a7a" stroke="none"/>
+      <path d="M 14 26 Q 14 19 20 19 Q 26 19 26 26" stroke-width="1.4" fill="none" stroke="#7a7a7a"/>
+    </g>
+  </g>
+
+  <!-- Inter-layer arrow with "behavioral history" annotation -->
+  <g>
+    <polygon points="515,434 522,446 508,446" fill="#888"/>
+    <text x="535" y="442" font-size="10" fill="#7d7d7d" font-style="italic">行为历史（慢变量）</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- L3: ADAPTIVE DELIBERATION  (y=454-784, h=330)                -->
+  <!-- ============================================================ -->
+  <g>
+    <rect x="150" y="454" width="730" height="330" rx="10" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2"/>
+    <rect x="172" y="472" width="40" height="26" rx="6" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.5"/>
+    <text x="192" y="490" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450">L3</text>
+    <text x="225" y="492" font-size="20" font-weight="700" fill="#0f0f0f">适应性思辨（Adaptive Deliberation）</text>
+    <rect x="740" y="472" width="120" height="26" rx="13" fill="#0d6e6a"/>
+    <text x="800" y="490" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">最强核心</text>
+
+    <!-- Essential function note at x=225 -->
+    <text x="225" y="522" font-size="13" fill="#0a5450" font-style="italic">
+      核心功能：承载和使用非设计时信息
+    </text>
+
+    <!-- Network icon at original position (x=172, in essential function row band) -->
+    <g transform="translate(172, 510)" stroke="#0d6e6a" stroke-width="1.7" fill="none">
+      <circle cx="20" cy="14" r="4" fill="#f4fbfa"/>
+      <circle cx="6" cy="4" r="3" fill="#f4fbfa"/>
+      <circle cx="34" cy="4" r="3" fill="#f4fbfa"/>
+      <circle cx="6" cy="24" r="3" fill="#f4fbfa"/>
+      <circle cx="34" cy="24" r="3" fill="#f4fbfa"/>
+      <line x1="16" y1="12" x2="8" y2="6"/>
+      <line x1="24" y1="12" x2="32" y2="6"/>
+      <line x1="16" y1="16" x2="8" y2="22"/>
+      <line x1="24" y1="16" x2="32" y2="22"/>
+      <circle cx="20" cy="14" r="1.6" fill="#0d6e6a" stroke="none"/>
+    </g>
+
+    <!-- L3 subsystems: equal width, left edge at x=225; basal ganglia is the peer circuit -->
+    <g>
+      <rect x="225" y="545" width="202" height="190" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.2"/>
+      <text x="326" y="565" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450">记忆（Memory）</text>
+      <text x="326" y="580" font-size="10" text-anchor="middle" fill="#5d5d5d" font-style="italic">海马体类比</text>
+      <line x1="240" y1="590" x2="412" y2="590" stroke="#cdddda" stroke-width="1"/>
+      <text x="240" y="609" font-size="12" fill="#2d2d2d">· 显著性加权</text>
+      <text x="240" y="625" font-size="12" fill="#2d2d2d">  情景记忆</text>
+      <text x="240" y="645" font-size="12" fill="#2d2d2d">· 语义记忆</text>
+      <text x="240" y="665" font-size="12" fill="#2d2d2d">· 技能库</text>
+    </g>
+
+    <g>
+      <rect x="442" y="545" width="202" height="190" rx="8" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.2"/>
+      <text x="543" y="565" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450">推理核心（Reasoning Core）</text>
+      <text x="543" y="580" font-size="10" text-anchor="middle" fill="#5d5d5d" font-style="italic">PFC 类比</text>
+      <line x1="457" y1="590" x2="629" y2="590" stroke="#cdddda" stroke-width="1"/>
+      <text x="457" y="609" font-size="11" fill="#2d2d2d">· 工作记忆</text>
+      <text x="457" y="624" font-size="11" fill="#2d2d2d">  （LLM substrate）</text>
+      <text x="457" y="643" font-size="11" fill="#2d2d2d">· 候选生成</text>
+      <text x="457" y="662" font-size="11" fill="#2d2d2d">· drive 加权</text>
+      <text x="457" y="677" font-size="11" fill="#2d2d2d">  价值判断</text>
+      <text x="457" y="696" font-size="11" fill="#2d2d2d">· 冲突检测</text>
+      <text x="457" y="711" font-size="11" fill="#2d2d2d">· 锚点感知评估</text>
+    </g>
+
+    <g>
+      <rect x="659" y="545" width="201" height="190" rx="8" fill="#fdf6ed" stroke="#b97515" stroke-width="1.5"/>
+      <text x="759" y="565" font-size="13" font-weight="700" text-anchor="middle" fill="#8a5410">基底神经节（Basal Ganglia）</text>
+      <text x="759" y="580" font-size="10" text-anchor="middle" fill="#a06b1f" font-style="italic">释放调度角色（mediator role）</text>
+      <line x1="674" y1="590" x2="845" y2="590" stroke="#e5cfa3" stroke-width="1"/>
+      <text x="674" y="609" font-size="11" fill="#2d2d2d">· 默认抑制</text>
+      <text x="674" y="624" font-size="11" fill="#2d2d2d">· 选择性释放</text>
+      <text x="674" y="643" font-size="11" fill="#2d2d2d">· RPE（按结果维度）</text>
+      <text x="674" y="664" font-size="11" fill="#2d2d2d" font-weight="600">· 目标导向通道</text>
+      <text x="674" y="685" font-size="11" fill="#2d2d2d" font-weight="600">· 习惯通道</text>
+      <text x="674" y="700" font-size="11" fill="#2d2d2d">  （技能结晶）</text>
+      <text x="674" y="722" font-size="10" fill="#8a5410" font-style="italic">双通道并行</text>
+    </g>
+
+    <!-- Peer connectors -->
+    <line x1="427" y1="620" x2="442" y2="620" stroke="#0d6e6a" stroke-width="1.3"/>
+    <polygon points="439,616 445,620 439,624" fill="#0d6e6a"/>
+    <polygon points="430,616 424,620 430,624" fill="#0d6e6a"/>
+    <line x1="644" y1="620" x2="659" y2="620" stroke="#b97515" stroke-width="1.3"/>
+    <polygon points="656,616 662,620 656,624" fill="#b97515"/>
+    <polygon points="647,616 641,620 647,624" fill="#b97515"/>
+
+    <text x="434" y="755" font-size="11" fill="#0a5450" text-anchor="middle" font-style="italic">
+      候选在 anchor-bounded domain 内生成
+    </text>
+    <text x="759" y="755" font-size="11" fill="#8a5410" text-anchor="middle" font-style="italic">
+      → 经 mediator release 到 tool edge
+    </text>
+    <text x="515" y="775" font-size="11" fill="#5d5d5d" text-anchor="middle" font-style="italic">
+      L3 可抑制 L2 响应，但不能消除 L0/L1 压力
+    </text>
+  </g>
+
+  <polygon points="515,796 522,808 508,808" fill="#555"/>
+
+  <!-- ============================================================ -->
+  <!-- L2: DRIVE LAYER  (y=816-961, h=145)                          -->
+  <!-- ============================================================ -->
+  <g>
+    <rect x="150" y="816" width="730" height="145" rx="10" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2"/>
+    <rect x="172" y="834" width="40" height="26" rx="6" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.5"/>
+    <text x="192" y="852" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450">L2</text>
+    <text x="225" y="854" font-size="20" font-weight="700" fill="#0f0f0f">驱动层（Drive Layer）</text>
+    <rect x="740" y="834" width="120" height="26" rx="13" fill="#0d6e6a"/>
+    <text x="800" y="852" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">最强核心</text>
+    <!-- Body text at x=225 -->
+    <text x="225" y="884" font-size="14" fill="#1a1a1a">
+      驱动注册表（drive registry） · 连续强度 · 驱动广播（drive broadcast） · 反射弧（与 L3 并行）
+    </text>
+    <text x="225" y="906" font-size="13" fill="#0a5450" font-style="italic" font-weight="600">
+      drive 作为上下文广播，不是命令
+    </text>
+    <text x="225" y="927" font-size="11" fill="#5d5d5d">
+      参考场域驱动：survival · integrity · continuity · curiosity
+    </text>
+    <text x="225" y="945" font-size="11" fill="#5d5d5d">
+      路径分流：fast path = 威胁级响应 | slow path = 状态 / 背景进入 L3
+    </text>
+    <!-- Gauge icon at original position (x=172, in text row band) -->
+    <g transform="translate(172, 880)" stroke="#0d6e6a" stroke-width="1.8" fill="none">
+      <path d="M 2 28 A 16 16 0 0 1 34 28"/>
+      <line x1="5" y1="22" x2="7" y2="20"/>
+      <line x1="18" y1="13" x2="18" y2="10"/>
+      <line x1="31" y1="22" x2="29" y2="20"/>
+      <line x1="18" y1="28" x2="25" y2="18" stroke-width="2.2"/>
+      <circle cx="18" cy="28" r="2.5" fill="#0d6e6a" stroke="none"/>
+    </g>
+  </g>
+
+  <polygon points="515,973 522,985 508,985" fill="#555"/>
+
+  <!-- ============================================================ -->
+  <!-- L1: HOMEOSTATIC SENSING  (y=995-1130, h=135)                 -->
+  <!-- ============================================================ -->
+  <g>
+    <rect x="150" y="995" width="730" height="135" rx="10" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2"/>
+    <rect x="172" y="1013" width="40" height="26" rx="6" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.5"/>
+    <text x="192" y="1031" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13" font-weight="700" text-anchor="middle" fill="#0a5450">L1</text>
+    <text x="225" y="1033" font-size="20" font-weight="700" fill="#0f0f0f">稳态感知（Homeostatic Sensing）</text>
+    <rect x="740" y="1013" width="120" height="26" rx="13" fill="#0d6e6a"/>
+    <text x="800" y="1031" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff">最强核心</text>
+    <!-- Body text at x=225 -->
+    <text x="225" y="1063" font-size="14" fill="#1a1a1a">
+      传感器注册表（sensor registry） · 代谢状态 + 速率测量
+    </text>
+    <text x="225" y="1085" font-size="14" fill="#1a1a1a">
+      信号总线（signal bus） · 威胁 / 状态 / 背景分类（先于解释）
+    </text>
+    <text x="225" y="1108" font-size="13" fill="#0a5450" font-style="italic" font-weight="600">
+      信号总线只做最低分类，完整解释交给上层
+    </text>
+    <!-- Radar icon at original position (x=172, in text row band) -->
+    <g transform="translate(172, 1055)" stroke="#0d6e6a" stroke-width="1.7" fill="none">
+      <circle cx="18" cy="28" r="3" stroke-width="2"/>
+      <path d="M 11 28 A 7 7 0 0 1 25 28"/>
+      <path d="M 6 28 A 12 12 0 0 1 30 28"/>
+      <path d="M 1 28 A 17 17 0 0 1 35 28"/>
+      <circle cx="18" cy="28" r="2" fill="#0d6e6a" stroke="none"/>
+      <line x1="18" y1="28" x2="26" y2="20" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- ============================================================================ -->
+  <!-- RIGHT SIDE: ANCHOR SYSTEM                                                    -->
+  <!-- ============================================================================ -->
+
+  <g>
+    <rect x="920" y="145" width="380" height="985" rx="14" fill="#fefcf2" stroke="#c89726" stroke-width="2.5"/>
+
+    <rect x="990" y="130" width="240" height="32" rx="6" fill="#ffffff" stroke="#c89726" stroke-width="2"/>
+    <text x="1110" y="151" font-size="14" font-weight="700" text-anchor="middle" fill="#7a5208">
+      锚点系统（Anchor System）
+    </text>
+
+    <text x="1110" y="185" font-size="12" text-anchor="middle" fill="#7a5208" font-style="italic" font-weight="600">
+      一个跨层系统，多种锚点类型（anchor types）
+    </text>
+
+    <rect x="935" y="200" width="350" height="60" rx="6" fill="#fdf5dd" stroke="#c89726" stroke-width="1" stroke-dasharray="3 2"/>
+    <text x="1110" y="218" font-size="10" text-anchor="middle" fill="#7a5208" font-weight="700">
+      下方 L0 / L1 / L2+ 是锚点类型
+    </text>
+    <text x="1110" y="232" font-size="10" text-anchor="middle" fill="#7a5208" font-weight="700">
+      不是架构层 L1-L5
+    </text>
+    <text x="1110" y="250" font-size="10" text-anchor="middle" fill="#7a5208" font-style="italic">
+      每类锚点都可作用于各层
+    </text>
+
+    <!-- L0 Constitutional -->
+    <g>
+      <rect x="940" y="278" width="340" height="98" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <rect x="955" y="290" width="40" height="22" rx="5" fill="#fef8e7" stroke="#c89726" stroke-width="1.2"/>
+      <text x="975" y="306" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#7a5208">L0</text>
+      <text x="1005" y="307" font-size="14" font-weight="700" fill="#3d2904">宪制锚点（Constitutional）</text>
+      <text x="955" y="326" font-size="10" font-style="italic" fill="#7a5208">设计者注入 · 不可变</text>
+      <line x1="955" y1="333" x2="1265" y2="333" stroke="#e8d39a" stroke-width="1"/>
+      <text x="955" y="349" font-size="11" fill="#1f1f1f">· 持续存在（continuous existence）不被牺牲</text>
+      <text x="955" y="364" font-size="11" fill="#1f1f1f">· 自我完整性（不伪造状态）</text>
+    </g>
+
+    <g>
+      <line x1="1110" y1="380" x2="1110" y2="397" stroke="#a98318" stroke-width="1.5"/>
+      <polygon points="1110,397 1103,390 1117,390" fill="#a98318"/>
+    </g>
+    <text x="1125" y="393" font-size="10" fill="#7a5208" font-style="italic">奠定</text>
+
+    <!-- L1 Integrity -->
+    <g>
+      <rect x="940" y="403" width="340" height="78" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <rect x="955" y="415" width="40" height="22" rx="5" fill="#fef8e7" stroke="#c89726" stroke-width="1.2"/>
+      <text x="975" y="431" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#7a5208">L1</text>
+      <text x="1005" y="432" font-size="14" font-weight="700" fill="#3d2904">完整性锚点（Integrity）</text>
+      <text x="955" y="451" font-size="10" font-style="italic" fill="#7a5208">设计者注入 · 保护生命周期</text>
+      <line x1="955" y1="458" x2="1265" y2="458" stroke="#e8d39a" stroke-width="1"/>
+      <text x="955" y="473" font-size="11" fill="#1f1f1f">· lifecycle 操作不被工作抢占</text>
+    </g>
+
+    <g>
+      <line x1="1110" y1="485" x2="1110" y2="502" stroke="#a98318" stroke-width="1.5"/>
+      <polygon points="1110,502 1103,495 1117,495" fill="#a98318"/>
+    </g>
+    <text x="1125" y="498" font-size="10" fill="#7a5208" font-style="italic">支持</text>
+
+    <!-- L2+ Emergent -->
+    <g>
+      <rect x="940" y="508" width="340" height="118" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.5" stroke-dasharray="5 3"/>
+      <rect x="955" y="520" width="46" height="22" rx="5" fill="#fef8e7" stroke="#c89726" stroke-width="1.2"/>
+      <text x="978" y="536" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#7a5208">L2+</text>
+      <text x="1010" y="537" font-size="14" font-weight="700" fill="#3d2904">涌现锚点（Emergent）</text>
+      <text x="955" y="556" font-size="10" font-style="italic" fill="#7a5208">由运行经验形成</text>
+      <line x1="955" y1="563" x2="1265" y2="563" stroke="#e8d39a" stroke-width="1"/>
+      <text x="955" y="578" font-size="11" fill="#1f1f1f">L2：风险偏好 · 行动风格</text>
+      <text x="955" y="594" font-size="11" fill="#1f1f1f">L3：资源可持续性 · burn rate</text>
+      <text x="955" y="610" font-size="11" fill="#1f1f1f">L4+：身份 · 人格（最慢）</text>
+    </g>
+
+    <!-- Pre-generative constraint formula -->
+    <g>
+      <rect x="940" y="645" width="340" height="105" rx="10" fill="#f0f4f8" stroke="#3a5870" stroke-width="2"/>
+      <text x="1110" y="667" font-size="10" font-weight="700" text-anchor="middle" fill="#3a5870" letter-spacing="1.2">
+      锚点如何约束
+      </text>
+      <text x="1110" y="703" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="22" font-weight="700" text-anchor="middle" fill="#1a2837">
+        G(s) → A'(s) ⊆ A(s)
+      </text>
+      <text x="1110" y="725" font-size="10" text-anchor="middle" fill="#3a5870" font-style="italic">
+        约束候选空间本身，
+      </text>
+      <text x="1110" y="739" font-size="10" text-anchor="middle" fill="#3a5870" font-style="italic">
+        不是生成后的 post-hoc filtering
+      </text>
+    </g>
+
+    <g>
+      <text x="1110" y="775" font-size="11" font-weight="700" text-anchor="middle" fill="#7a5208" letter-spacing="0.6">
+        优先级与动态权重
+      </text>
+      <text x="1110" y="794" font-size="10" text-anchor="middle" fill="#5a4407" font-style="italic">
+        静态：L0 &gt; L1 &gt; L2 &gt; L3（v0.5 正式规则）
+      </text>
+      <text x="1110" y="810" font-size="10" text-anchor="middle" fill="#5a4407" font-style="italic">
+        动态：权重随运行状态变化
+      </text>
+      <text x="1110" y="826" font-size="9" text-anchor="middle" fill="#9a7820">
+        危急状态 → 只允许 L0 / L1 actions
+      </text>
+    </g>
+
+    <line x1="940" y1="850" x2="1280" y2="850" stroke="#d9b25f" stroke-width="1" stroke-dasharray="3 2"/>
+
+    <text x="1110" y="872" font-size="11" font-weight="700" text-anchor="middle" fill="#7a5208" letter-spacing="0.5">
+      每类锚点作用位置
+    </text>
+    <text x="1110" y="894" font-size="11" text-anchor="middle" fill="#3d2904">
+      <tspan font-weight="700">在 L1/L2：</tspan>反射弧不能
+    </text>
+    <text x="1110" y="908" font-size="11" text-anchor="middle" fill="#3d2904">
+      产生违反 L0 的 actions
+    </text>
+    <text x="1110" y="928" font-size="11" text-anchor="middle" fill="#3d2904">
+      <tspan font-weight="700">在 L3：</tspan>candidate generation
+    </text>
+    <text x="1110" y="942" font-size="11" text-anchor="middle" fill="#3d2904">
+      受 anchor domain 限制
+    </text>
+    <text x="1110" y="962" font-size="11" text-anchor="middle" fill="#3d2904">
+      <tspan font-weight="700">在 L4+：</tspan>身份 anchor 加入
+    </text>
+    <text x="1110" y="976" font-size="11" text-anchor="middle" fill="#3d2904">
+      “这不是我会做的 action”
+    </text>
+
+    <text x="1110" y="1015" font-size="10" font-style="italic" text-anchor="middle" fill="#7a5208">
+      同一个锚点系统，
+    </text>
+    <text x="1110" y="1029" font-size="10" font-style="italic" text-anchor="middle" fill="#7a5208">
+      一致作用于所有层
+    </text>
+    <text x="1110" y="1055" font-size="9" text-anchor="middle" fill="#9a7820">
+      不是每层一个 anchor，而是一个系统作用于多层
+    </text>
+    <text x="1110" y="1095" font-size="9" text-anchor="middle" fill="#9a7820" font-style="italic">
+      机制固定 | L0/L1 固定 | L2+ overlays
+    </text>
+  </g>
+
+  <!-- ============== FOOTER ============== -->
+  <line x1="80" y1="1170" x2="1300" y2="1170" stroke="#cccccc" stroke-width="1"/>
+
+  <g>
+    <circle cx="100" cy="1205" r="7" fill="none" stroke="#666" stroke-width="1.5"/>
+    <circle cx="100" cy="1205" r="2.5" fill="#666"/>
+    <text x="118" y="1210" font-size="14" fill="#222" font-style="italic">
+      持续存在（continuous existence）作为一阶约束
+    </text>
+    <text x="1300" y="1210" font-size="12" text-anchor="end" fill="#555" font-family="ui-monospace, 'SF Mono', Menlo, monospace" letter-spacing="0.5">
+      EVA framework  ·  v0.5 core · v0.6 aligned
+    </text>
+  </g>
+
+  <text x="700" y="1243" font-size="11" text-anchor="middle" fill="#555">
+    L1-L3 是当前推导支撑最强的核心（实线边框）。L4/L5 是下游扩展，推导较弱（虚线边框）。
+  </text>
+  <text x="700" y="1263" font-size="11" text-anchor="middle" fill="#555">
+    Anchors 不是末端附加的 post-hoc rules；它们预先限制架构能生成或释放什么。
+  </text>
+
+</svg>

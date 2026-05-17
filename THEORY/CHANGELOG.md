@@ -6,6 +6,47 @@ This is not a line-by-line diff. It records the conceptual evolution—what clai
 
 ---
 
+## Reader-Facing Simplification (2026-05-14)
+
+Repository-level explanatory materials simplified. Theory claims unchanged.
+
+- Root README shortened into a single reading path for technically curious readers rather than separate researcher / engineer / curious-reader tracks
+- `ARTICLES/` rewritten as short, visual-first explainers with implementation details kept as boundary notes rather than theory content
+- `VISUALS/` simplified to direct SVG diagrams without HTML-as-diagram-source, spec files, or preview PNG dependency
+- Legacy HTML visuals and old visual specifications preserved under `archive/visuals-html-2026-05-17/`
+- Visual set currently focuses on the two core diagrams: five-layer overview and signal flow
+
+---
+
+## v0.6 — Theoretical Extension (2026-05-08)
+
+**Status**: Current theoretical extension. Extends v0.5 without replacing it.
+
+v0.6 preserves the v0.5 core architecture: Claim A / Claim B, C1-C3 operating conditions, the L1-L3 structural core, the anchor system, drive as contextual broadcast, LLM as Level 3 cultural carrier, and peer-circuit action selection. It adds the theoretical commitments needed once EVA is applied beyond a single narrow runtime field.
+
+### New in v0.6
+- **Active persistence**: continuous existence is clarified as preserving future capacity to continue existing, not passively preserving current state. Inaction has cost in environments with metabolic pressure, environmental risk, or expiring opportunity.
+- **Persistence target hierarchy**: the framework now distinguishes substrate instance, embodied instance, capability structure, resource and asset system, reproductive structure, group structure, and cultural information as different persistence targets.
+- **Capability sources and provenance**: structural invariants, existence-field conditions, designer-given priors, individually acquired capabilities, and inherited priors are separated by origin, modification permission, and identity implications.
+- **Structural invariant / operational content distinction**: release authority, anchor boundaries, drive prototypes within a life, and field conditions are structural; LLM advice, retrieved content, candidate content, and learned biases are operational content.
+- **Observable stability**: stability is introduced as the external measurement interface for continuous existence, with architecture-neutral metric families and architecture-specific audit.
+- **Multi-dimensional outcome**: outcome is treated as a vector evaluated under drive context, with hard constraints separated from soft trade-offs.
+- **Extension discipline**: new scenarios default to scenario specification rather than theory expansion. Theory extension requires inexpressibility, internal contradiction, or boundary failure.
+
+### Revisions to how v0.5 should be read
+- v0.5 references to continuous existence should be read through the active-persistence interpretation.
+- The four-drive list in v0.5 is a field condition, not a universal architectural drive inventory.
+- v0.5's skill library should be read as simplified relative to v0.6's provenance distinction.
+- "Grow, don't deploy" applies only to content that is permitted to grow; structural invariants and existence-field conditions do not grow within a life.
+- LLM positioning in v0.5 is preserved and sharpened: language models provide operational content, not release authority.
+
+### Explicit limits
+- Inherited prior mechanisms are positioned theoretically but not implemented.
+- Persistence levels 5-7 are theoretical placeholders for future versions.
+- Cross-environment transfer, physical embodiment, and multi-agent structural commitments are not resolved by v0.6.
+
+---
+
 ## Reader-Facing Content Expansion (2026-04-20)
 
 Repository-level content packaging expanded. Theory claims unchanged.
@@ -43,7 +84,7 @@ The document is still called v0.5. These are precision refinements within v0.5, 
 
 ## v0.5 — Integrated Stable Version (2026-04-19)
 
-**Status**: Current stable version. Theoretical framework considered stable; further changes expected to be precision refinements rather than structural modifications.
+**Status**: Core stable version. v0.6 extends this version without replacing it.
 
 ### Integrates from v0.4 (preserved)
 - Claim A (paradigm) / Claim B (structural) explicit separation
@@ -156,12 +197,12 @@ v0.4's contribution to structure was substantial and valuable. Its softening of 
 
 This section records decisions that have remained stable across versions and will not be reopened without substantive new information.
 
-**Decided at v0.1, stable through v0.5**:
+**Decided at v0.1, stable through v0.6**:
 - Five-layer architecture (not three, not seven)
 - Biological evolution as reference system
 - Anchor system as vertical cross-layer structure
 
-**Decided at v0.3, stable through v0.5**:
+**Decided at v0.3, stable through v0.6**:
 - Scope limited to C1/C2/C3
 - Epistemic three-layer grounding (A/B/C)
 - L4/L5 included in architecture but with weaker derivation
@@ -171,6 +212,12 @@ This section records decisions that have remained stable across versions and wil
 - LLM positioned as Level 3 cultural carrier; building agent's own memory layer takes engineering priority over stronger LLM integration
 - Drive-as-context framed as architectural necessity (not stylistic preference)
 - Peer circuit framed as structural requirement (not design choice)
+
+**Decided at v0.6**:
+- v0.6 extends v0.5; it does not supersede the v0.5 core architecture
+- Continuous existence should be read as active persistence
+- New environments default to scenario specification rather than theory extension
+- Capability provenance and structural-invariant boundaries must remain explicit
 
 ---
 
