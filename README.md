@@ -30,17 +30,17 @@ That shift changes the architecture. EVA treats sensing, drive, constraint, medi
 ## Core Diagrams
 
 <p align="center">
-  <a href="VISUALS/five-layer-overview.svg">
+  <a href="VISUALS/five-layer-overview.svg?raw=1">
     <img src="VISUALS/five-layer-overview.svg" alt="EVA five-layer overview" width="720" />
   </a>
 </p>
 
 <p align="center">
-  <a href="VISUALS/five-layer-overview.svg">Five-Layer Overview</a>
+  <a href="VISUALS/five-layer-overview.svg?raw=1">Five-Layer Overview</a>
   ·
-  <a href="VISUALS/signal-flow.svg">Signal Flow</a>
+  <a href="VISUALS/signal-flow.svg?raw=1">Signal Flow</a>
   ·
-  <a href="VISUALS/v0.6-extension-map.svg">v0.6 Extension Map</a>
+  <a href="VISUALS/v0.6-extension-map.svg?raw=1">v0.6 Extension Map</a>
 </p>
 
 ## Core Claims
@@ -52,11 +52,11 @@ That shift changes the architecture. EVA treats sensing, drive, constraint, medi
 ## Read in This Order
 
 1. [`ARTICLES/01-paradigm-introduction.md`](ARTICLES/01-paradigm-introduction.md) — the basic framing difference.
-2. [`VISUALS/five-layer-overview.svg`](VISUALS/five-layer-overview.svg) and [`VISUALS/signal-flow.svg`](VISUALS/signal-flow.svg) — the two core diagrams.
+2. [`VISUALS/five-layer-overview.svg`](VISUALS/five-layer-overview.svg?raw=1) and [`VISUALS/signal-flow.svg`](VISUALS/signal-flow.svg?raw=1) — the two core diagrams.
 3. [`ARTICLES/02-architectural-contributions.md`](ARTICLES/02-architectural-contributions.md) — the core architecture.
 4. [`ARTICLES/03-related-work-and-positioning.md`](ARTICLES/03-related-work-and-positioning.md) — adjacent work and boundaries.
 5. [`ARTICLES/04-v0.6-extension.md`](ARTICLES/04-v0.6-extension.md) — what v0.6 adds.
-6. [`VISUALS/v0.6-extension-map.svg`](VISUALS/v0.6-extension-map.svg) — a visual map of the v0.6 extension.
+6. [`VISUALS/v0.6-extension-map.svg`](VISUALS/v0.6-extension-map.svg?raw=1) — a visual map of the v0.6 extension.
 7. [`THEORY/v0.5-integrated.md`](THEORY/v0.5-integrated.md) — the formal core.
 8. [`THEORY/v0.6-extension.md`](THEORY/v0.6-extension.md) — the current extension.
 
