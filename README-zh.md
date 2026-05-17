@@ -30,17 +30,17 @@ English: [README.md](README.md)
 ## 核心图示
 
 <p align="center">
-  <a href="VISUALS/five-layer-overview-zh.svg?raw=1">
+  <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/five-layer-overview-zh.svg">
     <img src="VISUALS/five-layer-overview-zh.svg" alt="EVA 五层架构" width="720" />
   </a>
 </p>
 
 <p align="center">
-  <a href="VISUALS/five-layer-overview-zh.svg?raw=1">五层架构图</a>
+  <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/five-layer-overview-zh.svg">五层架构图</a>
   ·
-  <a href="VISUALS/signal-flow-zh.svg?raw=1">信号流图</a>
+  <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/signal-flow-zh.svg">信号流图</a>
   ·
-  <a href="VISUALS/v0.6-extension-map-zh.svg?raw=1">v0.6 扩展图</a>
+  <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/v0.6-extension-map-zh.svg">v0.6 扩展图</a>
 </p>
 
 ## 核心 Claim
@@ -52,11 +52,11 @@ English: [README.md](README.md)
 ## 推荐阅读顺序
 
 1. [`ARTICLES/01-paradigm-introduction-zh.md`](ARTICLES/01-paradigm-introduction-zh.md) — 基本 framing 差异。
-2. [`VISUALS/five-layer-overview-zh.svg`](VISUALS/five-layer-overview-zh.svg?raw=1) 和 [`VISUALS/signal-flow-zh.svg`](VISUALS/signal-flow-zh.svg?raw=1) — 两张核心图示。
+2. [`VISUALS/five-layer-overview-zh.svg`](https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/five-layer-overview-zh.svg) 和 [`VISUALS/signal-flow-zh.svg`](https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/signal-flow-zh.svg) — 两张核心图示。
 3. [`ARTICLES/02-architectural-contributions-zh.md`](ARTICLES/02-architectural-contributions-zh.md) — 核心架构。
 4. [`ARTICLES/03-related-work-and-positioning-zh.md`](ARTICLES/03-related-work-and-positioning-zh.md) — 相邻工作和边界。
 5. [`ARTICLES/04-v0.6-extension-zh.md`](ARTICLES/04-v0.6-extension-zh.md) — v0.6 增加了什么。
-6. [`VISUALS/v0.6-extension-map-zh.svg`](VISUALS/v0.6-extension-map-zh.svg?raw=1) — v0.6 扩展的图示概览。
+6. [`VISUALS/v0.6-extension-map-zh.svg`](https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/v0.6-extension-map-zh.svg) — v0.6 扩展的图示概览。
 7. [`THEORY/v0.5-integrated.md`](THEORY/v0.5-integrated.md) — 正式核心理论。
 8. [`THEORY/v0.6-extension.md`](THEORY/v0.6-extension.md) — 当前扩展。
 
