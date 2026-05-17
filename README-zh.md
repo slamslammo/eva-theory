@@ -14,6 +14,21 @@ English: [README.md](README.md)
 
 ## 从这里开始
 
+多数 agent framework 从 task completion 出发。EVA 从另一个问题出发：
+
+> 一个 agent 必须维护什么，才能在时间中作为同一个 agent 持续存在？
+
+这个问题会改变架构。EVA 把 sensing、drive、constraint、mediated release、memory 和 learning 看作 persistence-centered loop 的组成部分，而不是 task planner 周围的附属工具。
+
+## 当前状态
+
+- **v0.5** 是稳定核心架构。
+- **v0.6** 是当前围绕 active persistence 和 scenario discipline 的扩展。
+- 当前理论支撑最强的核心仍是 **L1-L3**：homeostatic sensing、drive structure、adaptive deliberation。
+- L4 self-model 和 L5 social cognition 仍是下游扩展，推导强度弱于 L1-L3。
+
+## 核心图示
+
 <p align="center">
   <a href="VISUALS/five-layer-overview-zh.svg">
     <img src="VISUALS/five-layer-overview-zh.svg" alt="EVA 五层架构" width="720" />
@@ -27,19 +42,6 @@ English: [README.md](README.md)
   ·
   <a href="VISUALS/v0.6-extension-map-zh.svg">v0.6 扩展图</a>
 </p>
-
-多数 agent framework 从 task completion 出发。EVA 从另一个问题出发：
-
-> 一个 agent 必须维护什么，才能在时间中作为同一个 agent 持续存在？
-
-这个问题会改变架构。EVA 把 sensing、drive、constraint、mediated release、memory 和 learning 看作 persistence-centered loop 的组成部分，而不是 task planner 周围的附属工具。
-
-## 当前状态
-
-- **v0.5** 是稳定核心架构。
-- **v0.6** 是当前围绕 active persistence 和 scenario discipline 的扩展。
-- 当前理论支撑最强的核心仍是 **L1-L3**：homeostatic sensing、drive structure、adaptive deliberation。
-- L4 self-model 和 L5 social cognition 仍是下游扩展，推导强度弱于 L1-L3。
 
 ## 核心 Claim
 

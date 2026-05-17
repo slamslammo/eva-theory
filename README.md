@@ -14,6 +14,21 @@ This repository contains the theory. The companion implementation project is [`e
 
 ## Start Here
 
+Most agent frameworks start from task completion. EVA starts from a different question:
+
+> What must an agent maintain in order to keep existing as the same agent over time?
+
+That shift changes the architecture. EVA treats sensing, drive, constraint, mediated release, memory, and learning as parts of a persistence-centered loop rather than tools around a task planner.
+
+## Current Status
+
+- **v0.5** is the stable core architecture.
+- **v0.6** is the current extension around active persistence and scenario discipline.
+- The strongest theoretical core remains **L1-L3**: homeostatic sensing, drive structure, and adaptive deliberation.
+- L4 self-model and L5 social cognition remain downstream extensions with weaker derivational strength.
+
+## Core Diagrams
+
 <p align="center">
   <a href="VISUALS/five-layer-overview.svg">
     <img src="VISUALS/five-layer-overview.svg" alt="EVA five-layer overview" width="720" />
@@ -27,19 +42,6 @@ This repository contains the theory. The companion implementation project is [`e
   ·
   <a href="VISUALS/v0.6-extension-map.svg">v0.6 Extension Map</a>
 </p>
-
-Most agent frameworks start from task completion. EVA starts from a different question:
-
-> What must an agent maintain in order to keep existing as the same agent over time?
-
-That shift changes the architecture. EVA treats sensing, drive, constraint, mediated release, memory, and learning as parts of a persistence-centered loop rather than tools around a task planner.
-
-## Current Status
-
-- **v0.5** is the stable core architecture.
-- **v0.6** is the current extension around active persistence and scenario discipline.
-- The strongest theoretical core remains **L1-L3**: homeostatic sensing, drive structure, and adaptive deliberation.
-- L4 self-model and L5 social cognition remain downstream extensions with weaker derivational strength.
 
 ## Core Claims
 
