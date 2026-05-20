@@ -6,6 +6,33 @@ This is not a line-by-line diff. It records the conceptual evolution—what clai
 
 ---
 
+## v0.6 rev2 — Scenario-Defined Existence Semantics (2026-05-20)
+
+**Status**: Substantive revision to v0.6. Redraws a boundary within v0.6; does not open a new version line. v0.5 is unchanged; all other v0.6 commitments are unchanged.
+
+A boundary-failure revision in the sense of v0.6 §8.5 (criterion 3). v0.6 as originally written had the framework decide what counts as an individual living and dying—substrate failure equated with process termination and death, embodied failure treated as a universally recoverable episode boundary. Applying this to two cases exposed the boundary as misdrawn:
+
+- **Crafter** (terminal embodied failure): HP reaching zero ends that individual's life with no re-embodiment available, yet v0.6 read it as a recoverable boundary—which is what licensed the `done → reset()` implementation that silently masked a death.
+- **Recoverable interruption** (battery loss, restart, migration): a halt with recoverable state is not death, yet v0.6's substrate-failure framing tied continuity to uninterrupted execution.
+
+### Redrawn
+- **Existence semantics are scenario-defined, not framework-defined.** The framework provides persistence mechanisms and the persistence-target hierarchy as classification language; each existence field declares what counts as continued existence, recoverable interruption, and terminal failure. A persistence mechanism may support continuity but cannot redefine what the field has declared to be death. (Chapter 2 opening, §2.2, §2.4, §8.4.)
+- **Continuous existence ≠ continuous execution.** The protected quantity is identity continuity—recoverable state, intact structural invariants, unbroken provenance—instantiated per field, not uninterrupted processing. Recoverable interruptions are not death; only irrecoverable loss of identity continuity is. (§2.4.)
+- **§2.4 death semantics rewritten.** Substrate failure split into recoverable interruption versus terminal loss; embodied failure is terminal or recoverable per field, with Crafter HP=0 as the terminal case.
+
+### Clarified
+- **EVA is the architecture, not the entity that exists.** The persisting subject is the *individual*—one instantiation of the architecture in one field. (Chapter 2 opening.)
+- **Inheritance is cross-individual.** Distilled priors flow from past individuals to a new, distinct individual; this is population-level continuity of information and a means to improve future individuals' persistence, not the continuation of one individual across lives. A shared substrate or continuing process does not make two individuals one. (§3.6, §2 opening.)
+- **Stability metrics do not define existence semantics.** A comparative-stability run is one individual's life to its field-declared terminal point; aggregation across runs is population statistics, not one subject living many times. (§5.4.)
+
+### Mandated
+- **Scenario specification must declare existence semantics**: continuity criterion, recoverable interruption, terminal failure, individual boundary, reset semantics, inheritance channel. This is the engineering home of the criterion v0.5 left to interpretation; its concrete form belongs to deployment documentation, not to the theory. (§8.4.)
+
+### v0.5 relationship
+- v0.5 has no essential conflict with this revision. It had an expression gap—it never said the existence criterion is scenario-defined—and left continuous-existence-versus-execution undistinguished. Both are closed via Appendix R.9 re-interpreting v0.5 §2 C1 and §4. v0.5's body is unchanged.
+
+---
+
 ## Reader-Facing Simplification (2026-05-14)
 
 Repository-level explanatory materials simplified. Theory claims unchanged.
@@ -218,6 +245,11 @@ This section records decisions that have remained stable across versions and wil
 - Continuous existence should be read as active persistence
 - New environments default to scenario specification rather than theory extension
 - Capability provenance and structural-invariant boundaries must remain explicit
+
+**Decided at v0.6 rev2**:
+- Existence semantics—what counts as continued existence, recoverable interruption, and terminal failure—are scenario-defined; the framework maintains continuity under the field's declaration but does not define it
+- Continuous existence is identity continuity (recoverable state + intact structural invariants + unbroken provenance), not continuous execution
+- The persisting subject is the individual; inheritance is cross-individual population continuity, a means to improve future individuals, not the continuation of one individual across lives
 
 ---
 
