@@ -40,7 +40,9 @@ That shift changes the architecture. EVA treats sensing, drive, constraint, medi
   ·
   <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/signal-flow.svg">Signal Flow</a>
   ·
-  <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/v0.6-extension-map.svg">v0.6 Extension Map</a>
+  <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/framework-and-scenario.svg">Framework and Scenario</a>
+  ·
+  <a href="https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/persistence-over-time.svg">Active Persistence Over Time</a>
 </p>
 
 ## Core Claims
@@ -56,7 +58,7 @@ That shift changes the architecture. EVA treats sensing, drive, constraint, medi
 3. [`ARTICLES/02-architectural-contributions.md`](ARTICLES/02-architectural-contributions.md) — the core architecture.
 4. [`ARTICLES/03-related-work-and-positioning.md`](ARTICLES/03-related-work-and-positioning.md) — adjacent work and boundaries.
 5. [`ARTICLES/04-v0.6-extension.md`](ARTICLES/04-v0.6-extension.md) — what v0.6 adds.
-6. [`VISUALS/v0.6-extension-map.svg`](https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/v0.6-extension-map.svg) — a visual map of the v0.6 extension.
+6. [`VISUALS/framework-and-scenario.svg`](https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/framework-and-scenario.svg) and [`VISUALS/persistence-over-time.svg`](https://raw.githubusercontent.com/slamslammo/eva-theory/main/VISUALS/persistence-over-time.svg) — two diagrams of the v0.6 extension.
 7. [`THEORY/v0.5-integrated.md`](THEORY/v0.5-integrated.md) — the formal core.
 8. [`THEORY/v0.6-extension.md`](THEORY/v0.6-extension.md) — the current extension.
 

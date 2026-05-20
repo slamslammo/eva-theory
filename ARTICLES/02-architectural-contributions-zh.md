@@ -334,7 +334,7 @@ EVA **不**声称：
 
 完整 theoretical derivation，包括 scope conditions、epistemic layering、signal architecture 和 anchor formalization，读 `THEORY/v0.5-integrated.md`。
 
-面向读者的 diagrams 和 companion visuals，见 `VISUALS/five-layer-overview-zh.svg`、`VISUALS/signal-flow-zh.svg` 和 `VISUALS/v0.6-extension-map-zh.svg`。
+面向读者的 diagrams 和 companion visuals，见 `VISUALS/five-layer-overview-zh.svg`、`VISUALS/signal-flow-zh.svg`、`VISUALS/framework-and-scenario-zh.svg` 和 `VISUALS/persistence-over-time-zh.svg`。
 
 ---
 

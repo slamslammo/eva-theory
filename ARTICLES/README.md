@@ -24,5 +24,5 @@ This directory holds public-facing writing that explains EVA at different depths
 
 - For the core theory, see `THEORY/v0.5-integrated.md`
 - For the current extension, see `THEORY/v0.6-extension.md`
-- For visuals, see `VISUALS/five-layer-overview.svg`, `VISUALS/signal-flow.svg`, and `VISUALS/v0.6-extension-map.svg`
+- For visuals, see `VISUALS/five-layer-overview.svg`, `VISUALS/signal-flow.svg`, `VISUALS/framework-and-scenario.svg`, and `VISUALS/persistence-over-time.svg`
 - For the theory/implementation boundary note, see `IMPLEMENTATION/eva-agent-correspondence.md`

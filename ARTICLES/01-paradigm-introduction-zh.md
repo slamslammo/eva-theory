@@ -196,7 +196,7 @@ Paradigm argument 很容易被误读，因此有几项澄清很重要。
 
 **更详细的工程与架构区别**：见 `ARTICLES/02-architectural-contributions-zh.md`。这篇 companion article 聚焦 EVA 与当前 agent framework 不同的具体 design choices。
 
-**仓库导航和面向读者材料**：见 `ARTICLES/README-zh.md`、`VISUALS/five-layer-overview-zh.svg`、`VISUALS/signal-flow-zh.svg` 和 `VISUALS/v0.6-extension-map-zh.svg`。
+**仓库导航和面向读者材料**：见 `ARTICLES/README-zh.md`、`VISUALS/five-layer-overview-zh.svg`、`VISUALS/signal-flow-zh.svg`、`VISUALS/framework-and-scenario-zh.svg` 和 `VISUALS/persistence-over-time-zh.svg`。
 
 **实现专属设计和当前状态**：见公开配套项目 [`eva-agent`](https://github.com/slamslammo/eva-agent)。本仓库中理论与实现的轻量桥接见 `IMPLEMENTATION/eva-agent-correspondence-zh.md`。
 

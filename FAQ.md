@@ -36,7 +36,7 @@ For a short architecture entry, see `ARTICLES/02-architectural-contributions.md`
 
 No.
 
-v0.5 remains the stable core architecture. v0.6 extends it by clarifying active persistence, persistence targets, capability provenance, observable stability, multi-dimensional outcome, and scenario specification.
+v0.5 remains the stable core architecture. v0.6 extends it by clarifying active persistence, persistence targets, capability provenance, observable stability, multi-dimensional outcome, scenario specification, and scenario-defined existence semantics.
 
 For the short reader-facing version, see `ARTICLES/04-v0.6-extension.md`.
 
@@ -50,4 +50,4 @@ Active persistence means that inaction is evaluated as one possible trajectory, 
 
 Scenario specification is the v0.6 discipline for applying EVA to new environments without expanding the theory each time.
 
-A scenario should specify the relevant existence-field conditions: active persistence targets, drive dimensions, capability sources and provenance, action-space constraints, outcome interpretation, and observable stability traces. Only if a new environment cannot be expressed within the existing framework, creates an internal contradiction, or exposes a failed boundary should theory extension be considered.
+A scenario should specify the relevant existence-field conditions: the existence semantics (what counts as continued existence, recoverable interruption, and terminal failure for an individual in that field), active persistence targets, drive dimensions, capability sources and provenance, action-space constraints, outcome interpretation, and observable stability traces. Only if a new environment cannot be expressed within the existing framework, creates an internal contradiction, or exposes a failed boundary should theory extension be considered.

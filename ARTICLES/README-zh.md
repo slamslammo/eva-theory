@@ -30,5 +30,5 @@ English: [README.md](README.md)
 
 - 核心理论见 `THEORY/v0.5-integrated.md`
 - 当前扩展见 `THEORY/v0.6-extension.md`
-- 图示见 `VISUALS/five-layer-overview-zh.svg`、`VISUALS/signal-flow-zh.svg` 和 `VISUALS/v0.6-extension-map-zh.svg`
+- 图示见 `VISUALS/five-layer-overview-zh.svg`、`VISUALS/signal-flow-zh.svg`、`VISUALS/framework-and-scenario-zh.svg` 和 `VISUALS/persistence-over-time-zh.svg`
 - 理论 / 实现边界说明见 `IMPLEMENTATION/eva-agent-correspondence-zh.md`

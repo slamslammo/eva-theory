@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1400 900" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <!-- ====================================================================== -->
+  <!-- EVA v0.6 — Active Persistence Over Time                                 -->
+  <!-- Content authority: THEORY/v0.6-extension.md (rev2)                      -->
+  <!-- One metaphor: a future-viability lifeline over time. Recoverable        -->
+  <!-- interruption (resumes = same individual) vs terminal failure (line      -->
+  <!-- ends = death). Inheritance carries information to a NEW individual.     -->
+  <!-- ====================================================================== -->
+
+  <rect width="1400" height="900" fill="#ffffff"/>
+
+  <!-- ============== HEADER ============== -->
+  <text x="700" y="56" font-size="31" font-weight="700" text-anchor="middle" fill="#0f0f0f">EVA v0.6 — Active Persistence Over Time</text>
+  <text x="700" y="88" font-size="16" text-anchor="middle" fill="#555" font-style="italic">continuous existence is identity continuity over time — not uninterrupted execution</text>
+
+  <!-- ============== LEGEND (top-right) ============== -->
+  <g>
+    <rect x="1052" y="108" width="296" height="120" rx="10" fill="#fcfcfc" stroke="#d8d8d8" stroke-width="1"/>
+    <line x1="1068" y1="132" x2="1100" y2="132" stroke="#0d6e6a" stroke-width="3"/>
+    <text x="1110" y="136" font-size="12.5" fill="#333">individual lifeline (future viability)</text>
+    <line x1="1068" y1="158" x2="1100" y2="158" stroke="#0d6e6a" stroke-width="2.4" stroke-dasharray="6 5"/>
+    <text x="1110" y="162" font-size="12.5" fill="#333">recoverable interruption</text>
+    <text x="1076" y="188" font-size="15" fill="#c0392b" font-weight="700" text-anchor="middle">✕</text>
+    <text x="1110" y="188" font-size="12.5" fill="#333">terminal failure (individual death)</text>
+    <line x1="1068" y1="210" x2="1100" y2="210" stroke="#4a5fb0" stroke-width="2.4" stroke-dasharray="2 4" stroke-linecap="round"/>
+    <text x="1110" y="214" font-size="12.5" fill="#333">inheritance (cross-individual)</text>
+  </g>
+
+  <!-- ============== AXES ============== -->
+  <line x1="150" y1="700" x2="150" y2="172" stroke="#444" stroke-width="2"/>
+  <polygon points="150,162 143,184 157,184" fill="#444"/>
+  <g transform="translate(118 440) rotate(-90)"><text font-size="13" fill="#444" text-anchor="middle" letter-spacing="1.2" font-weight="600">FUTURE VIABILITY</text></g>
+  <line x1="150" y1="700" x2="1340" y2="700" stroke="#444" stroke-width="2"/>
+  <polygon points="1350,700 1328,693 1328,707" fill="#444"/>
+  <text x="1300" y="724" font-size="13" fill="#444" font-weight="600" letter-spacing="1.2">TIME →</text>
+
+  <!-- terminal threshold (field-declared) -->
+  <line x1="158" y1="650" x2="1320" y2="650" stroke="#b5760a" stroke-width="1.6" stroke-dasharray="8 6"/>
+  <text x="158" y="642" font-size="11.5" fill="#8a5a00" font-style="italic">terminal threshold — field-declared (e.g. Crafter HP = 0)</text>
+
+  <!-- ============== INDIVIDUAL #1 ============== -->
+  <!-- birth -->
+  <circle cx="178" cy="402" r="5" fill="#0d6e6a"/>
+  <text x="172" y="392" font-size="11.5" fill="#0a5450" text-anchor="end">born</text>
+  <!-- segment 1: rise, disturbance dip, recovery -->
+  <path d="M 178,402 C 240,332 300,332 362,372 C 410,404 452,470 500,452 C 540,438 572,392 598,388" fill="none" stroke="#0d6e6a" stroke-width="3"/>
+  <!-- recoverable interruption gap -->
+  <line x1="598" y1="388" x2="666" y2="388" stroke="#0d6e6a" stroke-width="2.4" stroke-dasharray="6 5"/>
+  <circle cx="598" cy="388" r="3.4" fill="#0d6e6a"/>
+  <circle cx="666" cy="388" r="3.4" fill="#0d6e6a"/>
+  <!-- segment 2: decline to terminal -->
+  <path d="M 666,388 C 722,382 754,432 788,488 C 820,544 842,614 860,646" fill="none" stroke="#0d6e6a" stroke-width="3"/>
+  <!-- terminal X -->
+  <g stroke="#c0392b" stroke-width="3.4" stroke-linecap="round"><line x1="852" y1="638" x2="872" y2="658"/><line x1="872" y1="638" x2="852" y2="658"/></g>
+
+  <!-- inaction decay hint -->
+  <path d="M 362,372 C 400,408 430,452 452,500" fill="none" stroke="#b0b0b0" stroke-width="1.6" stroke-dasharray="2 4"/>
+  <text x="360" y="556" font-size="11.5" fill="#9a9a9a" font-style="italic">inaction also decays viability</text>
+
+  <!-- ============== INHERITANCE ============== -->
+  <path d="M 868,652 C 940,706 1016,628 1010,556 C 1006,506 982,460 952,438" fill="none" stroke="#4a5fb0" stroke-width="2.4" stroke-dasharray="2 5" stroke-linecap="round"/>
+  <polygon points="952,438 958,458 944,452" fill="#4a5fb0"/>
+  <text x="980" y="600" font-size="12.5" fill="#3a4a96" font-weight="600">trace → distillation → inherited priors</text>
+  <text x="980" y="618" font-size="11.5" fill="#6a78b8" font-style="italic">cross-individual — not the dead one resumed</text>
+
+  <!-- ============== INDIVIDUAL #2 ============== -->
+  <circle cx="952" cy="436" r="5" fill="#0d6e6a"/>
+  <path d="M 952,436 C 1008,372 1068,372 1126,398 C 1176,420 1216,404 1266,410 C 1288,413 1300,412 1308,412" fill="none" stroke="#0d6e6a" stroke-width="3"/>
+  <polygon points="1316,412 1296,405 1296,419" fill="#0d6e6a"/>
+  <text x="1150" y="356" font-size="12.5" fill="#0a5450" font-weight="600">new, distinct individual</text>
+  <text x="1150" y="374" font-size="11.5" fill="#5c6f6d" font-style="italic">inherits priors · ongoing / truncated</text>
+
+  <!-- ============== ANNOTATIONS ============== -->
+  <!-- disturbance / recovery -->
+  <line x1="500" y1="456" x2="430" y2="560" stroke="#bbb" stroke-width="1"/>
+  <text x="250" y="588" font-size="13" fill="#333" font-weight="600">disturbance → bounded action → recovery</text>
+  <text x="250" y="606" font-size="11.5" fill="#777" font-style="italic">active persistence: inaction is not automatically safe</text>
+
+  <!-- recoverable interruption -->
+  <line x1="632" y1="384" x2="632" y2="300" stroke="#bbb" stroke-width="1"/>
+  <text x="632" y="288" font-size="13" fill="#0a5450" font-weight="700" text-anchor="middle">recoverable interruption</text>
+  <text x="632" y="306" font-size="11.5" fill="#5c6f6d" font-style="italic" text-anchor="middle">restart · migration · power loss → SAME individual</text>
+
+  <!-- terminal -->
+  <line x1="846" y1="648" x2="690" y2="600" stroke="#d9a59c" stroke-width="1"/>
+  <text x="540" y="596" font-size="13" fill="#c0392b" font-weight="700">terminal failure → individual death</text>
+  <text x="540" y="614" font-size="11.5" fill="#b06a60" font-style="italic">field criterion reached (e.g. Crafter HP = 0)</text>
+
+  <!-- ============== POPULATION BAND ============== -->
+  <rect x="150" y="734" width="1190" height="118" rx="10" fill="#f6f8f8" stroke="#dfe6e5" stroke-width="1"/>
+  <text x="170" y="762" font-size="14" font-weight="700" fill="#0a5450">Across many individuals — the population</text>
+  <text x="170" y="784" font-size="12" fill="#5c6f6d" font-style="italic">each run is one individual to its terminal point; aggregation is population statistics, not one subject living many times</text>
+  <text x="170" y="824" font-size="12" fill="#5c6f6d">average lifespan &amp; capability rise over generations as inheritance accumulates — the Comparative Stability claim (§5)</text>
+  <!-- mini lifelines rising -->
+  <g stroke="#0d6e6a" stroke-width="2" fill="none">
+    <path d="M 905,838 C 920,824 935,824 950,832"/>
+    <path d="M 985,836 C 1003,816 1021,816 1039,828"/>
+    <path d="M 1074,832 C 1095,806 1116,806 1137,822"/>
+    <path d="M 1165,828 C 1189,796 1213,796 1237,816"/>
+  </g>
+  <path d="M 905,842 C 1060,812 1180,792 1268,776" fill="none" stroke="#4a5fb0" stroke-width="1.8" stroke-dasharray="3 5"/>
+  <polygon points="1276,774 1256,770 1260,784" fill="#4a5fb0"/>
+
+  <!-- ============== FOOTER ============== -->
+  <text x="700" y="884" font-size="13.5" text-anchor="middle" fill="#555" font-style="italic">Continuous existence ≠ continuous execution.   Inheritance is cross-individual.   ·   v0.6 rev2 — §1 · §2.4 · §3.6 · §5</text>
+</svg>

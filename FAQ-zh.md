@@ -38,7 +38,7 @@ LLM 可以增强 reasoning，也能提供 human cumulative knowledge。但 EVA �
 
 不是。
 
-v0.5 仍然是稳定核心架构。v0.6 在此基础上扩展，澄清 active persistence、persistence targets、capability provenance、observable stability、multi-dimensional outcome 和 scenario specification。
+v0.5 仍然是稳定核心架构。v0.6 在此基础上扩展，澄清 active persistence、persistence targets、capability provenance、observable stability、multi-dimensional outcome、scenario specification 和 scenario-defined existence semantics。
 
 面向读者的简短版本见 `ARTICLES/04-v0.6-extension-zh.md`。
 
@@ -52,4 +52,4 @@ Active persistence 的意思是：inaction 也要作为一种可能 trajectory �
 
 Scenario specification 是 v0.6 中用于将 EVA 应用到新环境的纪律，目的是避免理论每遇到新环境就膨胀。
 
-一个 scenario 应说明相关的 existence-field conditions：active persistence targets、drive dimensions、capability sources and provenance、action-space constraints、outcome interpretation 和 observable stability traces。只有当新环境无法用现有框架表达、造成内部矛盾，或暴露出边界失败时，才应考虑理论扩展。
+一个 scenario 应说明相关的 existence-field conditions：existence semantics(在该 field 中什么算持续存在、什么算 recoverable interruption、什么算 terminal failure)、active persistence targets、drive dimensions、capability sources and provenance、action-space constraints、outcome interpretation 和 observable stability traces。只有当新环境无法用现有框架表达、造成内部矛盾，或暴露出边界失败时，才应考虑理论扩展。

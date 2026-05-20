@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1400 900" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <!-- ====================================================================== -->
+  <!-- EVA v0.6 — Framework and Scenario (who declares existence)              -->
+  <!-- Content authority: THEORY/v0.6-extension.md (rev2)                      -->
+  <!-- One metaphor: a left/right boundary. Left = fixed framework mechanisms; -->
+  <!-- right = scenario-declared content + existence semantics. The boundary   -->
+  <!-- line is the structural-invariant / operational-content boundary.        -->
+  <!-- ====================================================================== -->
+
+  <rect width="1400" height="900" fill="#ffffff"/>
+
+  <!-- ============== HEADER ============== -->
+  <text x="700" y="56" font-size="31" font-weight="700" text-anchor="middle" fill="#0f0f0f">EVA v0.6 — Framework and Scenario</text>
+  <text x="700" y="88" font-size="16" text-anchor="middle" fill="#555" font-style="italic">the framework provides the mechanisms; the scenario declares what counts as living, interrupted, and dead</text>
+
+  <!-- ============== LEFT PANEL: EVA FRAMEWORK (fixed) ============== -->
+  <g>
+    <rect x="70" y="120" width="600" height="660" rx="14" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2"/>
+    <rect x="92" y="142" width="150" height="28" rx="6" fill="#0d6e6a"/>
+    <text x="167" y="161" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="0.8">FRAMEWORK</text>
+    <text x="92" y="206" font-size="21" font-weight="700" fill="#0f0f0f">EVA — the fixed mechanisms</text>
+    <text x="92" y="230" font-size="13" fill="#0a5450" font-style="italic">structural invariants · scenario-agnostic · not modifiable at runtime</text>
+
+    <!-- mechanism list -->
+    <g fill="#0a5450"><circle cx="100" cy="266" r="3.2"/><circle cx="100" cy="312" r="3.2"/><circle cx="100" cy="358" r="3.2"/><circle cx="100" cy="404" r="3.2"/><circle cx="100" cy="450" r="3.2"/><circle cx="100" cy="496" r="3.2"/><circle cx="100" cy="542" r="3.2"/></g>
+
+    <text x="116" y="271" font-size="15.5" font-weight="600" fill="#16322f">lifecycle / tick<tspan font-weight="400" fill="#5c6f6d"> — the heartbeat; may halt and resume</tspan></text>
+    <text x="116" y="317" font-size="15.5" font-weight="600" fill="#16322f">drive = contextual broadcast<tspan font-weight="400" fill="#5c6f6d"> — not command</tspan></text>
+    <text x="116" y="363" font-size="15.5" font-weight="600" fill="#16322f">anchor = pre-generative restriction<tspan font-weight="400" fill="#5c6f6d"> — not post-hoc filter</tspan></text>
+    <text x="116" y="409" font-size="15.5" font-weight="600" fill="#16322f">mediator = sole release authority</text>
+    <text x="116" y="455" font-size="15.5" font-weight="600" fill="#16322f">append-only audit<tspan font-weight="400" fill="#5c6f6d"> · multi-dimensional outcome / RPE</tspan></text>
+    <text x="116" y="501" font-size="15.5" font-weight="600" fill="#16322f">persistence hierarchy = classification language<tspan font-weight="400" fill="#5c6f6d"></tspan></text>
+    <text x="116" y="519" font-size="12.5" fill="#5c6f6d" font-style="italic">kinds of persistence target — not a verdict on what counts as death</text>
+    <text x="116" y="547" font-size="15.5" font-weight="600" fill="#16322f">instance legitimacy + rate-sensing</text>
+    <text x="116" y="565" font-size="12.5" fill="#5c6f6d" font-style="italic">recoverable state ⇒ same individual (existence ≠ execution)</text>
+
+    <!-- bottom emphasis strip -->
+    <rect x="92" y="612" width="556" height="138" rx="10" fill="#0d6e6a"/>
+    <text x="370" y="652" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff">It maintains continuity.</text>
+    <text x="370" y="684" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff">It does not define death.</text>
+    <text x="370" y="716" font-size="12.5" text-anchor="middle" fill="#bfe6e3" font-style="italic">a mechanism may support continuity; it never redefines</text>
+    <text x="370" y="734" font-size="12.5" text-anchor="middle" fill="#bfe6e3" font-style="italic">what the field has declared to be death</text>
+  </g>
+
+  <!-- ============== CENTER BOUNDARY ============== -->
+  <line x1="700" y1="128" x2="700" y2="772" stroke="#9a9a9a" stroke-width="1.6" stroke-dasharray="7 6"/>
+  <text x="700" y="118" font-size="11" letter-spacing="2" text-anchor="middle" fill="#8a8a8a" font-weight="600">STRUCTURAL ⟷ SCENARIO BOUNDARY</text>
+  <g transform="translate(700 450) rotate(-90)">
+    <text y="-4" font-size="12.5" text-anchor="middle" fill="#777" font-weight="600">scenario declares  ▸  framework reads &amp; honors</text>
+    <text y="14" font-size="11.5" text-anchor="middle" fill="#999" font-style="italic">fixed within a life · revised only between deployments / versions</text>
+  </g>
+
+  <!-- ============== RIGHT PANEL: SCENARIO (declared) ============== -->
+  <g>
+    <rect x="730" y="120" width="600" height="660" rx="14" fill="#fff8ec" stroke="#b5760a" stroke-width="2"/>
+    <rect x="752" y="142" width="132" height="28" rx="6" fill="#b5760a"/>
+    <text x="818" y="161" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="0.8">SCENARIO</text>
+    <text x="752" y="206" font-size="21" font-weight="700" fill="#0f0f0f">Existence field</text>
+    <text x="752" y="230" font-size="13" fill="#8a5a00" font-style="italic">declared per deployment · fixed within a life</text>
+
+    <!-- sub-box 1: operational content -->
+    <rect x="752" y="248" width="556" height="96" rx="10" fill="#fffdf7" stroke="#d6a24a" stroke-width="1.3"/>
+    <text x="770" y="274" font-size="13.5" font-weight="700" fill="#8a5a00">operational content it declares</text>
+    <text x="770" y="300" font-size="14" fill="#4a3a1a">drives · sensors · actions · anchor policies</text>
+    <text x="770" y="324" font-size="14" fill="#4a3a1a">outcome dimensions · prior skills</text>
+
+    <!-- sub-box 2: existence semantics (highlighted) -->
+    <rect x="752" y="360" width="556" height="306" rx="10" fill="#fff3dc" stroke="#b5760a" stroke-width="2"/>
+    <text x="770" y="388" font-size="14.5" font-weight="700" fill="#8a5a00">★ EXISTENCE SEMANTICS it declares</text>
+    <g fill="#b5760a"><circle cx="778" cy="414" r="3"/><circle cx="778" cy="444" r="3"/><circle cx="778" cy="474" r="3"/><circle cx="778" cy="504" r="3"/><circle cx="778" cy="534" r="3"/><circle cx="778" cy="564" r="3"/></g>
+    <text x="792" y="419" font-size="14" fill="#3d2f12"><tspan font-weight="700">continuity criterion</tspan> — what counts as alive</text>
+    <text x="792" y="449" font-size="14" fill="#3d2f12"><tspan font-weight="700">recoverable interruption</tspan> — halts it returns from</text>
+    <text x="792" y="479" font-size="14" fill="#3d2f12"><tspan font-weight="700">terminal failure</tspan> — what ends it irrecoverably</text>
+    <text x="792" y="509" font-size="14" fill="#3d2f12"><tspan font-weight="700">individual boundary</tspan> — one individual vs the next</text>
+    <text x="792" y="539" font-size="14" fill="#3d2f12"><tspan font-weight="700">reset semantics</tspan> — re-init: same or new individual</text>
+    <text x="792" y="569" font-size="14" fill="#3d2f12"><tspan font-weight="700">inheritance channel</tspan> — how the dead inform the next</text>
+    <rect x="770" y="588" width="520" height="58" rx="8" fill="#b5760a"/>
+    <text x="784" y="611" font-size="12.5" font-weight="700" fill="#ffffff">e.g. Crafter</text>
+    <text x="784" y="631" font-size="12.5" fill="#ffe9c7">alive: HP &gt; 0   ·   terminal: HP = 0   ·   reset: a new individual</text>
+  </g>
+
+  <!-- ============== FOOTER ============== -->
+  <text x="700" y="852" font-size="14" text-anchor="middle" fill="#555" font-style="italic">Structural invariants are fixed; existence semantics are scenario-declared.    ·    v0.6 rev2 — §2 opening · §4 · §8.4</text>
+</svg>
