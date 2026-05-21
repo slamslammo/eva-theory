@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1500 2000" font-family="system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <!-- ====================================================================== -->
+  <!-- EVA v0.6 — Merged: Core-in-Field · Existence-Semantics Hub · Active     -->
+  <!-- Persistence.  Content authority: THEORY/v0.6-extension.md (§1/§2/§3.6/§8)-->
+  <!-- round-c1 merge experiment (zh). Baseline style = v0.5 five-layer / signal-flow.-->
+  <!--                                                                         -->
+  <!-- Layout (vertical 3-band + central hub):                                 -->
+  <!--   Header           y   30- 115                                          -->
+  <!--   ① Structure band y  142- 814   (field + EVA core L1-L5 + compact anchor)-->
+  <!--   ↓ connector      y  814- 856                                          -->
+  <!--   ② Existence-     y  864-1212   (HUB · 6 declarations · the hinge)      -->
+  <!--      semantics                                                          -->
+  <!--   ↓ connector      y 1212-1240                                          -->
+  <!--   ③ Dynamics band  y 1244-1868   (active persistence + life state machine)-->
+  <!--   Footer           y 1888-1968   (through-line + 5/7/6/8 count legend)   -->
+  <!--                                                                         -->
+  <!-- Count legend (must stay visually distinct): 5 arch layers L1-L5 ·       -->
+  <!--   7 persistence levels (§2.2) · 6 existence-semantics (§8.4) ·          -->
+  <!--   8 outcome dimensions (§8.6).                                          -->
+  <!-- ====================================================================== -->
+  <defs>
+    <marker id="aAmber" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 z" fill="#b5760a"/></marker>
+    <marker id="aTeal"  markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 z" fill="#0d6e6a"/></marker>
+    <marker id="aRed"   markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 z" fill="#c0392b"/></marker>
+    <marker id="aBlue"  markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 z" fill="#4a5fb0"/></marker>
+    <marker id="aSlate" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 z" fill="#475569"/></marker>
+  </defs>
+  <rect width="1500" height="2000" fill="#ffffff"/>
+
+  <!-- ============== HEADER ============== -->
+  <text x="750" y="56" font-size="31" font-weight="700" text-anchor="middle" fill="#0f0f0f">EVA v0.6 — 同一个 core，在场景声明的 existence field 中存在与持续</text>
+  <text x="750" y="92" font-size="15" text-anchor="middle" fill="#555555" font-style="italic">v0.6 不新增架构 —— 同一 v0.5 core，被场景声明的 existence field 绑定；field 的存在语义既收口结构、又开启生命</text>
+
+  <!-- ====================================================================== -->
+  <!-- ① STRUCTURE BAND                                                        -->
+  <!-- ====================================================================== -->
+  <rect x="48" y="142" width="1404" height="672" rx="18" fill="#fbfdfd" stroke="#cbd5d4" stroke-width="1.5"/>
+  <rect x="78" y="128" width="244" height="30" rx="6" fill="#334155"/>
+  <text x="94" y="148" font-size="14" font-weight="700" fill="#ffffff">① 结构 · Structure</text>
+  <text x="338" y="148" font-size="12.5" fill="#475569" font-style="italic">同一 core ＋ 可替换 existence field</text>
+
+  <!-- existence field container -->
+  <rect x="80" y="174" width="1340" height="624" rx="14" fill="#fff8ec" stroke="#b5760a" stroke-width="2.2"/>
+  <rect x="104" y="190" width="214" height="28" rx="6" fill="#b5760a"/>
+  <text x="211" y="209" font-size="13" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="0.5">存在场 FIELD（field）</text>
+  <text x="334" y="209" font-size="13" fill="#8a5a00" font-style="italic">由场景声明 · 生命内固定 · 跨部署可替换</text>
+
+  <!-- LEFT: operational content -->
+  <text x="104" y="250" font-size="13.5" font-weight="700" fill="#8a5a00">operational content（操作内容）</text>
+  <text x="104" y="268" font-size="11" fill="#a07a30" font-style="italic">field 注入，由各层使用</text>
+  <g>
+    <rect x="104" y="280" width="262" height="54" rx="9" fill="#fffdf7" stroke="#d6a24a" stroke-width="1.3"/>
+    <text x="118" y="301" font-size="13.5" font-weight="700" fill="#3d2f12">outcome dimensions（结果维度）</text>
+    <text x="118" y="322" font-size="11" fill="#8a6a32">多维结果向量 · 8 维（§8.6）</text>
+    <rect x="104" y="342" width="262" height="54" rx="9" fill="#fffdf7" stroke="#d6a24a" stroke-width="1.3"/>
+    <text x="118" y="363" font-size="13.5" font-weight="700" fill="#3d2f12">priors · inherited priors（先验）</text>
+    <text x="118" y="384" font-size="11" fill="#8a6a32">designer 给定 ＋ 从过去个体蒸馏</text>
+    <rect x="104" y="404" width="262" height="54" rx="9" fill="#fffdf7" stroke="#d6a24a" stroke-width="1.3"/>
+    <text x="118" y="425" font-size="13.5" font-weight="700" fill="#3d2f12">drives（驱动）</text>
+    <text x="118" y="446" font-size="11" fill="#8a6a32">field 的 drive 集；作为 context 广播</text>
+    <rect x="104" y="466" width="262" height="54" rx="9" fill="#fffdf7" stroke="#d6a24a" stroke-width="1.3"/>
+    <text x="118" y="487" font-size="13.5" font-weight="700" fill="#3d2f12">sensors（传感器）</text>
+    <text x="118" y="508" font-size="11" fill="#8a6a32">field 暴露给 L1 的观测</text>
+  </g>
+  <g stroke="#b5760a" stroke-width="1.6" marker-end="url(#aAmber)">
+    <line x1="368" y1="307" x2="398" y2="430"/>
+    <line x1="368" y1="369" x2="398" y2="450"/>
+    <line x1="368" y1="431" x2="398" y2="470"/>
+    <line x1="368" y1="493" x2="398" y2="490"/>
+  </g>
+  <text x="104" y="556" font-size="11.5" fill="#7a5208" font-style="italic">边界：structural invariants（core，运行时不可改）</text>
+  <text x="104" y="574" font-size="11.5" fill="#7a5208" font-style="italic">↔ operational content（field 注入）</text>
+  <text x="104" y="598" font-size="11.5" fill="#7a5208" font-style="italic">注：anchor policies 与 action vocabulary 同样由 field 声明</text>
+
+  <!-- CENTER: EVA CORE -->
+  <rect x="402" y="244" width="626" height="540" rx="14" fill="#f4fbfa" stroke="#0d6e6a" stroke-width="2.4"/>
+  <rect x="420" y="258" width="118" height="26" rx="6" fill="#0d6e6a"/>
+  <text x="479" y="276" font-family="ui-monospace, Menlo, monospace" font-size="12" font-weight="700" text-anchor="middle" fill="#ffffff">EVA CORE</text>
+  <text x="548" y="277" font-size="12" fill="#0a5450" font-style="italic">structural invariants · 与场景无关 · 5 架构层 L1–L5</text>
+
+  <!-- L5 -->
+  <rect x="420" y="294" width="590" height="46" rx="8" fill="#fbfbfb" stroke="#9c9c9c" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <rect x="434" y="306" width="34" height="22" rx="5" fill="#ffffff" stroke="#9c9c9c" stroke-width="1.2"/><text x="451" y="321" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#6d6d6d">L5</text>
+  <text x="480" y="322" font-size="15" font-weight="700" fill="#3d3d3d">社会认知（Social Cognition）</text>
+  <rect x="900" y="306" width="96" height="22" rx="11" fill="#ffffff" stroke="#9c9c9c" stroke-width="1"/><text x="948" y="321" font-size="10" text-anchor="middle" fill="#6d6d6d">下游扩展</text>
+  <!-- L4 -->
+  <rect x="420" y="346" width="590" height="46" rx="8" fill="#fbfbfb" stroke="#9c9c9c" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <rect x="434" y="358" width="34" height="22" rx="5" fill="#ffffff" stroke="#9c9c9c" stroke-width="1.2"/><text x="451" y="373" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#6d6d6d">L4</text>
+  <text x="480" y="374" font-size="15" font-weight="700" fill="#3d3d3d">自我模型（Self-Model）</text>
+  <rect x="900" y="358" width="96" height="22" rx="11" fill="#ffffff" stroke="#9c9c9c" stroke-width="1"/><text x="948" y="373" font-size="10" text-anchor="middle" fill="#6d6d6d">由历史涌现</text>
+  <!-- L3 -->
+  <rect x="420" y="398" width="590" height="96" rx="8" fill="#f0faf9" stroke="#0d6e6a" stroke-width="2"/>
+  <rect x="434" y="410" width="34" height="22" rx="5" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/><text x="451" y="425" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#0a5450">L3</text>
+  <text x="480" y="426" font-size="15" font-weight="700" fill="#0f0f0f">适应性思辨（Adaptive Deliberation）</text>
+  <rect x="900" y="410" width="96" height="22" rx="11" fill="#0d6e6a"/><text x="948" y="425" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">最强核心</text>
+  <text x="480" y="454" font-size="11.5" fill="#5c6f6d">memory · reasoning core · basal-ganglia（RPE）</text>
+  <text x="480" y="476" font-size="11.5" fill="#0d6e6a" font-style="italic">＋ multi-dimensional outcome（多维结果，8 维向量）（v0.6）</text>
+  <!-- L2 -->
+  <rect x="420" y="500" width="590" height="46" rx="8" fill="#eef6f5" stroke="#0d6e6a" stroke-width="1.4"/>
+  <rect x="434" y="512" width="34" height="22" rx="5" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/><text x="451" y="527" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#0a5450">L2</text>
+  <text x="480" y="522" font-size="15" font-weight="700" fill="#0f0f0f">驱动层（Drive Layer）</text>
+  <text x="480" y="539" font-size="11" fill="#5c6f6d">contextual broadcast（情境广播）—— 不是命令</text>
+  <rect x="900" y="512" width="96" height="22" rx="11" fill="#0d6e6a"/><text x="948" y="527" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">最强核心</text>
+  <!-- L1 -->
+  <rect x="420" y="552" width="590" height="46" rx="8" fill="#eef6f5" stroke="#0d6e6a" stroke-width="1.4"/>
+  <rect x="434" y="564" width="34" height="22" rx="5" fill="#ffffff" stroke="#0d6e6a" stroke-width="1.4"/><text x="451" y="579" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" text-anchor="middle" fill="#0a5450">L1</text>
+  <text x="480" y="574" font-size="15" font-weight="700" fill="#0f0f0f">稳态感知（Homeostatic Sensing）</text>
+  <text x="480" y="591" font-size="11" fill="#0d6e6a" font-style="italic">＋ rate-sensing（速率感知）（v0.6）</text>
+  <rect x="900" y="564" width="96" height="22" rx="11" fill="#0d6e6a"/><text x="948" y="579" font-size="10" font-weight="700" text-anchor="middle" fill="#ffffff">最强核心</text>
+  <!-- lifecycle + mediator -->
+  <rect x="420" y="604" width="590" height="32" rx="6" fill="#eef6f5" stroke="#0d6e6a" stroke-width="1.1"/>
+  <text x="715" y="624" font-size="11.5" text-anchor="middle" fill="#0a5450">lifecycle / tick（生命周期 / 心跳）—— 可中断并恢复 · 存在 ≠ 运行（v0.6）</text>
+  <rect x="420" y="642" width="590" height="44" rx="8" fill="#0d6e6a"/>
+  <text x="715" y="669" font-size="14" font-weight="700" text-anchor="middle" fill="#ffffff">Mediator · release authority（中介 · 释放权）</text>
+  <line x1="715" y1="686" x2="715" y2="720" stroke="#0d6e6a" stroke-width="2" marker-end="url(#aTeal)"/>
+  <text x="729" y="714" font-size="11.5" fill="#5c6f6d" font-style="italic">动作输出到世界（actions to world）</text>
+
+  <!-- RIGHT: compact anchor system (DP-C1: compressed from v0.5 panel) -->
+  <rect x="1048" y="244" width="356" height="540" rx="12" fill="#fefcf2" stroke="#c89726" stroke-width="2.2"/>
+  <text x="1066" y="268" font-size="13.5" font-weight="700" fill="#7a5208">锚点系统（Anchor System）</text>
+  <text x="1066" y="286" font-size="11" fill="#7a5208" font-style="italic">一个跨层系统（cross-layer），多类锚点</text>
+  <rect x="1066" y="298" width="320" height="74" rx="9" fill="#f0f4f8" stroke="#3a5870" stroke-width="1.8"/>
+  <text x="1226" y="318" font-size="10" font-weight="700" text-anchor="middle" fill="#3a5870" letter-spacing="0.8">锚点如何约束（pre-generative）</text>
+  <text x="1226" y="345" font-family="ui-monospace, Menlo, monospace" font-size="19" font-weight="700" text-anchor="middle" fill="#1a2837">G(s) → A'(s) ⊆ A(s)</text>
+  <text x="1226" y="364" font-size="10" text-anchor="middle" fill="#3a5870" font-style="italic">预先约束候选空间，非事后过滤</text>
+  <rect x="1066" y="386" width="320" height="42" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="1080" y="404" font-size="12" font-weight="700" fill="#3d2904">L0 宪制锚点（Constitutional）</text>
+  <text x="1080" y="420" font-size="10" fill="#7a5208" font-style="italic">设计者注入 · 不可变</text>
+  <rect x="1066" y="436" width="320" height="42" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="1080" y="454" font-size="12" font-weight="700" fill="#3d2904">L1 完整性锚点（Integrity）</text>
+  <text x="1080" y="470" font-size="10" fill="#7a5208" font-style="italic">保护 lifecycle 不被工作抢占</text>
+  <rect x="1066" y="486" width="320" height="42" rx="8" fill="#ffffff" stroke="#c89726" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="1080" y="504" font-size="12" font-weight="700" fill="#3d2904">L2+ 涌现锚点（Emergent）</text>
+  <text x="1080" y="520" font-size="10" fill="#7a5208" font-style="italic">由运行经验形成 · 风险偏好 / 身份</text>
+  <line x1="1066" y1="544" x2="1386" y2="544" stroke="#d9b25f" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="1066" y="566" font-size="11" fill="#5a4407" font-style="italic">静态 L0 ＞ L1 ＞ L2 ＞ L3；动态权重随状态变化</text>
+  <text x="1066" y="586" font-size="11" fill="#9a7820">危急状态 → 只允许 L0 / L1 actions</text>
+  <text x="1066" y="612" font-size="11" font-weight="700" fill="#7a5208">同一锚点系统，一致作用于所有层</text>
+  <text x="1066" y="630" font-size="10" fill="#9a7820" font-style="italic">不是每层一个 anchor，而是一个系统作用于多层</text>
+  <text x="1066" y="656" font-size="10.5" fill="#7a5208">在 L3：candidate generation 受 anchor domain 限制</text>
+  <text x="1066" y="674" font-size="10.5" fill="#7a5208">在 L4+：身份 anchor 加入（“这不是我会做的 action”）</text>
+
+  <!-- ============== connector: structure -> hub ============== -->
+  <line x1="750" y1="800" x2="750" y2="858" stroke="#b5760a" stroke-width="3" marker-end="url(#aAmber)"/>
+  <text x="766" y="836" font-size="12.5" fill="#8a5a00" font-style="italic">field 的结构声明 ↓ 收口于 existence semantics</text>
+
+  <!-- ====================================================================== -->
+  <!-- ② EXISTENCE-SEMANTICS HUB (the hinge)                                   -->
+  <!-- ====================================================================== -->
+  <rect x="80" y="864" width="1340" height="348" rx="14" fill="#fff3dc" stroke="#b5760a" stroke-width="2.8"/>
+  <rect x="110" y="850" width="452" height="32" rx="6" fill="#b5760a"/>
+  <text x="126" y="871" font-size="14" font-weight="700" fill="#ffffff">② 中枢 · existence semantics（6 项）</text>
+  <text x="110" y="903" font-size="16" font-weight="700" fill="#8a5a00">★ 存在语义声明　EXISTENCE SEMANTICS</text>
+  <text x="110" y="924" font-size="12" fill="#7a5208" font-style="italic">framework 只读取这 6 项、本身不定义生与死；换 field，这 6 项随之不同，core 不变（结构在上、生命在下，唯一铰链）</text>
+
+  <!-- 6 declarations: 3 cols x 2 rows; each shows ↑structural / ↓life dual identity -->
+  <g>
+    <!-- row 1 -->
+    <rect x="98" y="936" width="420" height="104" rx="9" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+    <text x="114" y="958" font-size="13.5" font-weight="700" fill="#3d2f12">1 · continuity criterion（继续存在判据）</text>
+    <text x="114" y="982" font-size="11.5" fill="#0a5450">↑ 结构：什么算“仍在存在”</text>
+    <text x="114" y="1004" font-size="11.5" fill="#b23b2c">↓ 生命：判定个体是否活着</text>
+    <text x="114" y="1026" font-size="10.5" fill="#7a5208" font-style="italic">protected：identity continuity</text>
+
+    <rect x="540" y="936" width="420" height="104" rx="9" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+    <text x="556" y="958" font-size="13.5" font-weight="700" fill="#3d2f12">2 · recoverable interruption（可恢复中断）</text>
+    <text x="556" y="982" font-size="11.5" fill="#0a5450">↑ 结构：哪些 halt 可返回</text>
+    <text x="556" y="1004" font-size="11.5" fill="#b23b2c">↓ 生命：中断 ≠ 死，同一个体恢复</text>
+    <text x="556" y="1026" font-size="10.5" fill="#7a5208" font-style="italic">restart · migration · power loss</text>
+
+    <rect x="982" y="936" width="420" height="104" rx="9" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+    <text x="998" y="958" font-size="13.5" font-weight="700" fill="#3d2f12">3 · terminal failure（终止失败）</text>
+    <text x="998" y="982" font-size="11.5" fill="#0a5450">↑ 结构：什么使其彻底终止</text>
+    <text x="998" y="1004" font-size="11.5" fill="#b23b2c">↓ 生命：个体死亡（例 Crafter HP=0）</text>
+    <text x="998" y="1026" font-size="10.5" fill="#7a5208" font-style="italic">recoverable state / invariants / provenance 丢失</text>
+
+    <!-- row 2 -->
+    <rect x="98" y="1048" width="420" height="104" rx="9" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+    <text x="114" y="1070" font-size="13.5" font-weight="700" fill="#3d2f12">4 · individual boundary（个体边界）</text>
+    <text x="114" y="1094" font-size="11.5" fill="#0a5450">↑ 结构：一个个体 vs 下一个</text>
+    <text x="114" y="1116" font-size="11.5" fill="#b23b2c">↓ 生命：谁是“我”</text>
+    <text x="114" y="1138" font-size="10.5" fill="#7a5208" font-style="italic">instantiated per field</text>
+
+    <rect x="540" y="1048" width="420" height="104" rx="9" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+    <text x="556" y="1070" font-size="13.5" font-weight="700" fill="#3d2f12">5 · reset semantics（重置语义）</text>
+    <text x="556" y="1094" font-size="11.5" fill="#0a5450">↑ 结构：重启 = 同一 / 新个体</text>
+    <text x="556" y="1116" font-size="11.5" fill="#b23b2c">↓ 生命：reset 不等于复活</text>
+    <text x="556" y="1138" font-size="10.5" fill="#7a5208" font-style="italic">done → reset() 不再静默当作 episode 边界</text>
+
+    <rect x="982" y="1048" width="420" height="104" rx="9" fill="#ffffff" stroke="#c89726" stroke-width="1.4"/>
+    <text x="998" y="1070" font-size="13.5" font-weight="700" fill="#3d2f12">6 · inheritance channel（继承通道）</text>
+    <text x="998" y="1094" font-size="11.5" fill="#0a5450">↑ 结构：死者 → 影响后继</text>
+    <text x="998" y="1116" font-size="11.5" fill="#b23b2c">↓ 生命：跨个体传递（非续命）</text>
+    <text x="998" y="1138" font-size="10.5" fill="#7a5208" font-style="italic">cross-individual（§3.6）</text>
+  </g>
+
+  <!-- folded swap-strip (draft1 swap-strip + draft2 "field declares" collapse here) -->
+  <line x1="110" y1="1162" x2="1390" y2="1162" stroke="#e3c98f" stroke-width="1"/>
+  <text x="110" y="1186" font-size="12.5" font-weight="700" fill="#8a5a00">换 existence field → 同一 core，不同 agent：</text>
+  <g font-size="12" fill="#4a3a1a" text-anchor="middle">
+    <rect x="470" y="1170" width="150" height="26" rx="13" fill="#ffffff" stroke="#b5760a" stroke-width="1.4"/><text x="545" y="1187">一个游戏世界</text>
+    <rect x="636" y="1170" width="170" height="26" rx="13" fill="#ffffff" stroke="#b5760a" stroke-width="1.4"/><text x="721" y="1187">一个运行时服务</text>
+    <rect x="822" y="1170" width="170" height="26" rx="13" fill="#ffffff" stroke="#b5760a" stroke-width="1.4"/><text x="907" y="1187">一个具身机器人</text>
+  </g>
+  <text x="1010" y="1187" font-size="11" fill="#8a5a00" font-style="italic">core 机制相同；只有 field 的内容与这 6 项 existence semantics 不同</text>
+
+  <!-- ============== connector: hub -> dynamics ============== -->
+  <line x1="750" y1="1212" x2="750" y2="1242" stroke="#0d6e6a" stroke-width="3" marker-end="url(#aTeal)"/>
+  <text x="766" y="1234" font-size="12.5" fill="#0a5450" font-style="italic">existence semantics ↓ 决定个体如何 活 / 中断 / 死 / 继承</text>
+
+  <!-- ====================================================================== -->
+  <!-- ③ DYNAMICS BAND                                                         -->
+  <!-- ====================================================================== -->
+  <rect x="48" y="1244" width="1404" height="624" rx="18" fill="#fbfdfd" stroke="#cbd5d4" stroke-width="1.5"/>
+  <rect x="78" y="1230" width="270" height="30" rx="6" fill="#334155"/>
+  <text x="94" y="1250" font-size="14" font-weight="700" fill="#ffffff">③ 动态 · Dynamics / Life</text>
+
+  <!-- contrast: passive vs active -->
+  <rect x="82" y="1268" width="536" height="68" rx="10" fill="#f4f4f2" stroke="#b8b8b8" stroke-width="1.4"/>
+  <text x="102" y="1294" font-size="14" font-weight="700" fill="#777777">PASSIVE 读法 —— 不够</text>
+  <text x="102" y="1316" font-size="12" fill="#888888">preserve current state · 不行动 = 安全（v0.5 留作隐含）</text>
+  <text x="650" y="1308" font-size="20" font-weight="700" text-anchor="middle" fill="#0a5450">▸</text>
+  <rect x="684" y="1268" width="658" height="68" rx="10" fill="#f0faf9" stroke="#0d6e6a" stroke-width="2"/>
+  <text x="704" y="1294" font-size="14" font-weight="700" fill="#0a5450">ACTIVE persistence（主动持续）</text>
+  <text x="704" y="1316" font-size="12" fill="#3a5450">维持 future viability（未来生存力）· 不行动有代价 · 采取 bounded action 在变化中持续存在</text>
+
+  <!-- life state machine -->
+  <rect x="110" y="1430" width="270" height="116" rx="18" fill="#f0faf9" stroke="#0d6e6a" stroke-width="3"/>
+  <text x="245" y="1478" font-size="22" font-weight="700" text-anchor="middle" fill="#0a5450">RUNNING</text>
+  <text x="245" y="1506" font-size="12.5" text-anchor="middle" fill="#3a5450">个体持续存在</text>
+  <text x="245" y="1525" font-size="12.5" text-anchor="middle" fill="#3a5450">—— 沿时间保持同一身份</text>
+
+  <rect x="540" y="1382" width="270" height="98" rx="18" fill="#f8f8f6" stroke="#0d6e6a" stroke-width="2.5"/>
+  <text x="675" y="1424" font-size="19" font-weight="700" text-anchor="middle" fill="#0a5450">INTERRUPTED</text>
+  <text x="675" y="1448" font-size="12" text-anchor="middle" fill="#5c6f6d">可恢复的中断 · 身份延续</text>
+  <text x="675" y="1466" font-size="12" text-anchor="middle" fill="#5c6f6d">处理暂停，个体未死</text>
+
+  <rect x="540" y="1576" width="290" height="110" rx="18" fill="#fff5f5" stroke="#c0392b" stroke-width="3"/>
+  <text x="685" y="1616" font-size="18" font-weight="700" text-anchor="middle" fill="#b23b2c">TERMINAL FAILURE</text>
+  <text x="685" y="1640" font-size="12" text-anchor="middle" fill="#a85a50">身份连续性丢失 · 该个体终结</text>
+  <text x="685" y="1660" font-size="10.5" text-anchor="middle" fill="#bd7a72">recoverable state · invariants · provenance 丢失</text>
+
+  <rect x="980" y="1576" width="290" height="110" rx="18" fill="#f3f5fd" stroke="#4a5fb0" stroke-width="3"/>
+  <text x="1125" y="1616" font-size="18" font-weight="700" text-anchor="middle" fill="#3a4a96">NEW INDIVIDUAL</text>
+  <text x="1125" y="1640" font-size="12" text-anchor="middle" fill="#5a68a8">独立的新个体</text>
+  <text x="1125" y="1660" font-size="12" text-anchor="middle" fill="#5a68a8">继承蒸馏出的 priors</text>
+
+  <!-- arrows of the state machine -->
+  <path d="M 378 1452 C 470 1410 480 1420 538 1424" fill="none" stroke="#444444" stroke-width="2.2" marker-end="url(#aSlate)"/>
+  <text x="408" y="1404" font-size="11.5" fill="#555555" font-style="italic">restart · migration · power loss</text>
+  <path d="M 540 1460 C 480 1480 470 1490 380 1500" fill="none" stroke="#0d6e6a" stroke-width="2.2" marker-end="url(#aTeal)"/>
+  <text x="392" y="1490" font-size="11.5" fill="#0a5450" font-style="italic">state restored → 同一个体</text>
+  <path d="M 320 1546 C 400 1590 470 1600 538 1612" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#aRed)"/>
+  <rect x="350" y="1556" width="184" height="38" rx="8" fill="#fff8ec" stroke="#b5760a" stroke-width="1.3"/>
+  <text x="442" y="1572" font-size="11" text-anchor="middle" fill="#8a5a00" font-weight="600">field-declared terminal</text>
+  <text x="442" y="1587" font-size="10.5" text-anchor="middle" fill="#8a5a00">例：Crafter HP = 0</text>
+  <path d="M 830 1631 L 978 1631" fill="none" stroke="#4a5fb0" stroke-width="2.6" marker-end="url(#aBlue)"/>
+  <text x="904" y="1620" font-size="11.5" text-anchor="middle" fill="#3a4a96" font-style="italic">inheritance（继承）</text>
+  <text x="904" y="1656" font-size="10.5" text-anchor="middle" fill="#6a78b8" font-style="italic">cross-individual</text>
+
+  <!-- active-persistence loop -->
+  <rect x="110" y="1660" width="412" height="150" rx="12" fill="#eef6f5" stroke="#0d6e6a" stroke-width="1.6"/>
+  <text x="128" y="1686" font-size="14" font-weight="700" fill="#0a5450">active persistence —— 让它留在 RUNNING</text>
+  <text x="128" y="1710" font-size="12.5" fill="#3a5450">rate-sensing（速率感知）→ 预测 future viability →</text>
+  <text x="128" y="1730" font-size="12.5" fill="#3a5450">anticipatory pressure（预期压力）→ bounded action（有界行动）</text>
+  <text x="128" y="1754" font-size="11.5" fill="#5c6f6d" font-style="italic">在阈值之前就行动，而非之后</text>
+  <text x="128" y="1774" font-size="11.5" fill="#5c6f6d" font-style="italic">不行动是一条要评估的轨迹，不默认安全</text>
+  <text x="128" y="1794" font-size="11.5" fill="#5c6f6d" font-style="italic">受 anchors 与 mediator 约束</text>
+  <path d="M 300 1660 C 280 1600 280 1570 248 1548" fill="none" stroke="#0d6e6a" stroke-width="2" marker-end="url(#aTeal)"/>
+  <text x="300" y="1636" font-size="11" fill="#0a5450" font-style="italic">抵抗滑向 terminal</text>
+
+  <!-- existence != running criterion -->
+  <rect x="868" y="1400" width="472" height="146" rx="12" fill="#fff8ec" stroke="#b5760a" stroke-width="1.8"/>
+  <text x="886" y="1426" font-size="13.5" font-weight="700" fill="#8a5a00">存在 ≠ 运行（existence ≠ execution）</text>
+  <text x="886" y="1450" font-size="12" fill="#6a4a10">protected quantity = identity continuity（身份连续）：</text>
+  <text x="900" y="1472" font-size="12" fill="#6a4a10">· recoverable state（可恢复状态）</text>
+  <text x="900" y="1492" font-size="12" fill="#6a4a10">· structural invariants（结构不变量）</text>
+  <text x="900" y="1512" font-size="12" fill="#6a4a10">· provenance chain（溯源链）</text>
+  <text x="886" y="1534" font-size="11" fill="#a06b1f" font-style="italic">三者可跨 gap 恢复 ⇒ 同一个体；不可恢复 = 地板（unrecoverability floor）</text>
+
+  <!-- 7 persistence targets (distinct count, classification language) -->
+  <rect x="540" y="1700" width="430" height="110" rx="10" fill="#ffffff" stroke="#9c9c9c" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="556" y="1724" font-size="12.5" font-weight="700" fill="#475569">7 层 persistence target（§2.2）</text>
+  <text x="556" y="1746" font-size="11.5" fill="#3d3d3d">基质 · 具身 · 能力 · 资源 · 繁殖 · 群体 · 文化</text>
+  <text x="556" y="1768" font-size="11" fill="#6d6d6d" font-style="italic">分类语言，非生死裁决</text>
+  <text x="556" y="1788" font-size="11" fill="#6d6d6d" font-style="italic">各层是否 recoverable / terminal 由 field 声明</text>
+  <text x="556" y="1804" font-size="10.5" fill="#9a7820">同一层可在一 field 终止、另一 field 可恢复</text>
+
+  <!-- legend -->
+  <g font-size="12" fill="#444444">
+    <circle cx="1000" cy="1730" r="6" fill="#0d6e6a"/><text x="1014" y="1735">running / recoverable —— 同一个体</text>
+    <circle cx="1000" cy="1754" r="6" fill="#c0392b"/><text x="1014" y="1759">terminal —— 该个体终结</text>
+    <circle cx="1000" cy="1778" r="6" fill="#4a5fb0"/><text x="1014" y="1783">new individual（继承）</text>
+    <rect x="994" y="1796" width="12" height="12" rx="2" fill="#b5760a"/><text x="1014" y="1806">field-declared</text>
+  </g>
+
+  <!-- ============== FOOTER ============== -->
+  <line x1="80" y1="1888" x2="1420" y2="1888" stroke="#cccccc" stroke-width="1"/>
+  <text x="750" y="1914" font-size="13.5" text-anchor="middle" fill="#444444" font-style="italic">v0.6 = v0.5 core，被场景声明的 existence field 绑定；existence semantics 是结构与生命的唯一铰链。</text>
+  <text x="750" y="1938" font-size="11.5" text-anchor="middle" fill="#666666" font-family="ui-monospace, Menlo, monospace">§1 active persistence · §2 hierarchy ＋ existence semantics · §2.4 recoverable / terminal · §3.6 inheritance · §8 declaration</text>
+  <text x="750" y="1962" font-size="11" text-anchor="middle" fill="#8a5a00">计数区分： 5 架构层（L1–L5） · 7 persistence 层（§2.2） · 6 existence-semantics（§8.4） · 8 outcome 维度（§8.6）—— 四者不同，勿混。</text>
+</svg>
